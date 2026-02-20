@@ -187,8 +187,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Tilbake</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Husk at kryptering av lommeboken din ikke fullt ut kan beskytte bitcoinene dine mot å bli stjålet av skadelig programvare som infiserer datamaskinen din.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your aixs from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Husk at kryptering av lommeboken din ikke fullt ut kan beskytte aixene dine mot å bli stjålet av skadelig programvare som infiserer datamaskinen din.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -528,8 +528,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Kobler til jevnaldrende…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Be om betalinger (genererer QR-koder og bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and aix: URIs)</source>
+        <translation type="unfinished">Be om betalinger (genererer QR-koder og aix: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -611,8 +611,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Mottaksadresser</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation type="unfinished">Åpne en bitcoin: URI</translation>
+        <source>Open a aix: URI</source>
+        <translation type="unfinished">Åpne en aix: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1250,7 +1250,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aix-core</name>
     <message>
         <source>default wallet</source>
         <translation type="unfinished">standard lommebok</translation>

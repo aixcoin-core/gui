@@ -34,7 +34,7 @@
 #include <utility>
 #include <variant>
 
-const char * const BITCOIN_CONF_FILENAME = "bitcoin.conf";
+const char * const BITCOIN_CONF_FILENAME = "aix.conf";
 const char * const BITCOIN_SETTINGS_FILENAME = "settings.json";
 
 ArgsManager gArgs;
@@ -190,7 +190,7 @@ bool ArgsManager::ParseParameters(int argc, const char* const argv[], std::strin
         if (key.starts_with("-psn_")) continue;
 #endif
 
-        if (key == "-") break; //bitcoin-tx using stdin
+        if (key == "-") break; //aix-tx using stdin
         std::optional<std::string> val;
         size_t is_index = key.find('=');
         if (is_index != std::string::npos) {
@@ -760,7 +760,7 @@ fs::path GetDefaultDataDir()
     //   old: C:\Users\Username\AppData\Roaming\Aix
     //   new: C:\Users\Username\AppData\Local\Aix
     // macOS: ~/Library/Application Support/Aix
-    // Unix-like: ~/.bitcoin
+    // Unix-like: ~/.aix
 #ifdef WIN32
     // Windows
     // Check for existence of datadir in old location and keep it there
@@ -781,7 +781,7 @@ fs::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/Aix";
 #else
     // Unix-like
-    return pathRet / ".bitcoin";
+    return pathRet / ".aix";
 #endif
 #endif
 }

@@ -188,7 +188,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">بېرته</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your aixs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">یاد ولرئ چې ستاسو د والټ رمز جوړول بشپړ ساتنه نه شي کولای.ستاسو بټ کوینونه د مالویر له لارې د غلا څخه خوندي کول
  ستاسو کمپیوټ</translation>
     </message>
@@ -541,7 +541,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">د همکارانو سره نښلول…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and aix: URIs)</source>
         <translation type="unfinished">د تادیاتو غوښتنه کول (QR کوډونه او بټ کوین: URI جوړوي</translation>
     </message>
     <message>
@@ -628,7 +628,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">او د ترلاسه کولو پته</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a aix: URI</source>
         <translation type="unfinished">یو بټ کوین: URI پرانیزئ</translation>
     </message>
     <message>
@@ -1480,7 +1480,7 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open aix URI</source>
         <translation type="unfinished">بټ کوین URI پرانیزئ</translation>
     </message>
     <message>

@@ -18,7 +18,7 @@ class BenchSanityCheck(AixTestFramework):
         pass
 
     def skip_test_if_missing_module(self):
-        self.skip_if_no_bitcoin_bench()
+        self.skip_if_no_aix_bench()
 
     def add_options(self, parser):
         parser.add_argument(

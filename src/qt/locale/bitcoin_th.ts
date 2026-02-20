@@ -171,7 +171,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">กลับ</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your aixs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">จำไว้ว่าการเข้ารหัสกระเป๋าของคุณไม่สามารถปกป้องบิตคอยน์ของคุณจากการถูกขโมยโดยมัลแวร์ที่ติดเชื้อคอมพิวเตอร์ของคุณได้อย่างสมบูรณ์</translation>
     </message>
     <message>
@@ -625,7 +625,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">กำลังเชื่อมต่อกับเพื่อนร่วมงาน...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and aix: URIs)</source>
         <translation type="unfinished">ขอการชำระเงิน (สร้างรหัส QR และ URI ของบิตคอยน์)</translation>
     </message>
     <message>
@@ -707,7 +707,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;ตัวเลือกคำสั่งในบรรทัดคำสั่ง</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a aix: URI</source>
         <translation type="unfinished">เปิดบิตคอยน์: URI</translation>
     </message>
     <message>
@@ -1444,11 +1444,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">จาก</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the aix network, as detailed below.</source>
         <translation type="unfinished">ธุรกรรมล่าสุดอาจยังไม่ปรากฏ และดังนั้นยอดคงเหลือในกระเป๋าของคุณอาจไม่ถูกต้อง ข้อมูลนี้จะถูกต้องเมื่อกระเป๋าของคุณเสร็จสิ้นการซิงค์กับเครือข่ายบิตคอยน์ ตามที่อธิบายไว้ด้านล่าง</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend aixs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished">การพยายามใช้บิตคอยน์ที่ได้รับผลกระทบจากธุรกรรมที่ยังไม่ได้แสดงจะไม่ได้รับการยอมรับจากเครือข่าย</translation>
     </message>
     <message>
@@ -1503,7 +1503,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open aix URI</source>
         <translation type="unfinished">เปิด URI ของบิตคอยน์</translation>
     </message>
     <message>
@@ -1999,7 +1999,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ข้อผิดพลาดในการขอชำระเงิน</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start aix: click-to-pay handler</source>
         <translation type="unfinished">ไม่สามารถเริ่มต้นบิตคอยน์: ตัวจัดการคลิกเพื่อจ่าย</translation>
     </message>
     <message>
@@ -2007,8 +2007,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">การจัดการ URI</translation>
     </message>
     <message>
-        <source>'bitcoin://' is not a valid URI. Use 'bitcoin:' instead.</source>
-        <translation type="unfinished">'bitcoin://' ไม่ใช่ URI ที่ถูกต้อง ใช้ 'bitcoin:' แทน</translation>
+        <source>'aix://' is not a valid URI. Use 'aix:' instead.</source>
+        <translation type="unfinished">'aix://' ไม่ใช่ URI ที่ถูกต้อง ใช้ 'aix:' แทน</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.
@@ -2645,7 +2645,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aix-core</name>
     <message>
         <source>default wallet</source>
         <translation type="unfinished">กระเป๋าเงินเริ่มต้น</translation>

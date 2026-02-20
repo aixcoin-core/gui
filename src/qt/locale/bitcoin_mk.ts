@@ -171,7 +171,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Внесете ја старата и новата лозинка за паричникот.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your aixs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Запомнете дека шифрирањето на вашиот паричник не може целосно да ги заштити вашите биткоини од кражба од злонамерен софтвер, заразувајќи го вашиот сметач.</translation>
     </message>
     <message>
@@ -546,7 +546,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Поврзување со врсници...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and aix: URIs)</source>
         <translation type="unfinished">Барање за плаќања (создава QR-кодови и биткоин: URI)</translation>
     </message>
     <message>
@@ -630,7 +630,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Примање на адреси</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a aix: URI</source>
         <translation type="unfinished">Отвори биткоин: URI</translation>
     </message>
     <message>
@@ -1349,7 +1349,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aix-core</name>
     <message>
         <source>default wallet</source>
         <translation type="unfinished">Паричник по подразбирање</translation>

@@ -339,7 +339,7 @@
         <translation type="unfinished">Дапамога</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and aix: URIs)</source>
         <translation type="unfinished">Запатрабаваць плацёж (генеруецца QR-код для біткойн URI)</translation>
     </message>
     <message>
@@ -1080,7 +1080,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aix-core</name>
     <message>
         <source>Done loading</source>
         <translation type="unfinished">Загрузка выканана</translation>

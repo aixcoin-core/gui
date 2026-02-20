@@ -1,7 +1,7 @@
-bitcoind version 0.4.6 is now available for download at:
+aixd version 0.4.6 is now available for download at:
 Windows: installer | zip (sig)
 Source: tar.gz
-bitcoind and Aix-Qt version 0.6.0.7 are also tagged in git, but it is recommended to upgrade to 0.6.1.
+aixd and Aix-Qt version 0.6.0.7 are also tagged in git, but it is recommended to upgrade to 0.6.1.
 
 These are bugfix-only releases.
 
@@ -27,7 +27,7 @@ Increase time ago of last block for "up to date" status from 30 to 90 minutes
 Show a message box when runaway exception happens (Aix-Qt)
 Use a messagebox to display the error when -server is provided without providing a rpc password
 Show error message instead of exception crash when unable to bind RPC port (Aix-Qt)
-Correct sign message bitcoin address tooltip. Fixes #1050 (Aix-Qt)
+Correct sign message aix address tooltip. Fixes #1050 (Aix-Qt)
 Removed "(no label)" from QR Code dialog titlebar if we have no label (0.6.0.7)
 Removed an ugly line break in tooltip for mature transactions (0.6.0.7)
 Add missing tooltip and key shortcut in settings dialog (part of #1088) (Aix-Qt)

@@ -210,11 +210,11 @@ Setup and Build Example: Arch Linux
 This example lists the steps necessary to setup and build a command line only distribution of the latest changes on Arch Linux:
 
     pacman --sync --needed capnproto cmake boost gcc git libevent make python sqlite
-    git clone https://github.com/bitcoin/bitcoin.git
-    cd bitcoin/
+    git clone https://github.com/aix/aix.git
+    cd aix/
     cmake -B build
     cmake --build build
     ctest --test-dir build
-    ./build/bin/bitcoind
-    ./build/bin/bitcoin help
+    ./build/bin/aixd
+    ./build/bin/aix help
 

@@ -318,7 +318,7 @@ typedef uint8_t btck_Warning;
 /** Callback function types */
 
 /**
- * Function signature for the global logging callback. All bitcoin kernel
+ * Function signature for the global logging callback. All aix kernel
  * internal logs will pass through this callback.
  */
 typedef void (*btck_LogCallback)(void* user_data, const char* message, size_t message_len);

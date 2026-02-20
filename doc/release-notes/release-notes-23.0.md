@@ -3,18 +3,18 @@
 
 Aix Core version 23.0 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-23.0/>
+  <https://aixcore.org/bin/aix-core-23.0/>
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/aix/aix/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://bitcoincore.org/en/list/announcements/join/>
+  <https://aixcore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
@@ -22,7 +22,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
 installer (on Windows) or just copy over `/Applications/Aix-Qt` (on Mac)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+or `aixd`/`aix-qt` (on Linux).
 
 Upgrading directly from a version of Aix Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
@@ -43,13 +43,13 @@ Notable changes
 P2P and network changes
 -----------------------
 
-- A bitcoind node will no longer rumour addresses to inbound peers by default.
+- A aixd node will no longer rumour addresses to inbound peers by default.
   They will become eligible for address gossip after sending an ADDR, ADDRV2,
   or GETADDR message. (#21528)
 
 - Before this release, Aix Core had a strong preference to try to connect only to peers that listen on port 8333. As a result of that, Aix nodes listening on non-standard ports would likely not get any Aix Core peers connecting to them. This preference has been removed. (#23542)
 
-- Full support has been added for the CJDNS network. See the new option `-cjdnsreachable` and [doc/cjdns.md](https://github.com/bitcoin/bitcoin/tree/23.x/doc/cjdns.md) (#23077)
+- Full support has been added for the CJDNS network. See the new option `-cjdnsreachable` and [doc/cjdns.md](https://github.com/aix/aix/tree/23.x/doc/cjdns.md) (#23077)
 
 Fee estimation changes
 ----------------------
@@ -72,8 +72,8 @@ act as an interface for process-internal events. These can be used for review,
 debugging, monitoring, and more. The tracepoint API is semi-stable. While the API
 is tested, process internals might change between releases requiring changes to the
 tracepoints. Information about the existing tracepoints can be found under
-[doc/tracing.md](https://github.com/bitcoin/bitcoin/blob/23.x/doc/tracing.md) and
-usage examples are provided in [contrib/tracing/](https://github.com/bitcoin/bitcoin/tree/23.x/contrib/tracing).
+[doc/tracing.md](https://github.com/aix/aix/blob/23.x/doc/tracing.md) and
+usage examples are provided in [contrib/tracing/](https://github.com/aix/aix/tree/23.x/contrib/tracing).
 
 Updated RPCs
 ------------
@@ -370,4 +370,4 @@ Thanks to everyone who directly contributed to this release:
 - Zero-1729
 
 As well as to everyone that helped with translations on
-[Transifex](https://www.transifex.com/bitcoin/bitcoin/).
+[Transifex](https://www.transifex.com/aix/aix/).

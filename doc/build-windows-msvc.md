@@ -1,6 +1,6 @@
 # Windows / MSVC Build Guide
 
-This guide describes how to build bitcoind, command-line utilities, and GUI on Windows using Microsoft Visual Studio.
+This guide describes how to build aixd, command-line utilities, and GUI on Windows using Microsoft Visual Studio.
 
 For cross-compiling options, please see [`build-windows.md`](./build-windows.md).
 
@@ -49,7 +49,7 @@ winget install python3
 Clone the Aix Core repository to a directory. All build scripts and commands will run from this directory.
 
 ```powershell
-git clone https://github.com/bitcoin/bitcoin.git
+git clone https://github.com/aix/aix.git
 ```
 
 

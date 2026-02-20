@@ -1,17 +1,17 @@
 Aix Core version 29.1 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-29.1/>
+  <https://aixcore.org/bin/aix-core-29.1/>
 
 This release includes various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/aix/aix/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://bitcoincore.org/en/list/announcements/join/>
+  <https://aixcore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
@@ -19,7 +19,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
 installer (on Windows) or just copy over `/Applications/Aix-Qt` (on macOS)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+or `aixd`/`aix-qt` (on Linux).
 
 Upgrading directly from a version of Aix Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
@@ -150,9 +150,9 @@ function signature instead of just the function name. (#32604)
 
 - #32333 doc: Add missing top-level description to pruneblockchain RPC
 - #32353 doc: Fix fuzz test_runner.py path
-- #32389 doc: Fix test_bitcoin path
+- #32389 doc: Fix test_aix path
 - #32607 rpc: Note in fundrawtransaction doc, fee rate is for package
-- #32679 doc: update tor docs to use bitcoind binary from path
+- #32679 doc: update tor docs to use aixd binary from path
 - #32693 depends: fix cmake compatibility error for freetype
 - #32696 doc: make -DWITH_ZMQ=ON explicit on build-unix.md
 - #32708 rpc, doc: update listdescriptors RCP help
@@ -225,5 +225,5 @@ Thanks to everyone who directly contributed to this release:
 - zaidmstrr
 
 As well as to everyone that helped with translations on
-[Transifex](https://explore.transifex.com/bitcoin/bitcoin/).
+[Transifex](https://explore.transifex.com/aix/aix/).
 

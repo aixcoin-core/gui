@@ -1,11 +1,11 @@
 Aix-Qt version 0.8.3 is now available from:
-  http://sourceforge.net/projects/bitcoin/files/Aix/bitcoin-0.8.3/
+  http://sourceforge.net/projects/aix/files/Aix/aix-0.8.3/
 
 This is a maintenance release to fix a denial-of-service attack that
 can cause nodes to crash.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/bitcoin/bitcoin/issues
+  https://github.com/aix/aix/issues
 
 0.8.3 Release notes
 

@@ -824,7 +824,7 @@ The migration process will create a backup of the wallet before migrating. This 
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>You can sign messages/agreements with your legacy (P2PKH) addresses to prove you can receive bitcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your legacy (P2PKH) addresses to prove you can receive aixs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished">ወደ እነርሱ የተላኩ ቢትኮይን መቀበል እንደሚችሉ ለማረጋገጥ ከርስዎ (P2PKH) አድራሻዎች ጋር መልዕክቶችን/ስምምነቶችን መፈረም ይችላሉ። የማስገር ጥቃቶች እርስዎን ማንነትዎን በእነሱ ላይ እንዲፈርሙ ሊያታልሉዎት ስለሚችሉ ግልጽ ያልሆነ ወይም በዘፈቀደ ላለመፈረም ይጠንቀቁ። የተስማሙባቸውን ሙሉ ዝርዝር መግለጫዎች ብቻ ይፈርሙ።</translation>
     </message>
     <message>
@@ -927,7 +927,7 @@ The migration process will create a backup of the wallet before migrating. This 
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aix-core</name>
     <message>
         <source>default wallet</source>
         <translation type="unfinished">መደበኛ ዋሌት</translation>

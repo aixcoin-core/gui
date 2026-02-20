@@ -2,12 +2,12 @@
 # Copyright (c) 2022-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Test bitcoin-chainstate tool functionality
+"""Test aix-chainstate tool functionality
 
-Test basic block processing via bitcoin-chainstate tool, including detecting
+Test basic block processing via aix-chainstate tool, including detecting
 duplicates and malformed input.
 
-Test that bitcoin-chainstate can load a datadir initialized with an assumeutxo
+Test that aix-chainstate can load a datadir initialized with an assumeutxo
 snapshot and extend the snapshot chain with new blocks.
 """
 
@@ -25,7 +25,7 @@ SNAPSHOT_BASE_BLOCK_HASH = "7cc695046fec709f8c9394b6f928f81e81fd3ac20977bb68760f
 
 class AixChainstateTest(AixTestFramework):
     def skip_test_if_missing_module(self):
-        self.skip_if_no_bitcoin_chainstate()
+        self.skip_if_no_aix_chainstate()
 
     def set_test_params(self):
         """Use the pregenerated, deterministic chain up to height 199."""
@@ -74,7 +74,7 @@ class AixChainstateTest(AixTestFramework):
         datadir = n1.chain_path
         n1.stop_node()
         block = n0.getblock(n0.getblockhash(START_HEIGHT+1), 0)
-        self.log.info(f"Test bitcoin-chainstate {self.get_binaries().chainstate_argv()} with datadir: {datadir}")
+        self.log.info(f"Test aix-chainstate {self.get_binaries().chainstate_argv()} with datadir: {datadir}")
         self.add_block(datadir, block, expected_stderr="Block has not yet been rejected")
         self.add_block(datadir, block, expected_stderr="duplicate")
         self.add_block(datadir, "00", expected_stderr="Block decode failed")
@@ -93,7 +93,7 @@ class AixChainstateTest(AixTestFramework):
         assert_equal(loaded['base_height'], SNAPSHOT_BASE_BLOCK_HEIGHT)
         datadir = n1.chain_path
         n1.stop_node()
-        self.log.info(f"Test bitcoin-chainstate {self.get_binaries().chainstate_argv()} with an assumeutxo datadir: {datadir}")
+        self.log.info(f"Test aix-chainstate {self.get_binaries().chainstate_argv()} with an assumeutxo datadir: {datadir}")
         new_tip_hash = self.generate(n0, nblocks=1, sync_fun=self.no_op)[0]
         self.add_block(datadir, n0.getblock(new_tip_hash, 0), expected_stdout="Block tip changed")
 

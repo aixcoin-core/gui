@@ -1251,7 +1251,7 @@
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aix-core</name>
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">%smennararnir</translation>

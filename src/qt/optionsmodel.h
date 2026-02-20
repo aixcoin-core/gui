@@ -6,7 +6,7 @@
 #define BITCOIN_QT_OPTIONSMODEL_H
 
 #include <cstdint>
-#include <qt/bitcoinunits.h>
+#include <qt/aixunits.h>
 #include <qt/guiconstants.h>
 
 #include <QAbstractListModel>
@@ -100,7 +100,7 @@ public:
     bool getShowTrayIcon() const { return m_show_tray_icon; }
     bool getMinimizeToTray() const { return fMinimizeToTray; }
     bool getMinimizeOnClose() const { return fMinimizeOnClose; }
-    AixUnit getDisplayUnit() const { return m_display_bitcoin_unit; }
+    AixUnit getDisplayUnit() const { return m_display_aix_unit; }
     QString getThirdPartyTxUrls() const { return strThirdPartyTxUrls; }
     QFont getFontForMoney() const;
     bool getCoinControlFeatures() const { return fCoinControlFeatures; }
@@ -127,7 +127,7 @@ private:
     bool fMinimizeToTray;
     bool fMinimizeOnClose;
     QString language;
-    AixUnit m_display_bitcoin_unit;
+    AixUnit m_display_aix_unit;
     QString strThirdPartyTxUrls;
     FontChoice m_font_money{FontChoiceAbstract::EmbeddedFont};
     bool fCoinControlFeatures;

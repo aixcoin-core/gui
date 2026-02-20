@@ -2,7 +2,7 @@
 
 **Updated for MacOS [15](https://www.apple.com/macos/macos-sequoia/)**
 
-This guide describes how to build bitcoind, command-line utilities, and GUI on macOS.
+This guide describes how to build aixd, command-line utilities, and GUI on macOS.
 
 ## Preparation
 
@@ -71,7 +71,7 @@ Now that all the required dependencies are installed, let's clone the Aix Core r
 All build scripts and commands will run from this directory.
 
 ``` bash
-git clone https://github.com/bitcoin/bitcoin.git
+git clone https://github.com/aix/aix.git
 ```
 
 ### 5. Install Optional Dependencies
@@ -88,7 +88,7 @@ brew install qt@6
 ```
 
 Note: Building with Qt binaries downloaded from the Qt website is not officially supported.
-See the notes in [#7714](https://github.com/bitcoin/bitcoin/issues/7714).
+See the notes in [#7714](https://github.com/aix/aix/issues/7714).
 
 ###### libqrencode
 
@@ -183,14 +183,14 @@ cmake --build build --target deploy
 
 ## Running Aix Core
 
-Aix Core should now be available at `./build/bin/bitcoind`.
-If you compiled support for the GUI, it should be available at `./build/bin/bitcoin-qt`.
+Aix Core should now be available at `./build/bin/aixd`.
+If you compiled support for the GUI, it should be available at `./build/bin/aix-qt`.
 
-There is also a multifunction command line interface at `./build/bin/bitcoin`
-supporting subcommands like `bitcoin node`, `bitcoin gui`, `bitcoin rpc`, and
-others that can be listed with `bitcoin help`.
+There is also a multifunction command line interface at `./build/bin/aix`
+supporting subcommands like `aix node`, `aix gui`, `aix rpc`, and
+others that can be listed with `aix help`.
 
-The first time you run `bitcoind` or `bitcoin-qt`, it will start downloading the blockchain.
+The first time you run `aixd` or `aix-qt`, it will start downloading the blockchain.
 This process could take many hours, or even days on slower than average systems.
 
 By default, blockchain and wallet data files will be stored in:
@@ -204,9 +204,9 @@ Before running, you may create an empty configuration file:
 ```shell
 mkdir -p "/Users/${USER}/Library/Application Support/Aix"
 
-touch "/Users/${USER}/Library/Application Support/Aix/bitcoin.conf"
+touch "/Users/${USER}/Library/Application Support/Aix/aix.conf"
 
-chmod 600 "/Users/${USER}/Library/Application Support/Aix/bitcoin.conf"
+chmod 600 "/Users/${USER}/Library/Application Support/Aix/aix.conf"
 ```
 
 You can monitor the download process by looking at the debug.log file:
@@ -218,8 +218,8 @@ tail -f $HOME/Library/Application\ Support/Aix/debug.log
 ## Other commands:
 
 ```shell
-./build/bin/bitcoind -daemon      # Starts the bitcoin daemon.
-./build/bin/bitcoin-cli --help    # Outputs a list of command-line options.
-./build/bin/bitcoin-cli help      # Outputs a list of RPC commands when the daemon is running.
-./build/bin/bitcoin-qt -server # Starts the bitcoin-qt server mode, allows bitcoin-cli control
+./build/bin/aixd -daemon      # Starts the aix daemon.
+./build/bin/aix-cli --help    # Outputs a list of command-line options.
+./build/bin/aix-cli help      # Outputs a list of RPC commands when the daemon is running.
+./build/bin/aix-qt -server # Starts the aix-qt server mode, allows aix-cli control
 ```

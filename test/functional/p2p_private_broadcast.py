@@ -453,7 +453,7 @@ class P2PPrivateBroadcast(AixTestFramework):
         tx_originator.sendrawtransaction(hexstring=sibling2.serialize_with_witness().hex(), maxfeerate=0.1)
         self.log.info("  - sent sibling2: ok")
 
-        # Stop the SOCKS5 proxy server to avoid it being upset by the bitcoin
+        # Stop the SOCKS5 proxy server to avoid it being upset by the aix
         # node disconnecting in the middle of the SOCKS5 handshake when we
         # restart below.
         self.socks5_server.stop()

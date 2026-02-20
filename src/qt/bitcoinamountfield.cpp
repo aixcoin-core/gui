@@ -2,9 +2,9 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/bitcoinamountfield.h>
+#include <qt/aixamountfield.h>
 
-#include <qt/bitcoinunits.h>
+#include <qt/aixunits.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
 #include <qt/qvaluecombobox.h>
@@ -215,7 +215,7 @@ Q_SIGNALS:
     void valueChanged();
 };
 
-#include <qt/bitcoinamountfield.moc>
+#include <qt/aixamountfield.moc>
 
 AixAmountField::AixAmountField(QWidget* parent)
     : QWidget(parent)

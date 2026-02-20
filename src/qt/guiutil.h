@@ -77,7 +77,7 @@ namespace GUIUtil
      */
     void AddButtonShortcut(QAbstractButton* button, const QKeySequence& shortcut);
 
-    // Parse "bitcoin:" URI into recipient object, return true on successful parsing
+    // Parse "aix:" URI into recipient object, return true on successful parsing
     bool parseAixURI(const QUrl &uri, SendCoinsRecipient *out);
     bool parseAixURI(QString uri, SendCoinsRecipient *out);
     QString formatAixURI(const SendCoinsRecipient &info);

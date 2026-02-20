@@ -161,7 +161,7 @@ Ko te whakakī i ēnei whakaaronga e taea ana anake ki ngā whakararuraru o te m
         <translation type="unfinished">Whakauru te kupu whakapākehā me te kupu hōu mō te pēke moni.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your aixs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Mahara kia whakakorehia te whakakino i ō wharepukapuka kia whakararuraru i ō wharepūkoro.</translation>
     </message>
     <message>
@@ -438,7 +438,7 @@ Ko te whakakī i ēnei whakaaronga e taea ana anake ki ngā whakararuraru o te m
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aix-core</name>
     <message>
         <source>Input not found or already spent</source>
         <translation type="unfinished">Kāore i kitea te urupare, kua whiwhi i mua, kua whiwhi rānei.</translation>

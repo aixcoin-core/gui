@@ -2,7 +2,7 @@
 
 **Updated for NetBSD [10.1](https://netbsd.org/releases/formal-10/NetBSD-10.1.html)**
 
-This guide describes how to build bitcoind, command-line utilities, and GUI on NetBSD.
+This guide describes how to build aixd, command-line utilities, and GUI on NetBSD.
 
 ## Preparation
 
@@ -54,7 +54,7 @@ See [dependencies.md](dependencies.md) for a complete overview.
 Clone the Aix Core repository to a directory. All build scripts and commands will run from this directory.
 
 ```bash
-git clone https://github.com/bitcoin/bitcoin.git
+git clone https://github.com/aix/aix.git
 ```
 
 ### 3. Install Optional Dependencies

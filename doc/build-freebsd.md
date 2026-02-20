@@ -2,7 +2,7 @@
 
 **Updated for FreeBSD [14.3](https://www.freebsd.org/releases/14.3R/announce/)**
 
-This guide describes how to build bitcoind, command-line utilities, and GUI on FreeBSD.
+This guide describes how to build aixd, command-line utilities, and GUI on FreeBSD.
 
 ## Preparation
 
@@ -34,7 +34,7 @@ See [dependencies.md](dependencies.md) for a complete overview.
 ### 2. Clone Aix Repo
 Now that `git` and all the required dependencies are installed, let's clone the Aix Core repository to a directory. All build scripts and commands will run from this directory.
 ```bash
-git clone https://github.com/bitcoin/bitcoin.git
+git clone https://github.com/aix/aix.git
 ```
 
 ### 3. Install Optional Dependencies

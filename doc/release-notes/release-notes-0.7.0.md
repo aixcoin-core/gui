@@ -1,24 +1,24 @@
 Aix version 0.7.0 is now available for download at:
-  http://sourceforge.net/projects/bitcoin/files/Aix/bitcoin-0.7.0/
+  http://sourceforge.net/projects/aix/files/Aix/aix-0.7.0/
 
-We recommend that everybody running prior versions of bitcoind/Aix-Qt
+We recommend that everybody running prior versions of aixd/Aix-Qt
 upgrade to this release, except for users running Mac OSX 10.5.
 
 Please report bugs using the issue tracker at github:
-  https://github.com/bitcoin/bitcoin/issues
+  https://github.com/aix/aix/issues
 
 Project source code is hosted at github; you can get
 source-only tarballs/zipballs directly from there:
-  https://github.com/bitcoin/bitcoin/tarball/v0.7.0  # .tar.gz
-  https://github.com/bitcoin/bitcoin/zipball/v0.7.0  # .zip
+  https://github.com/aix/aix/tarball/v0.7.0  # .tar.gz
+  https://github.com/aix/aix/zipball/v0.7.0  # .zip
 
 Ubuntu Linux users can use the "Personal Package Archive" (PPA)
 maintained by Matt Corallo to automatically keep 
-bitcoin up-to-date.  Just type
-  sudo apt-add-repository ppa:bitcoin/bitcoin
+aix up-to-date.  Just type
+  sudo apt-add-repository ppa:aix/aix
   sudo apt-get update
-in your terminal, then install the bitcoin-qt package:
-  sudo apt-get install bitcoin-qt
+in your terminal, then install the aix-qt package:
+  sudo apt-get install aix-qt
 
 
 How to Upgrade
@@ -30,7 +30,7 @@ Code:
 /Applications/Aix-Qt
 (on Mac) or
 Code:
-bitcoind/bitcoin-qt
+aixd/aix-qt
 (on Linux).
 
 If you were running on Linux with a version that might have been compiled
@@ -52,7 +52,7 @@ BIP 34 - block version 2, height in coinbase
 BIP 35 - 'mempool' message, extended 'getdata' message behavior
 
 
-Core bitcoin handling and blockchain database
+Core aix handling and blockchain database
 
 * Reduced CPU usage, by eliminating some redundant hash calculations
 * Cache signature verifications, to eliminate redundant signature checks
@@ -109,7 +109,7 @@ Qt GUI
 * Add 2 labels to the overviewpage that display Wallet and Transaction status (obsolete or current)
 * Extend the optionsdialog (e.g. language selection) and re-work it to a tabbed UI
 * Merge sign/verify message into a single window with tabbed UI
-* Ensure a changed bitcoin unit immediately updates all GUI elements that use units
+* Ensure a changed aix unit immediately updates all GUI elements that use units
 * Update QR Code dialog
 * Improve error reporting at startup
 * Fine-grained UI updates for a much smoother UI during block downloads
@@ -119,8 +119,8 @@ Qt GUI
 * Much better translations
 * Override progress bar design on platforms with segmented progress bars to assist with readability
 * Added 'immature balance' display on the overview page
-* (Windows only): enable ASLR and DEP for bitcoin-qt.exe
-* (Windows only): add meta-data to bitcoin-qt.exe (e.g. description)
+* (Windows only): enable ASLR and DEP for aix-qt.exe
+* (Windows only): add meta-data to aix-qt.exe (e.g. description)
 
 Internal codebase
 
@@ -131,7 +131,7 @@ Internal codebase
 Miscellaneous
 
 * Reopen debug.log upon SIGHUP
-* Bash programmable completion for bitcoind(1)
+* Bash programmable completion for aixd(1)
 * On supported OS's, each thread is given a useful name
 
 

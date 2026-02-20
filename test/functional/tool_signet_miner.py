@@ -58,7 +58,7 @@ class SignetMinerTest(AixTestFramework):
     def skip_test_if_missing_module(self):
         self.skip_if_no_cli()
         self.skip_if_no_wallet()
-        self.skip_if_no_bitcoin_util()
+        self.skip_if_no_aix_util()
 
     def setup_network(self):
         self.setup_nodes()

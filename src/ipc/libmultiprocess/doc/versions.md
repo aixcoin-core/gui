@@ -1,8 +1,8 @@
 # libmultiprocess Versions
 
 Library versions are tracked with simple
-[tags](https://github.com/bitcoin-core/libmultiprocess/tags) and
-[branches](https://github.com/bitcoin-core/libmultiprocess/branches).
+[tags](https://github.com/aix-core/libmultiprocess/tags) and
+[branches](https://github.com/aix-core/libmultiprocess/branches).
 
 Versioning policy is described in the [version.h](../include/mp/version.h)
 include.

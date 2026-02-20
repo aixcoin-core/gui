@@ -20,7 +20,7 @@ public:
     State validate(QString &input, int &pos) const override;
 };
 
-/** Aix address widget validator, checks for a valid bitcoin address.
+/** Aix address widget validator, checks for a valid aix address.
  */
 class AixAddressCheckValidator : public QValidator
 {

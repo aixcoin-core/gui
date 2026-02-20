@@ -187,8 +187,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">I tua</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Manatua o le fa'amaonia o lau atigipusa e le mafai ona puipuia lelei lau bitcoins mai le fa'ama'i o malware o lo'o fa'ama'i i lau komepiuta.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your aixs from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Manatua o le fa'amaonia o lau atigipusa e le mafai ona puipuia lelei lau aixs mai le fa'ama'i o malware o lo'o fa'ama'i i lau komepiuta.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -546,8 +546,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Faʻatasi ma uō…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Talosaga mo totogi (faʻatupuina ni QR code ma bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and aix: URIs)</source>
+        <translation type="unfinished">Talosaga mo totogi (faʻatupuina ni QR code ma aix: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -630,8 +630,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Tuuina atu i le tuatusi</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation type="unfinished">Tuuina se bitcoin: URI</translation>
+        <source>Open a aix: URI</source>
+        <translation type="unfinished">Tuuina se aix: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1421,12 +1421,12 @@ O le fa'amaoniga o le malaga o le a fai se kopi o le 'aofa'i a'o le'i fa'aauau l
         <translation type="unfinished">Fomu</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
-        <translation type="unfinished">E mafai e fefaʻatauaiga lata mai ona le mafai ona vaʻaia, ma o le mea lea, atonu e le tusa ai le tamaʻi palani o lau 'wallet'. O lenei fa'amaoniga o le a sa'o pe a mae'a ona fa'atufugaga lau 'wallet' ma le upega tafaʻilagi o le bitcoin, e pei o fa'amaoniga i lalo.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the aix network, as detailed below.</source>
+        <translation type="unfinished">E mafai e fefaʻatauaiga lata mai ona le mafai ona vaʻaia, ma o le mea lea, atonu e le tusa ai le tamaʻi palani o lau 'wallet'. O lenei fa'amaoniga o le a sa'o pe a mae'a ona fa'atufugaga lau 'wallet' ma le upega tafaʻilagi o le aix, e pei o fa'amaoniga i lalo.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">O le taumafaiga e fa'aaoga bitcoins e a'afia i le fa'amaoniga e le'i fa'aalia o le a le taliaina e le upega.</translation>
+        <source>Attempting to spend aixs that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">O le taumafaiga e fa'aaoga aixs e a'afia i le fa'amaoniga e le'i fa'aalia o le a le taliaina e le upega.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1476,7 +1476,7 @@ O le fa'amaoniga o le malaga o le a fai se kopi o le 'aofa'i a'o le'i fa'aauau l
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open aix URI</source>
         <translation type="unfinished">Tatala le URI o le Aix</translation>
     </message>
     <message>

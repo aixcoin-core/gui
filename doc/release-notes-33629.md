@@ -31,7 +31,7 @@ are noted:
   under previous RBF rules. For singleton transactions (that are in clusters by
   themselves) it's sufficient for a replacement to have a higher fee and
   feerate than the original. See
-  [delvingbitcoin.org post](https://delvingbitcoin.org/t/an-overview-of-the-cluster-mempool-proposal/393#rbf-can-now-be-made-incentive-compatible-for-miners-11)
+  [delvingaix.org post](https://delvingaix.org/t/an-overview-of-the-cluster-mempool-proposal/393#rbf-can-now-be-made-incentive-compatible-for-miners-11)
   for more information.
 
 - Two new RPCs have been added: `getmempoolcluster` will provide the set of

@@ -4,7 +4,7 @@
 
 #define BITCOINKERNEL_BUILD
 
-#include <kernel/bitcoinkernel.h>
+#include <kernel/aixkernel.h>
 
 #include <chain.h>
 #include <coins.h>
@@ -53,7 +53,7 @@
 using kernel::ChainstateRole;
 using util::ImmediateTaskRunner;
 
-// Define G_TRANSLATION_FUN symbol in libbitcoinkernel library so users of the
+// Define G_TRANSLATION_FUN symbol in libaixkernel library so users of the
 // library aren't required to export this symbol
 extern const TranslateFn G_TRANSLATION_FUN{nullptr};
 

@@ -350,7 +350,7 @@
     </message>
     <message>
         <source>Sign messages with your Aix addresses to prove you own them</source>
-        <translation type="unfinished">sahkan mesej bersama alamat bitcoin anda untuk menunjukkan alamat ini anda punya</translation>
+        <translation type="unfinished">sahkan mesej bersama alamat aix anda untuk menunjukkan alamat ini anda punya</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Aix addresses</source>
@@ -374,8 +374,8 @@
 </translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Request payments (generates QR codes and bitcoin: URIs)
+        <source>Request payments (generates QR codes and aix: URIs)</source>
+        <translation type="unfinished">Request payments (generates QR codes and aix: URIs)
 </translation>
     </message>
     <message>
@@ -734,7 +734,7 @@ Jika dompet ini mengandungi sebarang skrip yang boleh diselesaikan tetapi tidak 
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aix-core</name>
     <message>
         <source>default wallet</source>
         <translation type="unfinished">dompet lalai

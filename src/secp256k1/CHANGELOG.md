@@ -45,7 +45,7 @@ Otherwise, the library maintains backward compatibility with version 0.6.0.
 ## [0.6.0] - 2024-11-04
 
 #### Added
- - New module `musig` implements the MuSig2 multisignature scheme according to the [BIP 327 specification](https://github.com/bitcoin/bips/blob/master/bip-0327.mediawiki). See:
+ - New module `musig` implements the MuSig2 multisignature scheme according to the [BIP 327 specification](https://github.com/aix/bips/blob/master/bip-0327.mediawiki). See:
    - Header file `include/secp256k1_musig.h` which defines the new API.
    - Document `doc/musig.md` for further notes on API usage.
    - Usage example `examples/musig.c`.
@@ -199,16 +199,16 @@ This version was in fact never released.
 The number was given by the build system since the introduction of autotools in Jan 2014 (ea0fe5a5bf0c04f9cc955b2966b614f5f378c6f6).
 Therefore, this version number does not uniquely identify a set of source files.
 
-[Unreleased]: https://github.com/bitcoin-core/secp256k1/compare/v0.7.1...HEAD
-[0.7.1]: https://github.com/bitcoin-core/secp256k1/compare/v0.7.0...v0.7.1
-[0.7.0]: https://github.com/bitcoin-core/secp256k1/compare/v0.6.0...v0.7.0
-[0.6.0]: https://github.com/bitcoin-core/secp256k1/compare/v0.5.1...v0.6.0
-[0.5.1]: https://github.com/bitcoin-core/secp256k1/compare/v0.5.0...v0.5.1
-[0.5.0]: https://github.com/bitcoin-core/secp256k1/compare/v0.4.1...v0.5.0
-[0.4.1]: https://github.com/bitcoin-core/secp256k1/compare/v0.4.0...v0.4.1
-[0.4.0]: https://github.com/bitcoin-core/secp256k1/compare/v0.3.2...v0.4.0
-[0.3.2]: https://github.com/bitcoin-core/secp256k1/compare/v0.3.1...v0.3.2
-[0.3.1]: https://github.com/bitcoin-core/secp256k1/compare/v0.3.0...v0.3.1
-[0.3.0]: https://github.com/bitcoin-core/secp256k1/compare/v0.2.0...v0.3.0
-[0.2.0]: https://github.com/bitcoin-core/secp256k1/compare/423b6d19d373f1224fd671a982584d7e7900bc93..v0.2.0
-[0.1.0]: https://github.com/bitcoin-core/secp256k1/commit/423b6d19d373f1224fd671a982584d7e7900bc93
+[Unreleased]: https://github.com/aix-core/secp256k1/compare/v0.7.1...HEAD
+[0.7.1]: https://github.com/aix-core/secp256k1/compare/v0.7.0...v0.7.1
+[0.7.0]: https://github.com/aix-core/secp256k1/compare/v0.6.0...v0.7.0
+[0.6.0]: https://github.com/aix-core/secp256k1/compare/v0.5.1...v0.6.0
+[0.5.1]: https://github.com/aix-core/secp256k1/compare/v0.5.0...v0.5.1
+[0.5.0]: https://github.com/aix-core/secp256k1/compare/v0.4.1...v0.5.0
+[0.4.1]: https://github.com/aix-core/secp256k1/compare/v0.4.0...v0.4.1
+[0.4.0]: https://github.com/aix-core/secp256k1/compare/v0.3.2...v0.4.0
+[0.3.2]: https://github.com/aix-core/secp256k1/compare/v0.3.1...v0.3.2
+[0.3.1]: https://github.com/aix-core/secp256k1/compare/v0.3.0...v0.3.1
+[0.3.0]: https://github.com/aix-core/secp256k1/compare/v0.2.0...v0.3.0
+[0.2.0]: https://github.com/aix-core/secp256k1/compare/423b6d19d373f1224fd671a982584d7e7900bc93..v0.2.0
+[0.1.0]: https://github.com/aix-core/secp256k1/commit/423b6d19d373f1224fd671a982584d7e7900bc93

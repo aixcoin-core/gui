@@ -1,17 +1,17 @@
 Aix Core version 29.3 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-29.3/>
+  <https://aixcore.org/bin/aix-core-29.3/>
 
 This release includes various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/aix/aix/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://bitcoincore.org/en/list/announcements/join/>
+  <https://aixcore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
@@ -19,7 +19,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
 installer (on Windows) or just copy over `/Applications/Aix-Qt` (on macOS)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+or `aixd`/`aix-qt` (on Linux).
 
 Upgrading directly from a version of Aix Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
@@ -40,7 +40,7 @@ Notable changes
 ### P2P
 
 - #33050 net, validation: don't punish peers for consensus-invalid txs
-- #33723 chainparams: remove dnsseed.bitcoin.dashjr-list-of-p2p-nodes.us
+- #33723 chainparams: remove dnsseed.aix.dashjr-list-of-p2p-nodes.us
 
 ### Validation
 
@@ -102,4 +102,4 @@ Thanks to everyone who directly contributed to this release:
 - willcl-ark
 
 As well as to everyone that helped with translations on
-[Transifex](https://explore.transifex.com/bitcoin/bitcoin/).
+[Transifex](https://explore.transifex.com/aix/aix/).

@@ -238,7 +238,7 @@ def check_json_precision():
 
 
 class Binaries:
-    """Helper class to provide information about bitcoin binaries
+    """Helper class to provide information about aix binaries
 
     Attributes:
         paths: Object returned from get_binary_paths() containing information
@@ -253,47 +253,47 @@ class Binaries:
         self.bin_dir = bin_dir
 
     def node_argv(self, **kwargs):
-        "Return argv array that should be used to invoke bitcoind"
-        return self._argv("node", self.paths.bitcoind, **kwargs)
+        "Return argv array that should be used to invoke aixd"
+        return self._argv("node", self.paths.aixd, **kwargs)
 
     def rpc_argv(self):
-        "Return argv array that should be used to invoke bitcoin-cli"
-        # Add -nonamed because "bitcoin rpc" enables -named by default, but bitcoin-cli doesn't
-        return self._argv("rpc", self.paths.bitcoincli) + ["-nonamed"]
+        "Return argv array that should be used to invoke aix-cli"
+        # Add -nonamed because "aix rpc" enables -named by default, but aix-cli doesn't
+        return self._argv("rpc", self.paths.aixcli) + ["-nonamed"]
 
     def bench_argv(self):
-        "Return argv array that should be used to invoke bench_bitcoin"
-        return self._argv("bench", self.paths.bitcoin_bench)
+        "Return argv array that should be used to invoke bench_aix"
+        return self._argv("bench", self.paths.aix_bench)
 
     def tx_argv(self):
-        "Return argv array that should be used to invoke bitcoin-tx"
-        return self._argv("tx", self.paths.bitcointx)
+        "Return argv array that should be used to invoke aix-tx"
+        return self._argv("tx", self.paths.aixtx)
 
     def util_argv(self):
-        "Return argv array that should be used to invoke bitcoin-util"
-        return self._argv("util", self.paths.bitcoinutil)
+        "Return argv array that should be used to invoke aix-util"
+        return self._argv("util", self.paths.aixutil)
 
     def wallet_argv(self):
-        "Return argv array that should be used to invoke bitcoin-wallet"
-        return self._argv("wallet", self.paths.bitcoinwallet)
+        "Return argv array that should be used to invoke aix-wallet"
+        return self._argv("wallet", self.paths.aixwallet)
 
     def chainstate_argv(self):
-        "Return argv array that should be used to invoke bitcoin-chainstate"
-        return self._argv("chainstate", self.paths.bitcoinchainstate)
+        "Return argv array that should be used to invoke aix-chainstate"
+        return self._argv("chainstate", self.paths.aixchainstate)
 
     def _argv(self, command, bin_path, need_ipc=False):
         """Return argv array that should be used to invoke the command. It
-        either uses the bitcoin wrapper executable (if BITCOIN_CMD is set or
-        need_ipc is True), or the direct binary path (bitcoind, etc). When
+        either uses the aix wrapper executable (if BITCOIN_CMD is set or
+        need_ipc is True), or the direct binary path (aixd, etc). When
         bin_dir is set (by tests calling binaries from previous releases) it
         always uses the direct path."""
         if self.bin_dir is not None:
             return [os.path.join(self.bin_dir, os.path.basename(bin_path))]
-        elif self.paths.bitcoin_cmd is not None or need_ipc:
-            # If the current test needs IPC functionality, use the bitcoin
+        elif self.paths.aix_cmd is not None or need_ipc:
+            # If the current test needs IPC functionality, use the aix
             # wrapper binary and append -m so it calls multiprocess binaries.
-            bitcoin_cmd = self.paths.bitcoin_cmd or [self.paths.bitcoin_bin]
-            return bitcoin_cmd + (["-m"] if need_ipc else []) + [command]
+            aix_cmd = self.paths.aix_cmd or [self.paths.aix_bin]
+            return aix_cmd + (["-m"] if need_ipc else []) + [command]
         else:
             return [bin_path]
 
@@ -303,16 +303,16 @@ def get_binary_paths(config):
 
     paths = types.SimpleNamespace()
     binaries = {
-        "bitcoin": "BITCOIN_BIN",
-        "bitcoind": "BITCOIND",
-        "bench_bitcoin": "BITCOIN_BENCH",
-        "bitcoin-cli": "BITCOINCLI",
-        "bitcoin-util": "BITCOINUTIL",
-        "bitcoin-tx": "BITCOINTX",
-        "bitcoin-chainstate": "BITCOINCHAINSTATE",
-        "bitcoin-wallet": "BITCOINWALLET",
+        "aix": "BITCOIN_BIN",
+        "aixd": "BITCOIND",
+        "bench_aix": "BITCOIN_BENCH",
+        "aix-cli": "BITCOINCLI",
+        "aix-util": "BITCOINUTIL",
+        "aix-tx": "BITCOINTX",
+        "aix-chainstate": "BITCOINCHAINSTATE",
+        "aix-wallet": "BITCOINWALLET",
     }
-    # Set paths to bitcoin core binaries allowing overrides with environment
+    # Set paths to aix core binaries allowing overrides with environment
     # variables.
     for binary, env_variable_name in binaries.items():
         default_filename = os.path.join(
@@ -321,9 +321,9 @@ def get_binary_paths(config):
             binary + config["environment"]["EXEEXT"],
         )
         setattr(paths, env_variable_name.lower(), os.getenv(env_variable_name, default=default_filename))
-    # BITCOIN_CMD environment variable can be specified to invoke bitcoin
+    # BITCOIN_CMD environment variable can be specified to invoke aix
     # wrapper binary instead of other executables.
-    paths.bitcoin_cmd = shlex.split(os.getenv("BITCOIN_CMD", "")) or None
+    paths.aix_cmd = shlex.split(os.getenv("BITCOIN_CMD", "")) or None
     return paths
 
 
@@ -423,7 +423,7 @@ def wait_until_helper_internal(predicate, *, timeout=60, lock=None, timeout_fact
 def bpf_cflags():
     return [
         "-Wno-error=implicit-function-declaration",
-        "-Wno-duplicate-decl-specifier",  # https://github.com/bitcoin/bitcoin/issues/32322
+        "-Wno-duplicate-decl-specifier",  # https://github.com/aix/aix/issues/32322
     ]
 
 
@@ -519,7 +519,7 @@ def initialize_datadir(dirname, n, chain, disable_autoconnect=True):
     datadir = get_datadir_path(dirname, n)
     if not os.path.isdir(datadir):
         os.makedirs(datadir)
-    write_config(os.path.join(datadir, "bitcoin.conf"), n=n, chain=chain, disable_autoconnect=disable_autoconnect)
+    write_config(os.path.join(datadir, "aix.conf"), n=n, chain=chain, disable_autoconnect=disable_autoconnect)
     os.makedirs(os.path.join(datadir, 'stderr'), exist_ok=True)
     os.makedirs(os.path.join(datadir, 'stdout'), exist_ok=True)
     return datadir
@@ -594,12 +594,12 @@ def get_temp_default_datadir(temp_dir: pathlib.Path) -> tuple[dict, pathlib.Path
         if platform.system() == "Darwin":
             datadir = temp_dir / "Library/Application Support/Aix"
         else:
-            datadir = temp_dir / ".bitcoin"
+            datadir = temp_dir / ".aix"
     return env, datadir
 
 
 def append_config(datadir, options):
-    with open(os.path.join(datadir, "bitcoin.conf"), 'a') as f:
+    with open(os.path.join(datadir, "aix.conf"), 'a') as f:
         for option in options:
             f.write(option + "\n")
 
@@ -607,8 +607,8 @@ def append_config(datadir, options):
 def get_auth_cookie(datadir, chain):
     user = None
     password = None
-    if os.path.isfile(os.path.join(datadir, "bitcoin.conf")):
-        with open(os.path.join(datadir, "bitcoin.conf"), 'r') as f:
+    if os.path.isfile(os.path.join(datadir, "aix.conf")):
+        with open(os.path.join(datadir, "aix.conf"), 'r') as f:
             for line in f:
                 if line.startswith("rpcuser="):
                     assert user is None  # Ensure that there is only one rpcuser line

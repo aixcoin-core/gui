@@ -14,7 +14,7 @@
 class ArgsManager;
 
 /**
- * CBaseChainParams defines the base parameters (shared between bitcoin-cli and bitcoind)
+ * CBaseChainParams defines the base parameters (shared between aix-cli and aixd)
  * of a given instance of the Aix system.
  */
 class CBaseChainParams

@@ -188,7 +188,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">צוריק</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your aixs from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">געדענקט אַז ענקריפּטינג דיין בייַטל טוט נישט גאָר באַשיצן דיין ביטקאָינס פון סטאָלען דורך מאַלוואַרע ינפעקטינג דיין קאָמפּיוטער.</translation>
     </message>
     <message>
@@ -531,7 +531,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aix-core</name>
     <message>
         <source>Your computer's date and time appear to be more than %d minutes out of sync with the network, this may lead to consensus failure. After you've confirmed your computer's clock, this message should no longer appear when you restart your node. Without a restart, it should stop showing automatically after you've connected to a sufficient number of new outbound peers, which may take some time. You can inspect the `timeoffset` field of the `getpeerinfo` and `getnetworkinfo` RPC methods to get more info.</source>
         <translation type="unfinished"> די דאט און צייט פון אייער קאמפיוטער זענען מסתבר מער ווי %d מינוט ארויס פון טעמפו מיטן נעצווערק, וואס קען פירן צו א פאל פון קאנצעסוס. נאך וואס איר האט באשטעטיקט די קלאק פון אייער קאמפיוטער, זאָל דער היינטיקער מעלדונג נישט מער אויסקומען ווען איר רעבוטן אייער נוד. אן א רעבוט, וועט עס אָפּשטיין אוטאָמאַטיש נאך וואס איר וועט זיך פאַרבינדן מיט גענוג ניי אאוטבאונד פיערס, וואס קען נעמען א ביסל צייט. איר קענען אָפּשאַצן דעם timeoffset פעלד פון די getpeerinfo און getnetworkinfo RPC מעטאדן פאר מער אינפֿאָרמאַציע.</translation>

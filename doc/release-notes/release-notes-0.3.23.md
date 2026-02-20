@@ -1,7 +1,7 @@
-Win32, Linux, MacOSX and source releases for bitcoin v0.3.23 have been uploaded to
-https://sourceforge.net/projects/bitcoin/files/Aix/bitcoin-0.3.23/
+Win32, Linux, MacOSX and source releases for aix v0.3.23 have been uploaded to
+https://sourceforge.net/projects/aix/files/Aix/aix-0.3.23/
 
-This is another quick bugfix release, trying to deal with the influx of new bitcoin users.
+This is another quick bugfix release, trying to deal with the influx of new aix users.
 
 Main items of note:
 

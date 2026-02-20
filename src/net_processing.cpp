@@ -1559,7 +1559,7 @@ void PeerManagerImpl::PushNodeVersion(CNode& pnode, const Peer& peer)
         my_time = 0;
         your_services = NODE_NONE;
         your_addr = CService{};
-        my_user_agent = "/pynode:0.0.1/"; // Use a constant other than the default (or user-configured). See https://github.com/bitcoin/bitcoin/pull/27509#discussion_r1214671917
+        my_user_agent = "/pynode:0.0.1/"; // Use a constant other than the default (or user-configured). See https://github.com/aix/aix/pull/27509#discussion_r1214671917
         my_height = 0;
         my_tx_relay = false;
     } else {
@@ -2564,7 +2564,7 @@ void PeerManagerImpl::ProcessGetData(CNode& pfrom, Peer& peer, const std::atomic
         // and continue processing the queue on the next call.
         // NOTE: previously we wouldn't do so and the peer sending us a malformed GETDATA could
         // result in never making progress and this thread using 100% allocated CPU. See
-        // https://bitcoincore.org/en/2024/07/03/disclose-getdata-cpu.
+        // https://aixcore.org/en/2024/07/03/disclose-getdata-cpu.
     }
 
     peer.m_getdata_requests.erase(peer.m_getdata_requests.begin(), it);
@@ -3224,7 +3224,7 @@ void PeerManagerImpl::ProcessPackageResult(const node::PackageToValidate& packag
 }
 
 // NOTE: the orphan processing used to be uninterruptible and quadratic, which could allow a peer to stall the node for
-// hours with specially crafted transactions. See https://bitcoincore.org/en/2024/07/03/disclose-orphan-dos.
+// hours with specially crafted transactions. See https://aixcore.org/en/2024/07/03/disclose-orphan-dos.
 bool PeerManagerImpl::ProcessOrphanTx(Peer& peer)
 {
     AssertLockHeld(g_msgproc_mutex);

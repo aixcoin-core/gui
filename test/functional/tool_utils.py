@@ -22,13 +22,13 @@ class ToolUtils(AixTestFramework):
         pass
 
     def skip_test_if_missing_module(self):
-        self.skip_if_no_bitcoin_tx()
-        self.skip_if_no_bitcoin_util()
+        self.skip_if_no_aix_tx()
+        self.skip_if_no_aix_util()
 
     def run_test(self):
         self.testcase_dir = Path(self.config["environment"]["SRCDIR"]) / "test" / "functional" / "data" / "util"
         self.bins = self.get_binaries()
-        with open(self.testcase_dir / "bitcoin-util-test.json") as f:
+        with open(self.testcase_dir / "aix-util-test.json") as f:
             input_data = json.loads(f.read())
 
         for i, test_obj in enumerate(input_data):
@@ -42,9 +42,9 @@ class ToolUtils(AixTestFramework):
         are not as expected. Error is caught by bctester() and reported.
         """
         # Get the exec names and arguments
-        if testObj["exec"] == "./bitcoin-util":
+        if testObj["exec"] == "./aix-util":
             execrun = self.bins.util_argv() + testObj["args"]
-        elif testObj["exec"] == "./bitcoin-tx":
+        elif testObj["exec"] == "./aix-tx":
             execrun = self.bins.tx_argv() + testObj["args"]
 
         # Read the input data (if there is any)

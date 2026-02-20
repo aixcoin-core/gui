@@ -40,7 +40,7 @@ class SettingsTest(AixTestFramework):
     def run_test(self):
         node, = self.nodes
         settings = node.chain_path / "settings.json"
-        conf = node.datadir_path / "bitcoin.conf"
+        conf = node.datadir_path / "aix.conf"
 
         # Assert default settings file was created
         self.stop_node(0)

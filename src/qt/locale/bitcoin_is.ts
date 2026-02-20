@@ -174,8 +174,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Sláðu inn gamla lykilorðið og nýja lykilorðið fyrir veskið.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Mundu að dulkóðun vesksins þíns getur ekki verndað bitcoins þína að fullu gegn því að vera stolið af spilliforritum sem sýkja tölvuna þína.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your aixs from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Mundu að dulkóðun vesksins þíns getur ekki verndað aixs þína að fullu gegn því að vera stolið af spilliforritum sem sýkja tölvuna þína.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -515,8 +515,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Tengist jafnöldrum...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Óska eftir greiðslum (býr til QR kóða og bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and aix: URIs)</source>
+        <translation type="unfinished">Óska eftir greiðslum (býr til QR kóða og aix: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1193,7 +1193,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aix-core</name>
     <message>
         <source>%s failed to validate the -assumeutxo snapshot state. This indicates a hardware problem, or a bug in the software, or a bad software modification that allowed an invalid snapshot to be loaded. As a result of this, the node will shut down and stop using any state that was built on the snapshot, resetting the chain height from %d to %d. On the next restart, the node will resume syncing from %d without using any snapshot data. Please report this incident to %s, including how you obtained the snapshot. The invalid snapshot chainstate will be left on disk in case it is helpful in diagnosing the issue that caused this error.</source>
         <translation type="unfinished">%s tókst ekki að staðfesta -assumeutxo skyndimyndastöðu. Þetta gefur til kynna vélbúnaðarvandamál, eða villu í hugbúnaðinum, eða slæma hugbúnaðarbreytingu sem gerði kleift að hlaða ógildri skyndimynd. Sem afleiðing af þessu mun hnúturinn lokast og hætta að nota hvaða ástand sem var byggt á skyndimyndinni og endurstilla keðjuhæðina úr %d í %d. Við næstu endurræsingu mun hnúturinn halda áfram samstillingu frá %d án þess að nota nokkur skyndimyndagögn. Vinsamlegast tilkynntu þetta atvik til %s, þar á meðal hvernig þú náðir myndinni. Ógilt skyndimynd chainstate verður skilið eftir á disknum ef það er gagnlegt við að greina vandamálið sem olli þessari villu.</translation>

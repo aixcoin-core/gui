@@ -3,18 +3,18 @@ v30.0 Release Notes
 
 Aix Core version v30.0 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-30.0/>
+  <https://aixcore.org/bin/aix-core-30.0/>
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/aix/aix/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://bitcoincore.org/en/list/announcements/join/>
+  <https://aixcore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
@@ -22,7 +22,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
 installer (on Windows) or just copy over `/Applications/Aix-Qt` (on macOS)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+or `aixd`/`aix-qt` (on Linux).
 
 Upgrading directly from a version of Aix Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
@@ -101,15 +101,15 @@ P2P and network changes
   option if they were using it, as the setting will cause an error in future versions
   when it is no longer recognized. (#31829)
 
-New `bitcoin` command
+New `aix` command
 ---------------------
 
-- A new `bitcoin` command line tool has been added to make features more discoverable
-  and convenient to use. The `bitcoin` tool just calls other executables and does not
-  implement any functionality on its own. Specifically `bitcoin node` is a synonym for
-  `bitcoind`, `bitcoin gui` is a synonym for `bitcoin-qt`, and `bitcoin rpc` is a synonym
-  for `bitcoin-cli -named`. Other commands and options can be listed with `bitcoin help`.
-  The new `bitcoin` command is an alternative to calling other commands directly, but it
+- A new `aix` command line tool has been added to make features more discoverable
+  and convenient to use. The `aix` tool just calls other executables and does not
+  implement any functionality on its own. Specifically `aix node` is a synonym for
+  `aixd`, `aix gui` is a synonym for `aix-qt`, and `aix rpc` is a synonym
+  for `aix-cli -named`. Other commands and options can be listed with `aix help`.
+  The new `aix` command is an alternative to calling other commands directly, but it
   doesn't replace them, and there are no plans to deprecate existing commands. (#31375)
 
 External Signing
@@ -120,28 +120,28 @@ External Signing
 IPC Mining Interface
 --------------------
 
-- The new `bitcoin` command does support one new feature: an (experimental) IPC Mining
+- The new `aix` command does support one new feature: an (experimental) IPC Mining
   Interface that allows the node to work with Stratum v2 or other mining client software,
-  see (#31098). When the node is started with `bitcoin -m node -ipcbind=unix` it will
+  see (#31098). When the node is started with `aix -m node -ipcbind=unix` it will
   listen on a unix socket for IPC client connections, allowing clients to request block
   templates and submit mined blocks. The `-m` option launches a new internal binary
-  (`bitcoin-node` instead of `bitcoind`) and is currently required but will become optional
-  in the future (with [#33229](https://github.com/bitcoin/bitcoin/pull/33229)).
+  (`aix-node` instead of `aixd`) and is currently required but will become optional
+  in the future (with [#33229](https://github.com/aix/aix/pull/33229)).
 
-- IPC connectivity introduces new dependencies (see [multiprocess.md](https://github.com/bitcoin/bitcoin/blob/master/doc/multiprocess.md)),
+- IPC connectivity introduces new dependencies (see [multiprocess.md](https://github.com/aix/aix/blob/master/doc/multiprocess.md)),
   which can be turned off with the `-DENABLE_IPC=OFF` build option if you do not intend
   to use IPC. (#31802)
 
 Install changes
 ---------------
 
-- The `test_bitcoin` executable is now installed in `libexec/` instead of `bin/`.
-  It can still be executed directly, or accessed through the new `bitcoin` command
-  as `bitcoin test`. The `libexec/` directory also contains new `bitcoin-node` and
-  `bitcoin-gui` binaries which support IPC features and are called through the
-  `bitcoin` tool. In source builds only, `test_bitcoin-qt`, `bench_bitcoin`, and
-  `bitcoin-chainstate` are also now installed to `libexec/` instead of `bin/` and
-  can be accessed through the new `bitcoin` command. See `bitcoin help` output for
+- The `test_aix` executable is now installed in `libexec/` instead of `bin/`.
+  It can still be executed directly, or accessed through the new `aix` command
+  as `aix test`. The `libexec/` directory also contains new `aix-node` and
+  `aix-gui` binaries which support IPC features and are called through the
+  `aix` tool. In source builds only, `test_aix-qt`, `bench_aix`, and
+  `aix-chainstate` are also now installed to `libexec/` instead of `bin/` and
+  can be accessed through the new `aix` command. See `aix help` output for
   details. (#31679)
 
 - On Windows, the installer no longer adds a “(64-bit)” suffix to entries in the
@@ -262,7 +262,7 @@ Wallet
   to the new descriptor wallet format. Refer to the `migratewallet` RPC for more
   details.
 
-- The legacy wallet removal drops redundant options in the bitcoin-wallet tool,
+- The legacy wallet removal drops redundant options in the aix-wallet tool,
   such as `-withinternalbdb`, `-legacy`, and `-descriptors`. Moreover, the
   legacy-only RPCs `addmultisigaddress`, `dumpprivkey`, `dumpwallet`,
   `importaddress`, `importmulti`, `importprivkey`, `importpubkey`,
@@ -435,4 +435,4 @@ Thanks to everyone who directly contributed to this release:
 - zaidmstrr
 
 As well as to everyone that helped with translations on
-[Transifex](https://explore.transifex.com/bitcoin/bitcoin/).
+[Transifex](https://explore.transifex.com/aix/aix/).

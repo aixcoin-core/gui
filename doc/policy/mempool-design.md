@@ -95,10 +95,10 @@ related to the maximal-weight closure problem, as found in the field of mineral
 extraction for open pit mining.
 
 [2] See
-https://delvingbitcoin.org/t/an-overview-of-the-cluster-mempool-proposal/393
+https://delvingaix.org/t/an-overview-of-the-cluster-mempool-proposal/393
 for a high level overview of the cluster mempool implementation (PR#33629,
 since v31.0) and its design rationale.
 
-[3] See https://delvingbitcoin.org/t/mempool-incentive-compatibility/553 for an
+[3] See https://delvingaix.org/t/mempool-incentive-compatibility/553 for an
 explanation of why and how we use feerate diagrams for mining, eviction, and
 evaluating transaction replacements.

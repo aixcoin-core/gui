@@ -44,11 +44,11 @@ related to the DNS seed operation.
 If these expectations cannot be satisfied the operator should
 discontinue providing services and contact the active Aix
 Core development team as well as posting on
-[bitcoin-dev](https://groups.google.com/g/bitcoindev).
+[aix-dev](https://groups.google.com/g/aixdev).
 
 Behavior outside of these expectations may be reasonable in some
 situations but should be discussed in public in advance.
 
 See also
 ----------
-- [bitcoin-seeder](https://github.com/sipa/bitcoin-seeder) is a reference implementation of a DNS seed.
+- [aix-seeder](https://github.com/sipa/aix-seeder) is a reference implementation of a DNS seed.

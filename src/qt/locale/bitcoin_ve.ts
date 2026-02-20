@@ -187,8 +187,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Murahu</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Humbulani uri u ṅwalulula tshipatshi tshaṋu a zwi nga koni u tsireledza nga vhuḓalo bitcoins dzaṋu kha u tswiwa nga malware ine ya kavhila khomphyutha yaṋu.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your aixs from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Humbulani uri u ṅwalulula tshipatshi tshaṋu a zwi nga koni u tsireledza nga vhuḓalo aixs dzaṋu kha u tswiwa nga malware ine ya kavhila khomphyutha yaṋu.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -516,8 +516,8 @@ U ṱanganya ṱhoho (%1%)...</translation>
         <translation type="unfinished">U ṱumana na thangana dza murole...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Humbelani mbadelo (u bveledza khoudu dza QR na bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and aix: URIs)</source>
+        <translation type="unfinished">Humbelani mbadelo (u bveledza khoudu dza QR na aix: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>

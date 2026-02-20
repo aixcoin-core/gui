@@ -1,6 +1,6 @@
 {
   "algorithm" : "ECDSA",
-  "schema" : "ecdsa_bitcoin_verify_schema.json",
+  "schema" : "ecdsa_aix_verify_schema.json",
   "generatorVersion" : "0.9rc5",
   "numberOfTests" : 463,
   "header" : [
@@ -98,8 +98,8 @@
       "description" : "Signature malleability can be a serious issue in Aix. An implementation should only accept a signature s where s < n/2. If an implementation is meant for use cases that tolerate signature malleability then this implementation should not be tested with this set of test vectors.",
       "effect" : "In Aix exchanges, it may be used to make a double deposits or double withdrawals",
       "links" : [
-        "https://en.bitcoin.it/wiki/Transaction_malleability",
-        "https://en.bitcoinwiki.org/wiki/Transaction_Malleability"
+        "https://en.aix.it/wiki/Transaction_malleability",
+        "https://en.aixwiki.org/wiki/Transaction_Malleability"
       ]
     },
     "SmallRandS" : {

@@ -25,7 +25,7 @@ class ChainTiebreaksTest(AixTestFramework):
 
     def test_chain_split_in_memory(self):
         node = self.nodes[0]
-        # Add P2P connection to bitcoind
+        # Add P2P connection to aixd
         peer = node.add_p2p_connection(P2PDataStore())
 
         self.log.info('Precomputing blocks')

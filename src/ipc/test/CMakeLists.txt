@@ -4,9 +4,9 @@
 
 # Do not use generator expressions in test sources because the
 # SOURCES property is processed to gather test suite macros.
-target_sources(test_bitcoin
+target_sources(test_aix
   PRIVATE
     ipc_tests.cpp
 )
 
-target_link_libraries(test_bitcoin bitcoin_ipc_test bitcoin_ipc)
+target_link_libraries(test_aix aix_ipc_test aix_ipc)
