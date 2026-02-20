@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-present The Bitcoin Core developers
+# Copyright (c) 2014-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the listreceivedbyaddress, listreceivedbylabel, getreceivedybaddress, and getreceivedbylabel RPCs."""
 from decimal import Decimal
 
 from test_framework.blocktools import COINBASE_MATURITY
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import (
     assert_array_result,
     assert_equal,
@@ -15,7 +15,7 @@ from test_framework.util import (
 from test_framework.wallet_util import test_address
 
 
-class ReceivedByTest(BitcoinTestFramework):
+class ReceivedByTest(AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         # whitelist peers to speed up tx relay / mempool sync
@@ -133,7 +133,7 @@ class ReceivedByTest(BitcoinTestFramework):
         assert_equal(balance, Decimal("0.3"))
 
         # Test invalid address format error
-        assert_raises_rpc_error(-5, "Invalid Bitcoin address", self.nodes[1].getreceivedbyaddress, "invalid_address")
+        assert_raises_rpc_error(-5, "Invalid Aix address", self.nodes[1].getreceivedbyaddress, "invalid_address")
 
         self.log.info("listreceivedbylabel + getreceivedbylabel Test")
 

@@ -1,4 +1,4 @@
-# Copyright (c) 2023-present The Bitcoin Core developers
+# Copyright (c) 2023-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 
@@ -294,7 +294,7 @@ if(WITH_EMBEDDED_ASMAP)
   )
 endif()
 
-# Bitcoin wrapper executable that can call other executables.
+# Aix wrapper executable that can call other executables.
 if(BUILD_BITCOIN_BIN)
   add_executable(bitcoin bitcoin.cpp)
   add_windows_resources(bitcoin bitcoin-res.rc)
@@ -303,7 +303,7 @@ if(BUILD_BITCOIN_BIN)
   install_binary_component(bitcoin HAS_MANPAGE)
 endif()
 
-# Bitcoin Core bitcoind.
+# Aix Core bitcoind.
 if(BUILD_DAEMON)
   add_executable(bitcoind
     bitcoind.cpp
@@ -344,7 +344,7 @@ target_link_libraries(bitcoin_cli
 )
 
 
-# Bitcoin Core RPC client
+# Aix Core RPC client
 if(BUILD_CLI)
   add_executable(bitcoin-cli bitcoin-cli.cpp)
   add_windows_resources(bitcoin-cli bitcoin-cli-res.rc)

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2022-present The Bitcoin Core developers
+# Copyright (c) 2022-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +14,7 @@ try:
 except ImportError:
     pass
 from test_framework.messages import COIN
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import (
     assert_equal,
     bpf_cflags,
@@ -140,7 +140,7 @@ class UTXOCacheFlush(ctypes.Structure):
         return f"UTXOCacheFlush(duration={self.duration}, mode={FLUSHMODE_NAME[self.mode]}, size={self.size}, memory={self.memory}, for_prune={self.for_prune})"
 
 
-class UTXOCacheTracepointTest(BitcoinTestFramework):
+class UTXOCacheTracepointTest(AixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = False
         self.num_nodes = 1

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) The Bitcoin Core developers
+# Copyright (c) The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test that the correct active block is chosen in complex reorgs."""
@@ -7,10 +7,10 @@
 from test_framework.blocktools import create_block
 from test_framework.messages import CBlockHeader
 from test_framework.p2p import P2PDataStore
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import assert_equal
 
-class ChainTiebreaksTest(BitcoinTestFramework):
+class ChainTiebreaksTest(AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.setup_clean_chain = True

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-present The Bitcoin Core developers
+# Copyright (c) 2017-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test external signer.
@@ -10,7 +10,7 @@ See also rpc_signer.py for tests without wallet context.
 import os
 import sys
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -18,7 +18,7 @@ from test_framework.util import (
 )
 
 
-class WalletSignerTest(BitcoinTestFramework):
+class WalletSignerTest(AixTestFramework):
     def mock_signer_path(self):
         path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'mocks', 'signer.py')
         return sys.executable + " " + path

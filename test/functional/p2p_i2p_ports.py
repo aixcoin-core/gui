@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-# Copyright (c) 2021-present The Bitcoin Core developers
+# Copyright (c) 2021-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
 Test ports handling for I2P hosts
 """
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import p2p_port
 
 
-class I2PPorts(BitcoinTestFramework):
+class I2PPorts(AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         # Use the p2p port of the non-existing next node as the proxy port

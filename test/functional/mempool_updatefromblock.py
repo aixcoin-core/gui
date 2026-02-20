@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2020-present The Bitcoin Core developers
+# Copyright (c) 2020-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test mempool descendants/ancestors information update.
@@ -12,7 +12,7 @@ from math import ceil
 import time
 
 from test_framework.blocktools import create_empty_fork
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import assert_equal, assert_greater_than_or_equal, assert_raises_rpc_error
 from test_framework.wallet import MiniWallet
 from test_framework.mempool_util import DEFAULT_CLUSTER_LIMIT
@@ -22,7 +22,7 @@ MAX_DISCONNECTED_TX_POOL_BYTES = 20_000_000
 CUSTOM_ANCESTOR_COUNT = 100
 CUSTOM_DESCENDANT_COUNT = CUSTOM_ANCESTOR_COUNT
 
-class MempoolUpdateFromBlockTest(BitcoinTestFramework):
+class MempoolUpdateFromBlockTest(AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [['-limitclustersize=1000']]

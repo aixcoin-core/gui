@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-# Copyright (c) 2020-present The Bitcoin Core developers
+# Copyright (c) 2020-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""Script for verifying Bitcoin Core release binaries.
+"""Script for verifying Aix Core release binaries.
 
 This script attempts to download the sum file SHA256SUMS and corresponding
 signature file SHA256SUMS.asc from bitcoincore.org and bitcoin.org and
@@ -359,7 +359,7 @@ def verify_shasums_signature(
 
     # Decide which keys we trust, though not "trust" in the GPG sense, but rather
     # which pubkeys convince us that this sums file is legitimate. In other words,
-    # which pubkeys within the Bitcoin community do we trust for the purposes of
+    # which pubkeys within the Aix community do we trust for the purposes of
     # binary verification?
     trusted_keys = set()
     if args.trusted_keys:

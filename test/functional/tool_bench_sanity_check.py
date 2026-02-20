@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) The Bitcoin Core developers
+# Copyright (c) The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or https://opensource.org/license/mit/.
 """Special script to run each bench sanity check
@@ -7,10 +7,10 @@
 import shlex
 import subprocess
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 
 
-class BenchSanityCheck(BitcoinTestFramework):
+class BenchSanityCheck(AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 0  # No node/datadir needed
 

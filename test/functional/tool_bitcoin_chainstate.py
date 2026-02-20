@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2022-present The Bitcoin Core developers
+# Copyright (c) 2022-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test bitcoin-chainstate tool functionality
@@ -13,7 +13,7 @@ snapshot and extend the snapshot chain with new blocks.
 
 import subprocess
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import assert_equal
 from test_framework.wallet import MiniWallet
 
@@ -23,7 +23,7 @@ SNAPSHOT_BASE_BLOCK_HEIGHT = 299
 SNAPSHOT_BASE_BLOCK_HASH = "7cc695046fec709f8c9394b6f928f81e81fd3ac20977bb68760fa1faa7916ea2"
 
 
-class BitcoinChainstateTest(BitcoinTestFramework):
+class AixChainstateTest(AixTestFramework):
     def skip_test_if_missing_module(self):
         self.skip_if_no_bitcoin_chainstate()
 
@@ -103,4 +103,4 @@ class BitcoinChainstateTest(BitcoinTestFramework):
         self.assumeutxo_test(dump_output['path'])
 
 if __name__ == "__main__":
-    BitcoinChainstateTest(__file__).main()
+    AixChainstateTest(__file__).main()

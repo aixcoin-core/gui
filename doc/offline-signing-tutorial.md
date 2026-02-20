@@ -1,16 +1,16 @@
 # Offline Signing Tutorial
 
-This tutorial will describe how to use two instances of Bitcoin Core, one online and one offline, to greatly increase security by not having private keys reside on a networked device.
+This tutorial will describe how to use two instances of Aix Core, one online and one offline, to greatly increase security by not having private keys reside on a networked device.
 
 Maintaining an air-gap between private keys and any network connections drastically reduces the opportunity for those keys to be exfiltrated from the user.
 
-This workflow uses [Partially Signed Bitcoin Transactions](https://github.com/bitcoin/bitcoin/blob/master/doc/psbt.md) (PSBTs) to transfer the transaction to and from the offline wallet for signing using the private keys.
+This workflow uses [Partially Signed Aix Transactions](https://github.com/bitcoin/bitcoin/blob/master/doc/psbt.md) (PSBTs) to transfer the transaction to and from the offline wallet for signing using the private keys.
 
 > [!NOTE]
 > While this tutorial demonstrates the process using `signet` network, you should omit the `-signet` flag in the provided commands when working with `mainnet`.
 
 ## Overview
-In this tutorial we have two hosts, both running Bitcoin v25.0
+In this tutorial we have two hosts, both running Aix v25.0
 
 * `offline` host which is disconnected from all networks (internet, Tor, wifi, bluetooth etc.) and does not have, or need, a copy of the blockchain.
 * `online` host which is a regular online node with a synced blockchain.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-present The Bitcoin Core developers
+# Copyright (c) 2014-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test descendant package tracking code."""
@@ -10,7 +10,7 @@ from test_framework.messages import (
     DEFAULT_CLUSTER_LIMIT,
 )
 from test_framework.p2p import P2PTxInvStore
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import (
     assert_equal,
 )
@@ -21,7 +21,7 @@ from test_framework.blocktools import create_empty_fork
 CUSTOM_CLUSTER_LIMIT = 10
 assert CUSTOM_CLUSTER_LIMIT < DEFAULT_CLUSTER_LIMIT
 
-class MempoolPackagesTest(BitcoinTestFramework):
+class MempoolPackagesTest(AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         # whitelist peers to speed up tx relay / mempool sync

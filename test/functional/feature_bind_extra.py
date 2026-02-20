@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2014-present The Bitcoin Core developers
+# Copyright (c) 2014-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -14,7 +14,7 @@ from test_framework.netutil import (
     get_bind_addrs,
 )
 from test_framework.test_framework import (
-    BitcoinTestFramework,
+    AixTestFramework,
 )
 from test_framework.test_node import ErrorMatch
 from test_framework.util import (
@@ -23,7 +23,7 @@ from test_framework.util import (
     rpc_port,
 )
 
-class BindExtraTest(BitcoinTestFramework):
+class BindExtraTest(AixTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         # Avoid any -bind= on the command line. Force the framework to avoid

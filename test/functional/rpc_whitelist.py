@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# Copyright (c) 2017-present The Bitcoin Core developers
+# Copyright (c) 2017-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
 A test for RPC users with restricted permissions
 """
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import (
     assert_equal,
     str_to_b64str,
@@ -29,7 +29,7 @@ def get_permissions(whitelist):
     return [perm for perm in whitelist.split(",") if perm]
 
 
-class RPCWhitelistTest(BitcoinTestFramework):
+class RPCWhitelistTest(AixTestFramework):
 
     def set_test_params(self):
         self.num_nodes = 1

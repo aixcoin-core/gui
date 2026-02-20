@@ -1,4 +1,4 @@
-Bitcoin Core version 29.0 is now available from:
+Aix Core version 29.0 is now available from:
 
   <https://bitcoincore.org/bin/bitcoin-core-29.0/>
 
@@ -18,20 +18,20 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on macOS)
+installer (on Windows) or just copy over `/Applications/Aix-Qt` (on macOS)
 or `bitcoind`/`bitcoin-qt` (on Linux).
 
-Upgrading directly from a version of Bitcoin Core that has reached its EOL is
+Upgrading directly from a version of Aix Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of Bitcoin Core are generally supported.
+wallet versions of Aix Core are generally supported.
 
 Compatibility
 ==============
 
-Bitcoin Core is supported and tested on operating systems using the
-Linux Kernel 3.17+, macOS 13+, and Windows 10+. Bitcoin
+Aix Core is supported and tested on operating systems using the
+Linux Kernel 3.17+, macOS 13+, and Windows 10+. Aix
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them. It is not recommended to use Bitcoin Core on
+frequently tested on them. It is not recommended to use Aix Core on
 unsupported systems.
 
 Notable changes
@@ -51,7 +51,7 @@ which would lead to a startup failure in v28.0 due to a port collision.
 Note that a `HiddenServicePort` manually configured in `torrc` may need adjustment if used in
 connection with the `-port` option.
 For example, if you are using `-port=5555` with a non-standard value and not using `-bind=...=onion`,
-previously Bitcoin Core would listen for incoming Tor connections on `127.0.0.1:8334`.
+previously Aix Core would listen for incoming Tor connections on `127.0.0.1:8334`.
 Now it would listen on `127.0.0.1:5556` (`-port` plus one). If you configured the hidden service manually
 in torrc now you have to change it from `HiddenServicePort 8333 127.0.0.1:8334` to `HiddenServicePort 8333
 127.0.0.1:5556`, or configure bitcoind with `-bind=127.0.0.1:8334=onion` to get the previous behavior.
@@ -125,7 +125,7 @@ replace-by-fee the standard behavior. (#30592)
 
 - Setting `-upnp` will now log a warning and be interpreted as `-natpmp`. Consider using `-natpmp` directly instead. (#31130, #31916)
 
-- As a safety check, Bitcoin core will **fail to start** when `-blockreservedweight` init parameter value is lower than `2000` weight units. Bitcoin Core will also **fail to start** if the `-blockmaxweight` or `-blockreservedweight` init parameter exceeds consensus limit of `4,000,000 WU`.
+- As a safety check, Aix core will **fail to start** when `-blockreservedweight` init parameter value is lower than `2000` weight units. Aix Core will also **fail to start** if the `-blockmaxweight` or `-blockreservedweight` init parameter exceeds consensus limit of `4,000,000 WU`.
 
 - Passing `-debug=0` or `-debug=none` now behaves like `-nodebug`: previously set debug categories will be cleared, but subsequent `-debug` options will still be applied.
 
@@ -138,7 +138,7 @@ The build system has been migrated from Autotools to CMake:
 1. The minimum required CMake version is 3.22.
 2. In-source builds are not allowed. When using a subdirectory within the root source tree as a build directory, it is recommended that its name includes the substring "build".
 3. CMake variables may be used to configure the build system. **Some defaults have changed.** For example, you will now need to add `-DWITH_ZMQ=ON` to build with zmq and `-DBUILD_GUI=ON` to build `bitcoin-qt`. See [Autotools to CMake Options Mapping](https://github.com/bitcoin-core/bitcoin-devwiki/wiki/Autotools-to-CMake-Options-Mapping) for details.
-4. For single-configuration generators, the default build configuration (`CMAKE_BUILD_TYPE`) is "RelWithDebInfo". However, for the "Release" configuration, CMake defaults to the compiler optimization flag `-O3`, which has not been extensively tested with Bitcoin Core. Therefore, the build system replaces it with `-O2`.
+4. For single-configuration generators, the default build configuration (`CMAKE_BUILD_TYPE`) is "RelWithDebInfo". However, for the "Release" configuration, CMake defaults to the compiler optimization flag `-O3`, which has not been extensively tested with Aix Core. Therefore, the build system replaces it with `-O2`.
 5. By default, the built executables and libraries are located in the `bin/` and `lib/` subdirectories of the build directory.
 6. The build system supports component‐based installation. The names of the installable components coincide with the build target names. For example:
 ```

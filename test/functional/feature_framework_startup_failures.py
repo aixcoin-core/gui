@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2025-present The Bitcoin Core developers
+# Copyright (c) 2025-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -9,14 +9,14 @@ went wrong. We should maintain this bar of only raising one exception as
 long as additional maintenance and complexity is low.
 
 Test relaunches itself into child processes in order to trigger failures
-without the parent process' BitcoinTestFramework also failing.
+without the parent process' AixTestFramework also failing.
 """
 
 from test_framework.util import (
     assert_raises_message,
     rpc_port,
 )
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 
 from hashlib import md5
 from os import linesep
@@ -25,7 +25,7 @@ import subprocess
 import sys
 import time
 
-class FeatureFrameworkStartupFailures(BitcoinTestFramework):
+class FeatureFrameworkStartupFailures(AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 
@@ -127,10 +127,10 @@ class InternalDurationTestMixin(InternalTestMixin):
 
     def get_reasonable_rpc_timeout(self):
         # 2 * the measured test startup duration should be enough.
-        # Divide by timeout_factor to counter multiplication in BitcoinTestFramework.
+        # Divide by timeout_factor to counter multiplication in AixTestFramework.
         return max(3, 2 * self.options.node_start_duration) / self.options.timeout_factor
 
-class TestWrongRpcPortStartupFailure(InternalDurationTestMixin, BitcoinTestFramework):
+class TestWrongRpcPortStartupFailure(InternalDurationTestMixin, AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         # Override RPC listen port to something TestNode isn't expecting so that
@@ -143,7 +143,7 @@ class TestWrongRpcPortStartupFailure(InternalDurationTestMixin, BitcoinTestFrame
     def run_test(self):
         assert False, "Should have failed earlier during startup."
 
-class TestMissingInitErrorTimeout(InternalDurationTestMixin, BitcoinTestFramework):
+class TestMissingInitErrorTimeout(InternalDurationTestMixin, AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         # Override the timeout to avoid waiting unnecessarily long for an init
@@ -158,7 +158,7 @@ class TestMissingInitErrorTimeout(InternalDurationTestMixin, BitcoinTestFramewor
     def run_test(self):
         assert False, "Should have failed earlier during startup."
 
-class TestInitErrorStartupFailure(InternalTestMixin, BitcoinTestFramework):
+class TestInitErrorStartupFailure(InternalTestMixin, AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [["-nonexistentarg"]]
@@ -166,7 +166,7 @@ class TestInitErrorStartupFailure(InternalTestMixin, BitcoinTestFramework):
     def run_test(self):
         assert False, "Should have failed earlier during startup."
 
-class TestStartStopStartupFailure(InternalTestMixin, BitcoinTestFramework):
+class TestStartStopStartupFailure(InternalTestMixin, AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 
@@ -179,7 +179,7 @@ class TestStartStopStartupFailure(InternalTestMixin, BitcoinTestFramework):
     def run_test(self):
         assert False, "Should have failed earlier during startup."
 
-class TestSuccess(InternalTestMixin, BitcoinTestFramework):
+class TestSuccess(InternalTestMixin, AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 

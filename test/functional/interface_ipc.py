@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-# Copyright (c) The Bitcoin Core developers
+# Copyright (c) The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the IPC (multiprocess) interface."""
 import asyncio
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import assert_equal
 from test_framework.ipc_util import (
     load_capnp_modules,
@@ -19,7 +19,7 @@ except ModuleNotFoundError:
     pass
 
 
-class IPCInterfaceTest(BitcoinTestFramework):
+class IPCInterfaceTest(AixTestFramework):
 
     def skip_test_if_missing_module(self):
         self.skip_if_no_ipc()

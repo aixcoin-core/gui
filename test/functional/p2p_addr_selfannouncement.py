@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2025-present The Bitcoin Core developers
+# Copyright (c) 2025-present The Aix Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """
@@ -19,7 +19,7 @@ from test_framework.messages import (
     CBlockHeader,
 )
 from test_framework.p2p import P2PInterface
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixTestFramework
 from test_framework.util import assert_equal, assert_greater_than
 
 IP_TO_ANNOUNCE = "42.42.42.42"
@@ -62,7 +62,7 @@ class SelfAnnouncementReceiver(P2PInterface):
         self.handle_addr_message(message)
 
 
-class AddrSelfAnnouncementTest(BitcoinTestFramework):
+class AddrSelfAnnouncementTest(AixTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.extra_args = [[f"-externalip={IP_TO_ANNOUNCE}"]]
