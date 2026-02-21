@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
   - name: Aix Core Security Policy
-    url: https://github.com/bitcoin/bitcoin/blob/master/SECURITY.md
+    url: https://github.com/aix/aix/blob/master/SECURITY.md
     about: View security policy
   - name: Aix Core Developers
-    url: https://bitcoincore.org
+    url: https://aixcore.org
     about: Aix Core homepage

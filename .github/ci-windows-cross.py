@@ -21,26 +21,26 @@ def run(cmd, **kwargs):
 
 
 def print_version():
-    bitcoind = Path.cwd() / "bin" / "bitcoind.exe"
-    run([str(bitcoind), "-version"])
+    aixd = Path.cwd() / "bin" / "aixd.exe"
+    run([str(aixd), "-version"])
 
 
 def check_manifests():
     release_dir = Path.cwd() / "bin"
-    manifest_path = release_dir / "bitcoind.manifest"
+    manifest_path = release_dir / "aixd.manifest"
 
-    cmd_bitcoind_manifest = [
+    cmd_aixd_manifest = [
         "mt.exe",
         "-nologo",
-        f"-inputresource:{release_dir / 'bitcoind.exe'}",
+        f"-inputresource:{release_dir / 'aixd.exe'}",
         f"-out:{manifest_path}",
     ]
-    run(cmd_bitcoind_manifest)
+    run(cmd_aixd_manifest)
     print(manifest_path.read_text())
 
     skipped = {  # Skip as they currently do not have manifests
         "fuzz.exe",
-        "bench_bitcoin.exe",
+        "bench_aix.exe",
         "test_kernel.exe",
     }
     for entry in release_dir.iterdir():
@@ -97,7 +97,7 @@ def run_functional_tests():
         # feature_unsupported_utxo_db.py fails on Windows because of emojis in the test data directory.
         "--exclude",
         "feature_unsupported_utxo_db.py",
-        # See https://github.com/bitcoin/bitcoin/issues/31409.
+        # See https://github.com/aix/aix/issues/31409.
         "--exclude",
         "wallet_multiwallet.py",
     ]
@@ -119,9 +119,9 @@ def run_functional_tests():
 def run_unit_tests():
     # Can't use ctest here like other jobs as we don't have a CMake build tree.
     commands = [
-        ["./bin/test_bitcoin-qt.exe"],
+        ["./bin/test_aix-qt.exe"],
         # Intentionally run sequentially here, to catch test case failures caused by dirty global state from prior test cases:
-        ["./bin/test_bitcoin.exe", "-l", "test_suite"],
+        ["./bin/test_aix.exe", "-l", "test_suite"],
         ["./src/secp256k1/bin/exhaustive_tests.exe"],
         ["./src/secp256k1/bin/noverify_tests.exe"],
         ["./src/secp256k1/bin/tests.exe"],
