@@ -188,7 +188,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">უკან დაბრუნება</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your aixcoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">გახსოვდეთ, რომ თქვენი საფულის დაშიფვრა ვერ უზრუნველყოფს სრულად დაიცვას თქვენი ბიტკოინების მოპარვა კომპიუტერში მავნე პროგრამებით.</translation>
     </message>
     <message>
@@ -565,8 +565,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">მიმდინარეობს ბლოკების დამუშავება დისკზე…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">გადახდის მოთხოვნა (შეიქმნება QR-კოდები და bitcoin: ბმულები)</translation>
+        <source>Request payments (generates QR codes and aixcoin: URIs)</source>
+        <translation type="unfinished">გადახდის მოთხოვნა (შეიქმნება QR-კოდები და aixcoin: ბმულები)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -636,7 +636,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">მისამართების მიღება</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a aixcoin: URI</source>
         <translation type="unfinished">გახსენით ბიტკოინი: URI</translation>
     </message>
     <message>
@@ -1248,7 +1248,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open aixcoin URI</source>
         <translation type="unfinished">გახსენით ბიტკოინის URI</translation>
     </message>
     <message>
@@ -1569,16 +1569,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">გადახდის მოთხოვნის შეცდომა</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation type="unfinished">ვერ გაიშვა bitcoin: click-to-pay</translation>
+        <source>Cannot start aixcoin: click-to-pay handler</source>
+        <translation type="unfinished">ვერ გაიშვა aixcoin: click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">URI-ების დამუშავება</translation>
     </message>
     <message>
-        <source>'bitcoin://' is not a valid URI. Use 'bitcoin:' instead.</source>
-        <translation type="unfinished">„bitcoin://“ არ არის სწორი URI. ამის ნაცვლად გამოიყენეთ „bitcoin:“.</translation>
+        <source>'aixcoin://' is not a valid URI. Use 'aixcoin:' instead.</source>
+        <translation type="unfinished">„aixcoin://“ არ არის სწორი URI. ამის ნაცვლად გამოიყენეთ „aixcoin:“.</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
@@ -2279,7 +2279,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">შეიყვანეთ ამ მისამართის ნიშნული გამოყენებული მისამართების სიაში დასამატებლად</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the aixcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
         <translation type="unfinished">მესიჯი, რომელიც თან ერთვის მონეტებს:  URI, რომელიც შეინახება ტრანსაქციასთან ერთად თქვენთვის. შენიშვნა: მესიჯი არ გაყვება გადახდას ბითქოინის ქსელში.</translation>
     </message>
 </context>
@@ -2846,7 +2846,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aixcoin-core</name>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation type="unfinished">ეს არის წინასწარი სატესტო ვერსია - გამოიყენეთ საკუთარი რისკით - არ გამოიყენოთ მოპოვებისა ან კომერციული მიზნებისათვის</translation>

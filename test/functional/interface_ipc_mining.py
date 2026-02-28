@@ -289,7 +289,7 @@ class IPCMiningTest(BitcoinTestFramework):
                     # The remote exception isn't caught currently and leads to a
                     # std::terminate call. Just detect and restart in this case.
                     # This bug is fixed with
-                    # https://github.com/bitcoin-core/libmultiprocess/pull/218
+                    # https://github.com/aixcoin-core/libmultiprocess/pull/218
                     assert_equal(e.description, "Peer disconnected.")
                     self.nodes[0].wait_until_stopped(expected_ret_code=(-11, -6, 1, 66), expected_stderr=re.compile(""))
                     self.start_node(0)

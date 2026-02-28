@@ -171,8 +171,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Ilagay ang lumang ♦passphrase♦ at ang bagong ♦passphrase♦ para sa pitaka.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Tandaan na ang pag-encrypt sa iyong pitaka ay hindi ganap na mapoprotektahan ang mga ♦bitcoin♦ sa pagnanakaw ng ♦malware♦ na makakahawa sa iyong kompyuter.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your aixcoins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Tandaan na ang pag-encrypt sa iyong pitaka ay hindi ganap na mapoprotektahan ang mga ♦aixcoin♦ sa pagnanakaw ng ♦malware♦ na makakahawa sa iyong kompyuter.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -496,8 +496,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Kumokonekta sa mga ♦peers♦...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Humiling ng mga bayad (gumagawa ng ♦QR codes♦ at ♦bitcoin: URIs♦)</translation>
+        <source>Request payments (generates QR codes and aixcoin: URIs)</source>
+        <translation type="unfinished">Humiling ng mga bayad (gumagawa ng ♦QR codes♦ at ♦aixcoin: URIs♦)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -571,8 +571,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Pagpapadalhan na mga ♦address♦</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation type="unfinished">Buksan ang ♦bitcoin: URI♦</translation>
+        <source>Open a aixcoin: URI</source>
+        <translation type="unfinished">Buksan ang ♦aixcoin: URI♦</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1439,7 +1439,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aixcoin-core</name>
     <message>
         <source>default wallet</source>
         <translation type="unfinished">pitaka na ♦default♦</translation>

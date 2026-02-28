@@ -2288,7 +2288,7 @@ enum class DecodeContext {
     ENDIF_ELSE,
 };
 
-//! Parse a miniscript from a bitcoin script
+//! Parse a miniscript from a aixcoin script
 template <typename Key, typename Ctx, typename I>
 inline std::optional<Node<Key>> DecodeScript(I& in, I last, const Ctx& ctx)
 {

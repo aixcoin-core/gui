@@ -188,8 +188,8 @@ La firma ye possible solamentu con direcciones del tipu 'legacy'.</translation>
         <translation type="unfinished">Atrás</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Recuerda que cifrar la tua cartera nun puede protexer completamente los tuyos bitcoins de ser robados por malware que infecte tu ordenador.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your aixcoins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Recuerda que cifrar la tua cartera nun puede protexer completamente los tuyos aixcoins de ser robados por malware que infecte tu ordenador.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -511,8 +511,8 @@ La firma ye possible solamentu con direcciones del tipu 'legacy'.</translation>
         <translation type="unfinished">Conectando con pares…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Solicitar pagamientos (xenera códigos QR y bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and aixcoin: URIs)</source>
+        <translation type="unfinished">Solicitar pagamientos (xenera códigos QR y aixcoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -589,8 +589,8 @@ La firma ye possible solamentu con direcciones del tipu 'legacy'.</translation>
         <translation type="unfinished">&amp;Direcciones de recepción</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
-        <translation type="unfinished">Abrir un bitcoin: URI</translation>
+        <source>Open a aixcoin: URI</source>
+        <translation type="unfinished">Abrir un aixcoin: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>

@@ -3,18 +3,18 @@ v30.0 Release Notes
 
 Bitcoin Core version v30.0 is now available from:
 
-  <https://bitcoincore.org/bin/bitcoin-core-30.0/>
+  <https://aixcoincore.org/bin/aixcoin-core-30.0/>
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/bitcoin/bitcoin/issues>
+  <https://github.com/aixcoin/aixcoin/issues>
 
 To receive security and update notifications, please subscribe to:
 
-  <https://bitcoincore.org/en/list/announcements/join/>
+  <https://aixcoincore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============
@@ -22,7 +22,7 @@ How to Upgrade
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
 installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on macOS)
-or `bitcoind`/`bitcoin-qt` (on Linux).
+or `aixcoind`/`aixcoin-qt` (on Linux).
 
 Upgrading directly from a version of Bitcoin Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
@@ -101,15 +101,15 @@ P2P and network changes
   option if they were using it, as the setting will cause an error in future versions
   when it is no longer recognized. (#31829)
 
-New `bitcoin` command
+New `aixcoin` command
 ---------------------
 
-- A new `bitcoin` command line tool has been added to make features more discoverable
-  and convenient to use. The `bitcoin` tool just calls other executables and does not
-  implement any functionality on its own. Specifically `bitcoin node` is a synonym for
-  `bitcoind`, `bitcoin gui` is a synonym for `bitcoin-qt`, and `bitcoin rpc` is a synonym
-  for `bitcoin-cli -named`. Other commands and options can be listed with `bitcoin help`.
-  The new `bitcoin` command is an alternative to calling other commands directly, but it
+- A new `aixcoin` command line tool has been added to make features more discoverable
+  and convenient to use. The `aixcoin` tool just calls other executables and does not
+  implement any functionality on its own. Specifically `aixcoin node` is a synonym for
+  `aixcoind`, `aixcoin gui` is a synonym for `aixcoin-qt`, and `aixcoin rpc` is a synonym
+  for `aixcoin-cli -named`. Other commands and options can be listed with `aixcoin help`.
+  The new `aixcoin` command is an alternative to calling other commands directly, but it
   doesn't replace them, and there are no plans to deprecate existing commands. (#31375)
 
 External Signing
@@ -120,28 +120,28 @@ External Signing
 IPC Mining Interface
 --------------------
 
-- The new `bitcoin` command does support one new feature: an (experimental) IPC Mining
+- The new `aixcoin` command does support one new feature: an (experimental) IPC Mining
   Interface that allows the node to work with Stratum v2 or other mining client software,
-  see (#31098). When the node is started with `bitcoin -m node -ipcbind=unix` it will
+  see (#31098). When the node is started with `aixcoin -m node -ipcbind=unix` it will
   listen on a unix socket for IPC client connections, allowing clients to request block
   templates and submit mined blocks. The `-m` option launches a new internal binary
-  (`bitcoin-node` instead of `bitcoind`) and is currently required but will become optional
-  in the future (with [#33229](https://github.com/bitcoin/bitcoin/pull/33229)).
+  (`aixcoin-node` instead of `aixcoind`) and is currently required but will become optional
+  in the future (with [#33229](https://github.com/aixcoin/aixcoin/pull/33229)).
 
-- IPC connectivity introduces new dependencies (see [multiprocess.md](https://github.com/bitcoin/bitcoin/blob/master/doc/multiprocess.md)),
+- IPC connectivity introduces new dependencies (see [multiprocess.md](https://github.com/aixcoin/aixcoin/blob/master/doc/multiprocess.md)),
   which can be turned off with the `-DENABLE_IPC=OFF` build option if you do not intend
   to use IPC. (#31802)
 
 Install changes
 ---------------
 
-- The `test_bitcoin` executable is now installed in `libexec/` instead of `bin/`.
-  It can still be executed directly, or accessed through the new `bitcoin` command
-  as `bitcoin test`. The `libexec/` directory also contains new `bitcoin-node` and
-  `bitcoin-gui` binaries which support IPC features and are called through the
-  `bitcoin` tool. In source builds only, `test_bitcoin-qt`, `bench_bitcoin`, and
-  `bitcoin-chainstate` are also now installed to `libexec/` instead of `bin/` and
-  can be accessed through the new `bitcoin` command. See `bitcoin help` output for
+- The `test_aixcoin` executable is now installed in `libexec/` instead of `bin/`.
+  It can still be executed directly, or accessed through the new `aixcoin` command
+  as `aixcoin test`. The `libexec/` directory also contains new `aixcoin-node` and
+  `aixcoin-gui` binaries which support IPC features and are called through the
+  `aixcoin` tool. In source builds only, `test_aixcoin-qt`, `bench_aixcoin`, and
+  `aixcoin-chainstate` are also now installed to `libexec/` instead of `bin/` and
+  can be accessed through the new `aixcoin` command. See `aixcoin help` output for
   details. (#31679)
 
 - On Windows, the installer no longer adds a “(64-bit)” suffix to entries in the
@@ -262,7 +262,7 @@ Wallet
   to the new descriptor wallet format. Refer to the `migratewallet` RPC for more
   details.
 
-- The legacy wallet removal drops redundant options in the bitcoin-wallet tool,
+- The legacy wallet removal drops redundant options in the aixcoin-wallet tool,
   such as `-withinternalbdb`, `-legacy`, and `-descriptors`. Moreover, the
   legacy-only RPCs `addmultisigaddress`, `dumpprivkey`, `dumpwallet`,
   `importaddress`, `importmulti`, `importprivkey`, `importpubkey`,
@@ -435,4 +435,4 @@ Thanks to everyone who directly contributed to this release:
 - zaidmstrr
 
 As well as to everyone that helped with translations on
-[Transifex](https://explore.transifex.com/bitcoin/bitcoin/).
+[Transifex](https://explore.transifex.com/aixcoin/aixcoin/).

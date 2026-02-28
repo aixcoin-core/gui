@@ -4,12 +4,12 @@
 
 include(GNUInstallDirs)
 
-# TODO: libbitcoinkernel is a work in progress consensus engine
+# TODO: libaixcoinkernel is a work in progress consensus engine
 #       library, as more and more modules are decoupled from the
 #       consensus engine, this list will shrink to only those
 #       which are absolutely necessary.
-add_library(bitcoinkernel
-  bitcoinkernel.cpp
+add_library(aixcoinkernel
+  aixcoinkernel.cpp
   chain.cpp
   checks.cpp
   chainparams.cpp
@@ -78,8 +78,8 @@ add_library(bitcoinkernel
   ../validation.cpp
   ../validationinterface.cpp
   ../versionbits.cpp
-  $<TARGET_OBJECTS:bitcoin_clientversion>
-  $<TARGET_OBJECTS:bitcoin_crypto>
+  $<TARGET_OBJECTS:aixcoin_clientversion>
+  $<TARGET_OBJECTS:aixcoin_crypto>
   $<TARGET_OBJECTS:leveldb>
   $<TARGET_OBJECTS:crc32c>
 )
@@ -93,12 +93,12 @@ if(NOT MSVC)
 endif()
 
 # Also manually apply the warnings to the kernel's internal dependencies
-target_link_libraries(bitcoin_clientversion PRIVATE kernel_warn_interface)
-target_link_libraries(bitcoin_crypto PRIVATE kernel_warn_interface)
+target_link_libraries(aixcoin_clientversion PRIVATE kernel_warn_interface)
+target_link_libraries(aixcoin_crypto PRIVATE kernel_warn_interface)
 target_link_libraries(leveldb PRIVATE kernel_warn_interface)
 target_link_libraries(crc32c PRIVATE kernel_warn_interface)
 
-target_link_libraries(bitcoinkernel
+target_link_libraries(aixcoinkernel
   PRIVATE
     core_interface
     kernel_warn_interface
@@ -108,30 +108,30 @@ target_link_libraries(bitcoinkernel
     Boost::headers
 )
 
-target_include_directories(bitcoinkernel PRIVATE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/leveldb/include>)
+target_include_directories(aixcoinkernel PRIVATE $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src/leveldb/include>)
 
-# Add a convenience libbitcoinkernel target as a synonym for bitcoinkernel.
-add_custom_target(libbitcoinkernel)
-add_dependencies(libbitcoinkernel bitcoinkernel)
+# Add a convenience libaixcoinkernel target as a synonym for aixcoinkernel.
+add_custom_target(libaixcoinkernel)
+add_dependencies(libaixcoinkernel aixcoinkernel)
 
-get_target_property(bitcoinkernel_type bitcoinkernel TYPE)
-if(bitcoinkernel_type STREQUAL "STATIC_LIBRARY")
-  target_compile_definitions(bitcoinkernel PUBLIC BITCOINKERNEL_STATIC)
+get_target_property(aixcoinkernel_type aixcoinkernel TYPE)
+if(aixcoinkernel_type STREQUAL "STATIC_LIBRARY")
+  target_compile_definitions(aixcoinkernel PUBLIC BITCOINKERNEL_STATIC)
 endif()
 
-configure_file(${PROJECT_SOURCE_DIR}/libbitcoinkernel.pc.in ${PROJECT_BINARY_DIR}/libbitcoinkernel.pc @ONLY)
-install(FILES ${PROJECT_BINARY_DIR}/libbitcoinkernel.pc DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig" COMPONENT libbitcoinkernel)
+configure_file(${PROJECT_SOURCE_DIR}/libaixcoinkernel.pc.in ${PROJECT_BINARY_DIR}/libaixcoinkernel.pc @ONLY)
+install(FILES ${PROJECT_BINARY_DIR}/libaixcoinkernel.pc DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig" COMPONENT libaixcoinkernel)
 
-install(TARGETS bitcoinkernel
+install(TARGETS aixcoinkernel
   RUNTIME
     DESTINATION ${CMAKE_INSTALL_BINDIR}
-    COMPONENT libbitcoinkernel
+    COMPONENT libaixcoinkernel
   LIBRARY
     DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    COMPONENT libbitcoinkernel
+    COMPONENT libaixcoinkernel
   ARCHIVE
     DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    COMPONENT libbitcoinkernel
+    COMPONENT libaixcoinkernel
 )
 
-install(FILES bitcoinkernel.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR} COMPONENT libbitcoinkernel)
+install(FILES aixcoinkernel.h DESTINATION ${CMAKE_INSTALL_INCLUDEDIR} COMPONENT libaixcoinkernel)

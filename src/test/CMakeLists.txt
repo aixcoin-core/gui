@@ -4,7 +4,7 @@
 
 # Do not use generator expressions in test sources because the
 # SOURCES property is processed to gather test suite macros.
-add_executable(test_bitcoin
+add_executable(test_aixcoin
   main.cpp
   addrman_tests.cpp
   allocator_tests.cpp
@@ -139,7 +139,7 @@ add_executable(test_bitcoin
 )
 
 include(TargetDataSources)
-target_json_data_sources(test_bitcoin
+target_json_data_sources(test_aixcoin
   data/base58_encode_decode.json
   data/bip341_wallet_vectors.json
   data/blockfilters.json
@@ -150,18 +150,18 @@ target_json_data_sources(test_bitcoin
   data/tx_invalid.json
   data/tx_valid.json
 )
-target_raw_data_sources(test_bitcoin NAMESPACE test::data
+target_raw_data_sources(test_aixcoin NAMESPACE test::data
   data/asmap.raw
 )
 
-add_windows_application_manifest(test_bitcoin)
+add_windows_application_manifest(test_aixcoin)
 
-target_link_libraries(test_bitcoin
+target_link_libraries(test_aixcoin
   core_interface
   test_util
-  bitcoin_cli
-  bitcoin_node
-  bitcoin_consensus
+  aixcoin_cli
+  aixcoin_node
+  aixcoin_consensus
   minisketch
   secp256k1
   Boost::headers
@@ -192,7 +192,7 @@ function(add_boost_test source_file)
   )
   foreach(test_suite_name IN LISTS test_suite_macro)
     add_test(NAME ${test_suite_name}
-      COMMAND test_bitcoin --run_test=${test_suite_name} --catch_system_error=no --log_level=test_suite -- DEBUG_LOG_OUT
+      COMMAND test_aixcoin --run_test=${test_suite_name} --catch_system_error=no --log_level=test_suite -- DEBUG_LOG_OUT
     )
     set_property(TEST ${test_suite_name} PROPERTY
       SKIP_REGULAR_EXPRESSION
@@ -204,8 +204,8 @@ function(add_boost_test source_file)
 endfunction()
 
 function(add_all_test_targets)
-  get_target_property(test_source_dir test_bitcoin SOURCE_DIR)
-  get_target_property(test_sources test_bitcoin SOURCES)
+  get_target_property(test_source_dir test_aixcoin SOURCE_DIR)
+  get_target_property(test_sources test_aixcoin SOURCES)
   foreach(test_source ${test_sources})
     cmake_path(IS_RELATIVE test_source result)
     if(result)
@@ -217,4 +217,4 @@ endfunction()
 
 add_all_test_targets()
 
-install_binary_component(test_bitcoin INTERNAL)
+install_binary_component(test_aixcoin INTERNAL)

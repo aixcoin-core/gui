@@ -166,7 +166,7 @@
         <translation type="unfinished">Әмияныңыздың ескі құпиясөйлемі мен жаңа құпиясөйлемін енгізіңіз.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your aixcoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Шифрлау биткоиніңізді компьютер жұқтырған зиянды БЖ-дан толығымен қорғай алмайтынын есіңізде сақтаңыз.</translation>
     </message>
     <message>
@@ -457,7 +457,7 @@
         <translation type="unfinished">Дискідегі блоктар инедекстелуде...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and aixcoin: URIs)</source>
         <translation type="unfinished">Төлем талап ету (QR кодтары мен биткоин құрады: URI)</translation>
     </message>
     <message>
@@ -866,7 +866,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aixcoin-core</name>
     <message>
         <source>Transaction amount too small</source>
         <translation type="unfinished">Транзакция өте кішкентай</translation>

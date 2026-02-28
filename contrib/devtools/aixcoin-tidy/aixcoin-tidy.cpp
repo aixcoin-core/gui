@@ -12,11 +12,11 @@ class BitcoinModule final : public clang::tidy::ClangTidyModule
 public:
     void addCheckFactories(clang::tidy::ClangTidyCheckFactories& CheckFactories) override
     {
-        CheckFactories.registerCheck<bitcoin::NonTrivialThreadLocal>("bitcoin-nontrivial-threadlocal");
+        CheckFactories.registerCheck<aixcoin::NonTrivialThreadLocal>("aixcoin-nontrivial-threadlocal");
     }
 };
 
 static clang::tidy::ClangTidyModuleRegistry::Add<BitcoinModule>
-    X("bitcoin-module", "Adds bitcoin checks.");
+    X("aixcoin-module", "Adds aixcoin checks.");
 
 volatile int BitcoinModuleAnchorSource = 0;

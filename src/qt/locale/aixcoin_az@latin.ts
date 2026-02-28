@@ -176,8 +176,8 @@ Daxil olma, yalnız 'qanuni' tipli ünvanlar ilə mümkündür.</translation>
         <translation type="unfinished">Davam et</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Unutmayın ki, pulqabınızın şifrələməsi bitcoinlərinizi kompüterinizə zərərli proqram tərəfindən oğurlanmaqdan tamamilə qoruya bilməz.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your aixcoins from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Unutmayın ki, pulqabınızın şifrələməsi aixcoinlərinizi kompüterinizə zərərli proqram tərəfindən oğurlanmaqdan tamamilə qoruya bilməz.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -509,7 +509,7 @@ Daxil olma, yalnız 'qanuni' tipli ünvanlar ilə mümkündür.</translation>
         <translation type="unfinished">İştirakçılara qoşulur...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and aixcoin: URIs)</source>
         <translation type="unfinished">Ödəmə tələbi (QR-kodlar və Bitcoin URI-ləri yaradılır):</translation>
     </message>
     <message>
@@ -592,7 +592,7 @@ Daxil olma, yalnız 'qanuni' tipli ünvanlar ilə mümkündür.</translation>
         <translation type="unfinished">&amp;Qəbul etmək üçün ünvanlar</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a aixcoin: URI</source>
         <translation type="unfinished">Bitcoin açın: URI</translation>
     </message>
     <message>
@@ -1575,7 +1575,7 @@ Daxil olma, yalnız 'qanuni' tipli ünvanlar ilə mümkündür.</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aixcoin-core</name>
     <message>
         <source>Warning: Private keys detected in wallet {%s} with disabled private keys</source>
         <translation type="unfinished">Xəbərdarlıq: Gizli açarlar, sıradan çıxarılmış gizli açarlar ilə {%s} pulqabısında aşkarlandı.</translation>

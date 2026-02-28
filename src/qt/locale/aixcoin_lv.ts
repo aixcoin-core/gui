@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation type="unfinished">Izvēlies adresi uz kuru sūtīt bitcoins</translation>
+        <translation type="unfinished">Izvēlies adresi uz kuru sūtīt aixcoins</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation type="unfinished">Izvēlies adresi ar kuru saņemt bitcoins</translation>
+        <translation type="unfinished">Izvēlies adresi ar kuru saņemt aixcoins</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -367,8 +367,8 @@
         <translation type="unfinished">Sinhronizē ar tīklu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation type="unfinished">Pieprasīt maksājumus (izveido QR kodu un bitcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and aixcoin: URIs)</source>
+        <translation type="unfinished">Pieprasīt maksājumus (izveido QR kodu un aixcoin: URIs)</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -781,7 +781,7 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation type="unfinished">Ieslēgt bitcoin &amp;kontroles funkcijas</translation>
+        <translation type="unfinished">Ieslēgt aixcoin &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
@@ -1462,7 +1462,7 @@
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aixcoin-core</name>
     <message>
         <source>Done loading</source>
         <translation type="unfinished">Ielāde pabeigta</translation>

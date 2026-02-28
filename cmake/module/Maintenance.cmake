@@ -19,7 +19,7 @@ function(setup_split_debug_script)
 endfunction()
 
 function(add_windows_deploy_target)
-  if(MINGW AND TARGET bitcoin AND TARGET bitcoin-qt AND TARGET bitcoind AND TARGET bitcoin-cli AND TARGET bitcoin-tx AND TARGET bitcoin-wallet AND TARGET bitcoin-util AND TARGET test_bitcoin)
+  if(MINGW AND TARGET aixcoin AND TARGET aixcoin-qt AND TARGET aixcoind AND TARGET aixcoin-cli AND TARGET aixcoin-tx AND TARGET aixcoin-wallet AND TARGET aixcoin-util AND TARGET test_aixcoin)
     find_program(MAKENSIS_EXECUTABLE makensis)
     if(NOT MAKENSIS_EXECUTABLE)
       add_custom_target(deploy
@@ -33,46 +33,46 @@ function(add_windows_deploy_target)
     include(GenerateSetupNsi)
     generate_setup_nsi()
     add_custom_command(
-      OUTPUT ${PROJECT_BINARY_DIR}/bitcoin-win64-setup.exe
+      OUTPUT ${PROJECT_BINARY_DIR}/aixcoin-win64-setup.exe
       COMMAND ${CMAKE_COMMAND} -E make_directory ${PROJECT_BINARY_DIR}/release
-      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:bitcoin> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:bitcoin>
-      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:bitcoin-qt> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:bitcoin-qt>
-      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:bitcoind> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:bitcoind>
-      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:bitcoin-cli> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:bitcoin-cli>
-      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:bitcoin-tx> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:bitcoin-tx>
-      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:bitcoin-wallet> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:bitcoin-wallet>
-      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:bitcoin-util> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:bitcoin-util>
-      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:test_bitcoin> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:test_bitcoin>
-      COMMAND ${MAKENSIS_EXECUTABLE} -V2 ${PROJECT_BINARY_DIR}/bitcoin-win64-setup.nsi
+      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:aixcoin> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:aixcoin>
+      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:aixcoin-qt> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:aixcoin-qt>
+      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:aixcoind> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:aixcoind>
+      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:aixcoin-cli> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:aixcoin-cli>
+      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:aixcoin-tx> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:aixcoin-tx>
+      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:aixcoin-wallet> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:aixcoin-wallet>
+      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:aixcoin-util> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:aixcoin-util>
+      COMMAND ${CMAKE_STRIP} $<TARGET_FILE:test_aixcoin> -o ${PROJECT_BINARY_DIR}/release/$<TARGET_FILE_NAME:test_aixcoin>
+      COMMAND ${MAKENSIS_EXECUTABLE} -V2 ${PROJECT_BINARY_DIR}/aixcoin-win64-setup.nsi
       VERBATIM
     )
-    add_custom_target(deploy DEPENDS ${PROJECT_BINARY_DIR}/bitcoin-win64-setup.exe)
+    add_custom_target(deploy DEPENDS ${PROJECT_BINARY_DIR}/aixcoin-win64-setup.exe)
   endif()
 endfunction()
 
 function(add_macos_deploy_target)
-  if(CMAKE_SYSTEM_NAME STREQUAL "Darwin" AND TARGET bitcoin-qt)
+  if(CMAKE_SYSTEM_NAME STREQUAL "Darwin" AND TARGET aixcoin-qt)
     set(macos_app "Bitcoin-Qt.app")
     # Populate Contents subdirectory.
     configure_file(${PROJECT_SOURCE_DIR}/share/qt/Info.plist.in ${macos_app}/Contents/Info.plist NO_SOURCE_PERMISSIONS)
     file(CONFIGURE OUTPUT ${macos_app}/Contents/PkgInfo CONTENT "APPL????")
     # Populate Contents/Resources subdirectory.
     file(CONFIGURE OUTPUT ${macos_app}/Contents/Resources/empty.lproj CONTENT "")
-    configure_file(${PROJECT_SOURCE_DIR}/src/qt/res/icons/bitcoin.icns ${macos_app}/Contents/Resources/bitcoin.icns NO_SOURCE_PERMISSIONS COPYONLY)
+    configure_file(${PROJECT_SOURCE_DIR}/src/qt/res/icons/aixcoin.icns ${macos_app}/Contents/Resources/aixcoin.icns NO_SOURCE_PERMISSIONS COPYONLY)
     file(CONFIGURE OUTPUT ${macos_app}/Contents/Resources/Base.lproj/InfoPlist.strings
       CONTENT "{ CFBundleDisplayName = \"@CLIENT_NAME@\"; CFBundleName = \"@CLIENT_NAME@\"; }"
     )
 
     add_custom_command(
       OUTPUT ${PROJECT_BINARY_DIR}/${macos_app}/Contents/MacOS/Bitcoin-Qt
-      COMMAND ${CMAKE_COMMAND} --install ${PROJECT_BINARY_DIR} --config $<CONFIG> --component bitcoin-qt --prefix ${macos_app}/Contents/MacOS --strip
-      COMMAND ${CMAKE_COMMAND} -E rename ${macos_app}/Contents/MacOS/bin/$<TARGET_FILE_NAME:bitcoin-qt> ${macos_app}/Contents/MacOS/Bitcoin-Qt
+      COMMAND ${CMAKE_COMMAND} --install ${PROJECT_BINARY_DIR} --config $<CONFIG> --component aixcoin-qt --prefix ${macos_app}/Contents/MacOS --strip
+      COMMAND ${CMAKE_COMMAND} -E rename ${macos_app}/Contents/MacOS/bin/$<TARGET_FILE_NAME:aixcoin-qt> ${macos_app}/Contents/MacOS/Bitcoin-Qt
       COMMAND ${CMAKE_COMMAND} -E rm -rf ${macos_app}/Contents/MacOS/bin
       COMMAND ${CMAKE_COMMAND} -E rm -rf ${macos_app}/Contents/MacOS/share
       VERBATIM
     )
 
-    set(macos_zip "bitcoin-macos-app")
+    set(macos_zip "aixcoin-macos-app")
     if(CMAKE_HOST_APPLE)
       add_custom_command(
         OUTPUT ${PROJECT_BINARY_DIR}/${macos_zip}.zip
@@ -114,7 +114,7 @@ function(add_macos_deploy_target)
         )
       endif()
     endif()
-    add_dependencies(deploydir bitcoin-qt)
+    add_dependencies(deploydir aixcoin-qt)
     add_dependencies(deploy deploydir)
   endif()
 endfunction()

@@ -453,7 +453,7 @@ class P2PPrivateBroadcast(BitcoinTestFramework):
             "0" * 64,
         )
 
-        # Stop the SOCKS5 proxy server to avoid it being upset by the bitcoin
+        # Stop the SOCKS5 proxy server to avoid it being upset by the aixcoin
         # node disconnecting in the middle of the SOCKS5 handshake when we
         # restart below.
         self.socks5_server.stop()

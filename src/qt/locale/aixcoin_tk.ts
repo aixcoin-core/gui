@@ -176,7 +176,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Dowam et</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your aixcoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Gapjygyňy şifrlemek kompýuteriňe zyýanly programma ýokuşmak arkaly bitkoinleriň ogurlanmagyndan doly gorap bilmejekdigini ýatdan çykarma.</translation>
     </message>
     <message>
@@ -584,7 +584,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Deňdeşlere baglanylýar...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and aixcoin: URIs)</source>
         <translation type="unfinished">Tölegleri sora (QR kodlary we bitkoin: URIleri döredýär)</translation>
     </message>
     <message>
@@ -667,7 +667,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">&amp;Kabul edýän salgylar</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI</source>
+        <source>Open a aixcoin: URI</source>
         <translation type="unfinished">Bitkoin aç: URI</translation>
     </message>
     <message>
@@ -1400,11 +1400,11 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Forma</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the aixcoin network, as detailed below.</source>
         <translation type="unfinished">Soňky geleşikler entek görünmän biler, şonuň üçin gapjygyňyzdaky galyndy nädogry bolup biler. Bu maglumat aşakda beýan edilişi ýaly gapjygyňyz bitkoin tory bilen utgaşmagy tamamlanda dogry bolar.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend aixcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished">Entek görkezilmedik geleşikleriň täsirine düşen bitkoinleri sarp etmek synanyşygy ulgam tarapyndan kabul edilmez.</translation>
     </message>
     <message>
@@ -1455,7 +1455,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open bitcoin URI</source>
+        <source>Open aixcoin URI</source>
         <translation type="unfinished">Bitkoin URI aç</translation>
     </message>
     <message>
@@ -1974,7 +1974,7 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">Töleg talabynda ýalňyşlyk</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start aixcoin: click-to-pay handler</source>
         <translation type="unfinished">Bitkoini başlap bolanok: click-to-pay işleýjisi</translation>
     </message>
     <message>
@@ -1982,8 +1982,8 @@ Diňe "miras" görnüşli salgylar bilen gol çekmek mümkin.</translation>
         <translation type="unfinished">URI işlemeklik</translation>
     </message>
     <message>
-        <source>'bitcoin://' is not a valid URI. Use 'bitcoin:' instead.</source>
-        <translation type="unfinished">'bitcoin://' dogry URI däl. Onuň ýerine 'bitcoin:' ulanyň.</translation>
+        <source>'aixcoin://' is not a valid URI. Use 'aixcoin:' instead.</source>
+        <translation type="unfinished">'aixcoin://' dogry URI däl. Onuň ýerine 'aixcoin:' ulanyň.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.
@@ -2557,7 +2557,7 @@ Size bu ýalňyşlyk gelýän bolsa, siz täjirden BIP21-e gabat gelýän URI-ni
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>aixcoin-core</name>
     <message>
         <source>default wallet</source>
         <translation type="unfinished">deslapky bellenen gapjyk</translation>
