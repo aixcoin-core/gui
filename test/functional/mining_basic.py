@@ -145,26 +145,26 @@ class MiningTest(AixcoinTestFramework):
 
         # test default (no parameter), zero and a bunch of arbitrary blockmintxfee rates [sat/kvB]
         for blockmintxfee_sat_kvb in (DEFAULT_BLOCK_MIN_TX_FEE, 0, 5, 10, 50, 100, 500, 1000, 2500, 5000, 21000, 333333, 2500000):
-            blockmintxfee_btc_kvb = blockmintxfee_sat_kvb / Decimal(COIN)
+            blockmintxfee_aix_kvb = blockmintxfee_sat_kvb / Decimal(COIN)
             if blockmintxfee_sat_kvb == DEFAULT_BLOCK_MIN_TX_FEE:
                 self.log.info(f"-> Default -blockmintxfee setting ({blockmintxfee_sat_kvb} sat/kvB)...")
             else:
-                blockmintxfee_parameter = f"-blockmintxfee={blockmintxfee_btc_kvb:.8f}"
+                blockmintxfee_parameter = f"-blockmintxfee={blockmintxfee_aix_kvb:.8f}"
                 self.log.info(f"-> Test {blockmintxfee_parameter} ({blockmintxfee_sat_kvb} sat/kvB)...")
                 self.restart_node(0, extra_args=[blockmintxfee_parameter, '-minrelaytxfee=0', '-persistmempool=0'])
-            assert_equal(node.getmininginfo()['blockmintxfee'], blockmintxfee_btc_kvb)
+            assert_equal(node.getmininginfo()['blockmintxfee'], blockmintxfee_aix_kvb)
 
             # submit one tx with exactly the blockmintxfee rate, and one slightly below
-            tx_with_min_feerate = self.wallet.send_self_transfer(from_node=node, fee_rate=blockmintxfee_btc_kvb, confirmed_only=True)
-            assert_equal(tx_with_min_feerate["fee"], get_fee(tx_with_min_feerate["tx"].get_vsize(), blockmintxfee_btc_kvb))
+            tx_with_min_feerate = self.wallet.send_self_transfer(from_node=node, fee_rate=blockmintxfee_aix_kvb, confirmed_only=True)
+            assert_equal(tx_with_min_feerate["fee"], get_fee(tx_with_min_feerate["tx"].get_vsize(), blockmintxfee_aix_kvb))
             if blockmintxfee_sat_kvb >= 10:
-                lowerfee_btc_kvb = blockmintxfee_btc_kvb - Decimal(10)/COIN  # 0.01 sat/vbyte lower
-                assert_greater_than(blockmintxfee_btc_kvb, lowerfee_btc_kvb)
-                assert_greater_than_or_equal(lowerfee_btc_kvb, 0)
-                tx_below_min_feerate = self.wallet.send_self_transfer(from_node=node, fee_rate=lowerfee_btc_kvb, confirmed_only=True)
-                assert_equal(tx_below_min_feerate["fee"], get_fee(tx_below_min_feerate["tx"].get_vsize(), lowerfee_btc_kvb))
+                lowerfee_aix_kvb = blockmintxfee_aix_kvb - Decimal(10)/COIN  # 0.01 sat/vbyte lower
+                assert_greater_than(blockmintxfee_aix_kvb, lowerfee_aix_kvb)
+                assert_greater_than_or_equal(lowerfee_aix_kvb, 0)
+                tx_below_min_feerate = self.wallet.send_self_transfer(from_node=node, fee_rate=lowerfee_aix_kvb, confirmed_only=True)
+                assert_equal(tx_below_min_feerate["fee"], get_fee(tx_below_min_feerate["tx"].get_vsize(), lowerfee_aix_kvb))
             else:  # go below zero fee by using modified fees
-                tx_below_min_feerate = self.wallet.send_self_transfer(from_node=node, fee_rate=blockmintxfee_btc_kvb, confirmed_only=True)
+                tx_below_min_feerate = self.wallet.send_self_transfer(from_node=node, fee_rate=blockmintxfee_aix_kvb, confirmed_only=True)
                 node.prioritisetransaction(tx_below_min_feerate["txid"], 0, -11)
 
             # check that tx below specified fee-rate is neither in template nor in the actual block
@@ -173,7 +173,7 @@ class MiningTest(AixcoinTestFramework):
 
             # Unless blockmintxfee is 0, the template shouldn't contain free transactions.
             # Note that the real block assembler uses package feerates, but we didn't create dependent transactions so it's ok to use base feerate.
-            if blockmintxfee_btc_kvb > 0:
+            if blockmintxfee_aix_kvb > 0:
                 for txid in block_template_txids:
                     tx = node.getmempoolentry(txid)
                     assert_greater_than(tx['fees']['base'], 0)

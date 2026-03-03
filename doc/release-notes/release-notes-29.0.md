@@ -234,7 +234,7 @@ Thanks to everyone who directly contributed to this release:
 - naiyoma
 - Nicola Leonardo Susca
 - omahs
-- pablomartin4btc
+- pablomartin4aix
 - Pieter Wuille
 - Randall Naar
 - RiceChuan

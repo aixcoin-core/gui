@@ -125,7 +125,7 @@ public:
 
             const QFontMetrics fm(fontMetrics());
             int h = lineEdit()->minimumSizeHint().height();
-            int w = GUIUtil::TextWidth(fm, AixcoinUnits::format(AixcoinUnit::BTC, AixcoinUnits::maxMoney(), false, AixcoinUnits::SeparatorStyle::ALWAYS));
+            int w = GUIUtil::TextWidth(fm, AixcoinUnits::format(AixcoinUnit::AIX, AixcoinUnits::maxMoney(), false, AixcoinUnits::SeparatorStyle::ALWAYS));
             w += 2; // cursor blinking space
 
             QStyleOptionSpinBox opt;
@@ -150,7 +150,7 @@ public:
     }
 
 private:
-    AixcoinUnit currentUnit{AixcoinUnit::BTC};
+    AixcoinUnit currentUnit{AixcoinUnit::AIX};
     CAmount singleStep{CAmount(100000)}; // satoshis
     mutable QSize cachedMinimumSizeHint;
     bool m_allow_empty{true};

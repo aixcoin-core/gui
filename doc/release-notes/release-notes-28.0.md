@@ -344,7 +344,7 @@ Thanks to everyone who directly contributed to this release:
 - Michael Dietz
 - Murch
 - nanlour
-- pablomartin4btc
+- pablomartin4aix
 - Peter Todd
 - Pieter Wuille
 - @RandyMcMillan

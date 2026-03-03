@@ -215,7 +215,7 @@ Thanks to everyone who directly contributed to this release:
 - Martin Zumsande
 - monlovesmango
 - nervana21
-- pablomartin4btc
+- pablomartin4aix
 - rkrux
 - romanz
 - ryanofsky

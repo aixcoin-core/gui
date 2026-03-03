@@ -40,9 +40,9 @@ public:
       @note Source: https://en.aixcoin.it/wiki/Units . Please add only sensible ones
      */
     enum class Unit {
-        BTC,
-        mBTC,
-        uBTC,
+        AIX,
+        mAIX,
+        uAIX,
         SAT
     };
     Q_ENUM(Unit)

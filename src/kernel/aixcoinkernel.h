@@ -117,17 +117,17 @@ extern "C" {
 /**
  * Opaque data structure for holding a transaction.
  */
-typedef struct btck_Transaction btck_Transaction;
+typedef struct aixk_Transaction aixk_Transaction;
 
 /**
  * Opaque data structure for holding a script pubkey.
  */
-typedef struct btck_ScriptPubkey btck_ScriptPubkey;
+typedef struct aixk_ScriptPubkey aixk_ScriptPubkey;
 
 /**
  * Opaque data structure for holding a transaction output.
  */
-typedef struct btck_TransactionOutput btck_TransactionOutput;
+typedef struct aixk_TransactionOutput aixk_TransactionOutput;
 
 /**
  * Opaque data structure for holding a logging connection.
@@ -136,11 +136,11 @@ typedef struct btck_TransactionOutput btck_TransactionOutput;
  *
  * Messages that were logged before a connection is created are buffered in a
  * 1MB buffer. Logging can alternatively be permanently disabled by calling
- * @ref btck_logging_disable. Functions changing the logging settings are
- * global and change the settings for all existing btck_LoggingConnection
+ * @ref aixk_logging_disable. Functions changing the logging settings are
+ * global and change the settings for all existing aixk_LoggingConnection
  * instances.
  */
-typedef struct btck_LoggingConnection btck_LoggingConnection;
+typedef struct aixk_LoggingConnection aixk_LoggingConnection;
 
 /**
  * Opaque data structure for holding the chain parameters.
@@ -149,7 +149,7 @@ typedef struct btck_LoggingConnection btck_LoggingConnection;
  * options. The parameters describe the properties of a chain, and may be
  * instantiated for either mainnet, testnet, signet, or regtest.
  */
-typedef struct btck_ChainParameters btck_ChainParameters;
+typedef struct aixk_ChainParameters aixk_ChainParameters;
 
 /**
  * Opaque data structure for holding options for creating a new kernel context.
@@ -161,7 +161,7 @@ typedef struct btck_ChainParameters btck_ChainParameters;
  * no callbacks and for mainnet. Their content and scope can be expanded over
  * time.
  */
-typedef struct btck_ContextOptions btck_ContextOptions;
+typedef struct aixk_ContextOptions aixk_ContextOptions;
 
 /**
  * Opaque data structure for holding a kernel context.
@@ -177,7 +177,7 @@ typedef struct btck_ContextOptions btck_ContextOptions;
  *
  * A constructed context can be safely used from multiple threads.
  */
-typedef struct btck_Context btck_Context;
+typedef struct aixk_Context aixk_Context;
 
 /**
  * Opaque data structure for holding a block tree entry.
@@ -190,7 +190,7 @@ typedef struct btck_Context btck_Context;
  * Each entry corresponds to a single block and may be used to retrieve its
  * data and validation status.
  */
-typedef struct btck_BlockTreeEntry btck_BlockTreeEntry;
+typedef struct aixk_BlockTreeEntry aixk_BlockTreeEntry;
 
 /**
  * Opaque data structure for holding options for creating a new chainstate
@@ -199,7 +199,7 @@ typedef struct btck_BlockTreeEntry btck_BlockTreeEntry;
  * The chainstate manager options are used to set some parameters for the
  * chainstate manager.
  */
-typedef struct btck_ChainstateManagerOptions btck_ChainstateManagerOptions;
+typedef struct aixk_ChainstateManagerOptions aixk_ChainstateManagerOptions;
 
 /**
  * Opaque data structure for holding a chainstate manager.
@@ -210,12 +210,12 @@ typedef struct btck_ChainstateManagerOptions btck_ChainstateManagerOptions;
  *
  * Its functionality will be more and more exposed in the future.
  */
-typedef struct btck_ChainstateManager btck_ChainstateManager;
+typedef struct aixk_ChainstateManager aixk_ChainstateManager;
 
 /**
  * Opaque data structure for holding a block.
  */
-typedef struct btck_Block btck_Block;
+typedef struct aixk_Block aixk_Block;
 
 /**
  * Opaque data structure for holding the state of a block during validation.
@@ -223,13 +223,13 @@ typedef struct btck_Block btck_Block;
  * Contains information indicating whether validation was successful, and if not
  * which step during block validation failed.
  */
-typedef struct btck_BlockValidationState btck_BlockValidationState;
+typedef struct aixk_BlockValidationState aixk_BlockValidationState;
 
 /**
  * Opaque data structure for holding the currently known best-chain associated
  * with a chainstate.
  */
-typedef struct btck_Chain btck_Chain;
+typedef struct aixk_Chain aixk_Chain;
 
 /**
  * Opaque data structure for holding a block's spent outputs.
@@ -238,49 +238,49 @@ typedef struct btck_Chain btck_Chain;
  * block. Internally it holds a nested vector. The top level vector has an
  * entry for each transaction in a block (in order of the actual transactions
  * of the block and without the coinbase transaction). This is exposed through
- * @ref btck_TransactionSpentOutputs. Each btck_TransactionSpentOutputs is in
+ * @ref aixk_TransactionSpentOutputs. Each aixk_TransactionSpentOutputs is in
  * turn a vector of all the previous outputs of a transaction (in order of
  * their corresponding inputs).
  */
-typedef struct btck_BlockSpentOutputs btck_BlockSpentOutputs;
+typedef struct aixk_BlockSpentOutputs aixk_BlockSpentOutputs;
 
 /**
  * Opaque data structure for holding a transaction's spent outputs.
  *
  * Holds the coins consumed by a certain transaction. Retrieved through the
- * @ref btck_BlockSpentOutputs. The coins are in the same order as the
+ * @ref aixk_BlockSpentOutputs. The coins are in the same order as the
  * transaction's inputs consuming them.
  */
-typedef struct btck_TransactionSpentOutputs btck_TransactionSpentOutputs;
+typedef struct aixk_TransactionSpentOutputs aixk_TransactionSpentOutputs;
 
 /**
  * Opaque data structure for holding a coin.
  *
- * Holds information on the @ref btck_TransactionOutput held within,
+ * Holds information on the @ref aixk_TransactionOutput held within,
  * including the height it was spent at and whether it is a coinbase output.
  */
-typedef struct btck_Coin btck_Coin;
+typedef struct aixk_Coin aixk_Coin;
 
 /**
  * Opaque data structure for holding a block hash.
  *
  * This is a type-safe identifier for a block.
  */
-typedef struct btck_BlockHash btck_BlockHash;
+typedef struct aixk_BlockHash aixk_BlockHash;
 
 /**
  * Opaque data structure for holding a transaction input.
  *
- * Holds information on the @ref btck_TransactionOutPoint held within.
+ * Holds information on the @ref aixk_TransactionOutPoint held within.
  */
-typedef struct btck_TransactionInput btck_TransactionInput;
+typedef struct aixk_TransactionInput aixk_TransactionInput;
 
 /**
  * Opaque data structure for holding a transaction out point.
  *
  * Holds the txid and output index it is pointing to.
  */
-typedef struct btck_TransactionOutPoint btck_TransactionOutPoint;
+typedef struct aixk_TransactionOutPoint aixk_TransactionOutPoint;
 
 /**
  * Opaque data structure for holding precomputed transaction data.
@@ -290,30 +290,30 @@ typedef struct btck_TransactionOutPoint btck_TransactionOutPoint;
  *
  * Required when verifying a taproot input.
  */
-typedef struct btck_PrecomputedTransactionData btck_PrecomputedTransactionData;
+typedef struct aixk_PrecomputedTransactionData aixk_PrecomputedTransactionData;
 
 /**
- * Opaque data structure for holding a btck_Txid.
+ * Opaque data structure for holding a aixk_Txid.
  *
  * This is a type-safe identifier for a transaction.
  */
-typedef struct btck_Txid btck_Txid;
+typedef struct aixk_Txid aixk_Txid;
 
 /**
- * Opaque data structure for holding a btck_BlockHeader.
+ * Opaque data structure for holding a aixk_BlockHeader.
  */
-typedef struct btck_BlockHeader btck_BlockHeader;
+typedef struct aixk_BlockHeader aixk_BlockHeader;
 
 /** Current sync state passed to tip changed callbacks. */
-typedef uint8_t btck_SynchronizationState;
-#define btck_SynchronizationState_INIT_REINDEX ((btck_SynchronizationState)(0))
-#define btck_SynchronizationState_INIT_DOWNLOAD ((btck_SynchronizationState)(1))
-#define btck_SynchronizationState_POST_INIT ((btck_SynchronizationState)(2))
+typedef uint8_t aixk_SynchronizationState;
+#define aixk_SynchronizationState_INIT_REINDEX ((aixk_SynchronizationState)(0))
+#define aixk_SynchronizationState_INIT_DOWNLOAD ((aixk_SynchronizationState)(1))
+#define aixk_SynchronizationState_POST_INIT ((aixk_SynchronizationState)(2))
 
 /** Possible warning types issued by validation. */
-typedef uint8_t btck_Warning;
-#define btck_Warning_UNKNOWN_NEW_RULES_ACTIVATED ((btck_Warning)(0))
-#define btck_Warning_LARGE_WORK_INVALID_CHAIN ((btck_Warning)(1))
+typedef uint8_t aixk_Warning;
+#define aixk_Warning_UNKNOWN_NEW_RULES_ACTIVATED ((aixk_Warning)(0))
+#define aixk_Warning_LARGE_WORK_INVALID_CHAIN ((aixk_Warning)(1))
 
 /** Callback function types */
 
@@ -321,59 +321,59 @@ typedef uint8_t btck_Warning;
  * Function signature for the global logging callback. All aixcoin kernel
  * internal logs will pass through this callback.
  */
-typedef void (*btck_LogCallback)(void* user_data, const char* message, size_t message_len);
+typedef void (*aixk_LogCallback)(void* user_data, const char* message, size_t message_len);
 
 /**
  * Function signature for freeing user data.
  */
-typedef void (*btck_DestroyCallback)(void* user_data);
+typedef void (*aixk_DestroyCallback)(void* user_data);
 
 /**
  * Function signatures for the kernel notifications.
  */
-typedef void (*btck_NotifyBlockTip)(void* user_data, btck_SynchronizationState state, const btck_BlockTreeEntry* entry, double verification_progress);
-typedef void (*btck_NotifyHeaderTip)(void* user_data, btck_SynchronizationState state, int64_t height, int64_t timestamp, int presync);
-typedef void (*btck_NotifyProgress)(void* user_data, const char* title, size_t title_len, int progress_percent, int resume_possible);
-typedef void (*btck_NotifyWarningSet)(void* user_data, btck_Warning warning, const char* message, size_t message_len);
-typedef void (*btck_NotifyWarningUnset)(void* user_data, btck_Warning warning);
-typedef void (*btck_NotifyFlushError)(void* user_data, const char* message, size_t message_len);
-typedef void (*btck_NotifyFatalError)(void* user_data, const char* message, size_t message_len);
+typedef void (*aixk_NotifyBlockTip)(void* user_data, aixk_SynchronizationState state, const aixk_BlockTreeEntry* entry, double verification_progress);
+typedef void (*aixk_NotifyHeaderTip)(void* user_data, aixk_SynchronizationState state, int64_t height, int64_t timestamp, int presync);
+typedef void (*aixk_NotifyProgress)(void* user_data, const char* title, size_t title_len, int progress_percent, int resume_possible);
+typedef void (*aixk_NotifyWarningSet)(void* user_data, aixk_Warning warning, const char* message, size_t message_len);
+typedef void (*aixk_NotifyWarningUnset)(void* user_data, aixk_Warning warning);
+typedef void (*aixk_NotifyFlushError)(void* user_data, const char* message, size_t message_len);
+typedef void (*aixk_NotifyFatalError)(void* user_data, const char* message, size_t message_len);
 
 /**
  * Function signatures for the validation interface.
  */
-typedef void (*btck_ValidationInterfaceBlockChecked)(void* user_data, btck_Block* block, const btck_BlockValidationState* state);
-typedef void (*btck_ValidationInterfacePoWValidBlock)(void* user_data, btck_Block* block, const btck_BlockTreeEntry* entry);
-typedef void (*btck_ValidationInterfaceBlockConnected)(void* user_data, btck_Block* block, const btck_BlockTreeEntry* entry);
-typedef void (*btck_ValidationInterfaceBlockDisconnected)(void* user_data, btck_Block* block, const btck_BlockTreeEntry* entry);
+typedef void (*aixk_ValidationInterfaceBlockChecked)(void* user_data, aixk_Block* block, const aixk_BlockValidationState* state);
+typedef void (*aixk_ValidationInterfacePoWValidBlock)(void* user_data, aixk_Block* block, const aixk_BlockTreeEntry* entry);
+typedef void (*aixk_ValidationInterfaceBlockConnected)(void* user_data, aixk_Block* block, const aixk_BlockTreeEntry* entry);
+typedef void (*aixk_ValidationInterfaceBlockDisconnected)(void* user_data, aixk_Block* block, const aixk_BlockTreeEntry* entry);
 
 /**
  * Function signature for serializing data.
  */
-typedef int (*btck_WriteBytes)(const void* bytes, size_t size, void* userdata);
+typedef int (*aixk_WriteBytes)(const void* bytes, size_t size, void* userdata);
 
 /**
  * Whether a validated data structure is valid, invalid, or an error was
  * encountered during processing.
  */
-typedef uint8_t btck_ValidationMode;
-#define btck_ValidationMode_VALID ((btck_ValidationMode)(0))
-#define btck_ValidationMode_INVALID ((btck_ValidationMode)(1))
-#define btck_ValidationMode_INTERNAL_ERROR ((btck_ValidationMode)(2))
+typedef uint8_t aixk_ValidationMode;
+#define aixk_ValidationMode_VALID ((aixk_ValidationMode)(0))
+#define aixk_ValidationMode_INVALID ((aixk_ValidationMode)(1))
+#define aixk_ValidationMode_INTERNAL_ERROR ((aixk_ValidationMode)(2))
 
 /**
  * A granular "reason" why a block was invalid.
  */
-typedef uint32_t btck_BlockValidationResult;
-#define btck_BlockValidationResult_UNSET ((btck_BlockValidationResult)(0))           //!< initial value. Block has not yet been rejected
-#define btck_BlockValidationResult_CONSENSUS ((btck_BlockValidationResult)(1))       //!< invalid by consensus rules (excluding any below reasons)
-#define btck_BlockValidationResult_CACHED_INVALID ((btck_BlockValidationResult)(2))  //!< this block was cached as being invalid and we didn't store the reason why
-#define btck_BlockValidationResult_INVALID_HEADER ((btck_BlockValidationResult)(3))  //!< invalid proof of work or time too old
-#define btck_BlockValidationResult_MUTATED ((btck_BlockValidationResult)(4))         //!< the block's data didn't match the data committed to by the PoW
-#define btck_BlockValidationResult_MISSING_PREV ((btck_BlockValidationResult)(5))    //!< We don't have the previous block the checked one is built on
-#define btck_BlockValidationResult_INVALID_PREV ((btck_BlockValidationResult)(6))    //!< A block this one builds on is invalid
-#define btck_BlockValidationResult_TIME_FUTURE ((btck_BlockValidationResult)(7))     //!< block timestamp was > 2 hours in the future (or our clock is bad)
-#define btck_BlockValidationResult_HEADER_LOW_WORK ((btck_BlockValidationResult)(8)) //!< the block header may be on a too-little-work chain
+typedef uint32_t aixk_BlockValidationResult;
+#define aixk_BlockValidationResult_UNSET ((aixk_BlockValidationResult)(0))           //!< initial value. Block has not yet been rejected
+#define aixk_BlockValidationResult_CONSENSUS ((aixk_BlockValidationResult)(1))       //!< invalid by consensus rules (excluding any below reasons)
+#define aixk_BlockValidationResult_CACHED_INVALID ((aixk_BlockValidationResult)(2))  //!< this block was cached as being invalid and we didn't store the reason why
+#define aixk_BlockValidationResult_INVALID_HEADER ((aixk_BlockValidationResult)(3))  //!< invalid proof of work or time too old
+#define aixk_BlockValidationResult_MUTATED ((aixk_BlockValidationResult)(4))         //!< the block's data didn't match the data committed to by the PoW
+#define aixk_BlockValidationResult_MISSING_PREV ((aixk_BlockValidationResult)(5))    //!< We don't have the previous block the checked one is built on
+#define aixk_BlockValidationResult_INVALID_PREV ((aixk_BlockValidationResult)(6))    //!< A block this one builds on is invalid
+#define aixk_BlockValidationResult_TIME_FUTURE ((aixk_BlockValidationResult)(7))     //!< block timestamp was > 2 hours in the future (or our clock is bad)
+#define aixk_BlockValidationResult_HEADER_LOW_WORK ((aixk_BlockValidationResult)(8)) //!< the block header may be on a too-little-work chain
 
 /**
  * Holds the validation interface callbacks. The user data pointer may be used
@@ -385,14 +385,14 @@ typedef struct {
     void* user_data;                                              //!< Holds a user-defined opaque structure that is passed to the validation
                                                                   //!< interface callbacks. If user_data_destroy is also defined ownership of the
                                                                   //!< user_data is passed to the created context options and subsequently context.
-    btck_DestroyCallback user_data_destroy;                       //!< Frees the provided user data structure.
-    btck_ValidationInterfaceBlockChecked block_checked;           //!< Called when a new block has been fully validated. Contains the
+    aixk_DestroyCallback user_data_destroy;                       //!< Frees the provided user data structure.
+    aixk_ValidationInterfaceBlockChecked block_checked;           //!< Called when a new block has been fully validated. Contains the
                                                                   //!< result of its validation.
-    btck_ValidationInterfacePoWValidBlock pow_valid_block;        //!< Called when a new block extends the header chain and has a valid transaction
+    aixk_ValidationInterfacePoWValidBlock pow_valid_block;        //!< Called when a new block extends the header chain and has a valid transaction
                                                                   //!< and segwit merkle root.
-    btck_ValidationInterfaceBlockConnected block_connected;       //!< Called when a block is valid and has now been connected to the best chain.
-    btck_ValidationInterfaceBlockDisconnected block_disconnected; //!< Called during a re-org when a block has been removed from the best chain.
-} btck_ValidationInterfaceCallbacks;
+    aixk_ValidationInterfaceBlockConnected block_connected;       //!< Called when a block is valid and has now been connected to the best chain.
+    aixk_ValidationInterfaceBlockDisconnected block_disconnected; //!< Called during a re-org when a block has been removed from the best chain.
+} aixk_ValidationInterfaceCallbacks;
 
 /**
  * A struct for holding the kernel notification callbacks. The user data
@@ -410,39 +410,39 @@ typedef struct {
     void* user_data;                        //!< Holds a user-defined opaque structure that is passed to the notification callbacks.
                                             //!< If user_data_destroy is also defined ownership of the user_data is passed to the
                                             //!< created context options and subsequently context.
-    btck_DestroyCallback user_data_destroy; //!< Frees the provided user data structure.
-    btck_NotifyBlockTip block_tip;          //!< The chain's tip was updated to the provided block entry.
-    btck_NotifyHeaderTip header_tip;        //!< A new best block header was added.
-    btck_NotifyProgress progress;           //!< Reports on current block synchronization progress.
-    btck_NotifyWarningSet warning_set;      //!< A warning issued by the kernel library during validation.
-    btck_NotifyWarningUnset warning_unset;  //!< A previous condition leading to the issuance of a warning is no longer given.
-    btck_NotifyFlushError flush_error;      //!< An error encountered when flushing data to disk.
-    btck_NotifyFatalError fatal_error;      //!< An unrecoverable system error encountered by the library.
-} btck_NotificationInterfaceCallbacks;
+    aixk_DestroyCallback user_data_destroy; //!< Frees the provided user data structure.
+    aixk_NotifyBlockTip block_tip;          //!< The chain's tip was updated to the provided block entry.
+    aixk_NotifyHeaderTip header_tip;        //!< A new best block header was added.
+    aixk_NotifyProgress progress;           //!< Reports on current block synchronization progress.
+    aixk_NotifyWarningSet warning_set;      //!< A warning issued by the kernel library during validation.
+    aixk_NotifyWarningUnset warning_unset;  //!< A previous condition leading to the issuance of a warning is no longer given.
+    aixk_NotifyFlushError flush_error;      //!< An error encountered when flushing data to disk.
+    aixk_NotifyFatalError fatal_error;      //!< An unrecoverable system error encountered by the library.
+} aixk_NotificationInterfaceCallbacks;
 
 /**
  * A collection of logging categories that may be encountered by kernel code.
  */
-typedef uint8_t btck_LogCategory;
-#define btck_LogCategory_ALL ((btck_LogCategory)(0))
-#define btck_LogCategory_BENCH ((btck_LogCategory)(1))
-#define btck_LogCategory_BLOCKSTORAGE ((btck_LogCategory)(2))
-#define btck_LogCategory_COINDB ((btck_LogCategory)(3))
-#define btck_LogCategory_LEVELDB ((btck_LogCategory)(4))
-#define btck_LogCategory_MEMPOOL ((btck_LogCategory)(5))
-#define btck_LogCategory_PRUNE ((btck_LogCategory)(6))
-#define btck_LogCategory_RAND ((btck_LogCategory)(7))
-#define btck_LogCategory_REINDEX ((btck_LogCategory)(8))
-#define btck_LogCategory_VALIDATION ((btck_LogCategory)(9))
-#define btck_LogCategory_KERNEL ((btck_LogCategory)(10))
+typedef uint8_t aixk_LogCategory;
+#define aixk_LogCategory_ALL ((aixk_LogCategory)(0))
+#define aixk_LogCategory_BENCH ((aixk_LogCategory)(1))
+#define aixk_LogCategory_BLOCKSTORAGE ((aixk_LogCategory)(2))
+#define aixk_LogCategory_COINDB ((aixk_LogCategory)(3))
+#define aixk_LogCategory_LEVELDB ((aixk_LogCategory)(4))
+#define aixk_LogCategory_MEMPOOL ((aixk_LogCategory)(5))
+#define aixk_LogCategory_PRUNE ((aixk_LogCategory)(6))
+#define aixk_LogCategory_RAND ((aixk_LogCategory)(7))
+#define aixk_LogCategory_REINDEX ((aixk_LogCategory)(8))
+#define aixk_LogCategory_VALIDATION ((aixk_LogCategory)(9))
+#define aixk_LogCategory_KERNEL ((aixk_LogCategory)(10))
 
 /**
  * The level at which logs should be produced.
  */
-typedef uint8_t btck_LogLevel;
-#define btck_LogLevel_TRACE ((btck_LogLevel)(0))
-#define btck_LogLevel_DEBUG ((btck_LogLevel)(1))
-#define btck_LogLevel_INFO ((btck_LogLevel)(2))
+typedef uint8_t aixk_LogLevel;
+#define aixk_LogLevel_TRACE ((aixk_LogLevel)(0))
+#define aixk_LogLevel_DEBUG ((aixk_LogLevel)(1))
+#define aixk_LogLevel_INFO ((aixk_LogLevel)(2))
 
 /**
  * Options controlling the format of log messages.
@@ -455,42 +455,42 @@ typedef struct {
     int log_threadnames;              //!< Prepend the name of the thread to log messages.
     int log_sourcelocations;          //!< Prepend the source location to log messages.
     int always_print_category_levels; //!< Prepend the log category and level to log messages.
-} btck_LoggingOptions;
+} aixk_LoggingOptions;
 
 /**
  * A collection of status codes that may be issued by the script verify function.
  */
-typedef uint8_t btck_ScriptVerifyStatus;
-#define btck_ScriptVerifyStatus_OK ((btck_ScriptVerifyStatus)(0))
-#define btck_ScriptVerifyStatus_ERROR_INVALID_FLAGS_COMBINATION ((btck_ScriptVerifyStatus)(1)) //!< The flags were combined in an invalid way.
-#define btck_ScriptVerifyStatus_ERROR_SPENT_OUTPUTS_REQUIRED ((btck_ScriptVerifyStatus)(2))    //!< The taproot flag was set, so valid spent_outputs have to be provided.
+typedef uint8_t aixk_ScriptVerifyStatus;
+#define aixk_ScriptVerifyStatus_OK ((aixk_ScriptVerifyStatus)(0))
+#define aixk_ScriptVerifyStatus_ERROR_INVALID_FLAGS_COMBINATION ((aixk_ScriptVerifyStatus)(1)) //!< The flags were combined in an invalid way.
+#define aixk_ScriptVerifyStatus_ERROR_SPENT_OUTPUTS_REQUIRED ((aixk_ScriptVerifyStatus)(2))    //!< The taproot flag was set, so valid spent_outputs have to be provided.
 
 /**
  * Script verification flags that may be composed with each other.
  */
-typedef uint32_t btck_ScriptVerificationFlags;
-#define btck_ScriptVerificationFlags_NONE ((btck_ScriptVerificationFlags)(0))
-#define btck_ScriptVerificationFlags_P2SH ((btck_ScriptVerificationFlags)(1U << 0))                 //!< evaluate P2SH (BIP16) subscripts
-#define btck_ScriptVerificationFlags_DERSIG ((btck_ScriptVerificationFlags)(1U << 2))               //!< enforce strict DER (BIP66) compliance
-#define btck_ScriptVerificationFlags_NULLDUMMY ((btck_ScriptVerificationFlags)(1U << 4))            //!< enforce NULLDUMMY (BIP147)
-#define btck_ScriptVerificationFlags_CHECKLOCKTIMEVERIFY ((btck_ScriptVerificationFlags)(1U << 9))  //!< enable CHECKLOCKTIMEVERIFY (BIP65)
-#define btck_ScriptVerificationFlags_CHECKSEQUENCEVERIFY ((btck_ScriptVerificationFlags)(1U << 10)) //!< enable CHECKSEQUENCEVERIFY (BIP112)
-#define btck_ScriptVerificationFlags_WITNESS ((btck_ScriptVerificationFlags)(1U << 11))             //!< enable WITNESS (BIP141)
-#define btck_ScriptVerificationFlags_TAPROOT ((btck_ScriptVerificationFlags)(1U << 17))             //!< enable TAPROOT (BIPs 341 & 342)
-#define btck_ScriptVerificationFlags_ALL ((btck_ScriptVerificationFlags)(btck_ScriptVerificationFlags_P2SH |                \
-                                                                         btck_ScriptVerificationFlags_DERSIG |              \
-                                                                         btck_ScriptVerificationFlags_NULLDUMMY |           \
-                                                                         btck_ScriptVerificationFlags_CHECKLOCKTIMEVERIFY | \
-                                                                         btck_ScriptVerificationFlags_CHECKSEQUENCEVERIFY | \
-                                                                         btck_ScriptVerificationFlags_WITNESS |             \
-                                                                         btck_ScriptVerificationFlags_TAPROOT))
+typedef uint32_t aixk_ScriptVerificationFlags;
+#define aixk_ScriptVerificationFlags_NONE ((aixk_ScriptVerificationFlags)(0))
+#define aixk_ScriptVerificationFlags_P2SH ((aixk_ScriptVerificationFlags)(1U << 0))                 //!< evaluate P2SH (BIP16) subscripts
+#define aixk_ScriptVerificationFlags_DERSIG ((aixk_ScriptVerificationFlags)(1U << 2))               //!< enforce strict DER (BIP66) compliance
+#define aixk_ScriptVerificationFlags_NULLDUMMY ((aixk_ScriptVerificationFlags)(1U << 4))            //!< enforce NULLDUMMY (BIP147)
+#define aixk_ScriptVerificationFlags_CHECKLOCKTIMEVERIFY ((aixk_ScriptVerificationFlags)(1U << 9))  //!< enable CHECKLOCKTIMEVERIFY (BIP65)
+#define aixk_ScriptVerificationFlags_CHECKSEQUENCEVERIFY ((aixk_ScriptVerificationFlags)(1U << 10)) //!< enable CHECKSEQUENCEVERIFY (BIP112)
+#define aixk_ScriptVerificationFlags_WITNESS ((aixk_ScriptVerificationFlags)(1U << 11))             //!< enable WITNESS (BIP141)
+#define aixk_ScriptVerificationFlags_TAPROOT ((aixk_ScriptVerificationFlags)(1U << 17))             //!< enable TAPROOT (BIPs 341 & 342)
+#define aixk_ScriptVerificationFlags_ALL ((aixk_ScriptVerificationFlags)(aixk_ScriptVerificationFlags_P2SH |                \
+                                                                         aixk_ScriptVerificationFlags_DERSIG |              \
+                                                                         aixk_ScriptVerificationFlags_NULLDUMMY |           \
+                                                                         aixk_ScriptVerificationFlags_CHECKLOCKTIMEVERIFY | \
+                                                                         aixk_ScriptVerificationFlags_CHECKSEQUENCEVERIFY | \
+                                                                         aixk_ScriptVerificationFlags_WITNESS |             \
+                                                                         aixk_ScriptVerificationFlags_TAPROOT))
 
-typedef uint8_t btck_ChainType;
-#define btck_ChainType_MAINNET ((btck_ChainType)(0))
-#define btck_ChainType_TESTNET ((btck_ChainType)(1))
-#define btck_ChainType_TESTNET_4 ((btck_ChainType)(2))
-#define btck_ChainType_SIGNET ((btck_ChainType)(3))
-#define btck_ChainType_REGTEST ((btck_ChainType)(4))
+typedef uint8_t aixk_ChainType;
+#define aixk_ChainType_MAINNET ((aixk_ChainType)(0))
+#define aixk_ChainType_TESTNET ((aixk_ChainType)(1))
+#define aixk_ChainType_TESTNET_4 ((aixk_ChainType)(2))
+#define aixk_ChainType_SIGNET ((aixk_ChainType)(3))
+#define aixk_ChainType_REGTEST ((aixk_ChainType)(4))
 
 /** @name Transaction
  * Functions for working with transactions.
@@ -504,7 +504,7 @@ typedef uint8_t btck_ChainType;
  * @param[in] raw_transaction_len Length of the serialized transaction.
  * @return                        The transaction, or null on error.
  */
-AIXCOINKERNEL_API btck_Transaction* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_create(
+AIXCOINKERNEL_API aixk_Transaction* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_create(
     const void* raw_transaction, size_t raw_transaction_len);
 
 /**
@@ -514,8 +514,8 @@ AIXCOINKERNEL_API btck_Transaction* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transa
  * @param[in] transaction Non-null.
  * @return                The copied transaction.
  */
-AIXCOINKERNEL_API btck_Transaction* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_copy(
-    const btck_Transaction* transaction) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_Transaction* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_copy(
+    const aixk_Transaction* transaction) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Serializes the transaction through the passed in callback to bytes.
@@ -527,9 +527,9 @@ AIXCOINKERNEL_API btck_Transaction* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transa
  *                        passed back through the writer callback.
  * @return                0 on success.
  */
-AIXCOINKERNEL_API int btck_transaction_to_bytes(
-    const btck_Transaction* transaction,
-    btck_WriteBytes writer,
+AIXCOINKERNEL_API int aixk_transaction_to_bytes(
+    const aixk_Transaction* transaction,
+    aixk_WriteBytes writer,
     void* user_data) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
@@ -538,8 +538,8 @@ AIXCOINKERNEL_API int btck_transaction_to_bytes(
  * @param[in] transaction Non-null.
  * @return                The number of outputs.
  */
-AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_count_outputs(
-    const btck_Transaction* transaction) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_count_outputs(
+    const aixk_Transaction* transaction) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Get the transaction outputs at the provided index. The returned
@@ -550,8 +550,8 @@ AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_count
  * @param[in] output_index The index of the transaction output to be retrieved.
  * @return                 The transaction output
  */
-AIXCOINKERNEL_API const btck_TransactionOutput* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_get_output_at(
-    const btck_Transaction* transaction, size_t output_index) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_TransactionOutput* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_get_output_at(
+    const aixk_Transaction* transaction, size_t output_index) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Get the transaction input at the provided index. The returned
@@ -562,8 +562,8 @@ AIXCOINKERNEL_API const btck_TransactionOutput* AIXCOINKERNEL_WARN_UNUSED_RESULT
  * @param[in] input_index The index of the transaction input to be retrieved.
  * @return                 The transaction input
  */
-AIXCOINKERNEL_API const btck_TransactionInput* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_get_input_at(
-    const btck_Transaction* transaction, size_t input_index) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_TransactionInput* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_get_input_at(
+    const aixk_Transaction* transaction, size_t input_index) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Get the number of inputs of a transaction.
@@ -571,8 +571,8 @@ AIXCOINKERNEL_API const btck_TransactionInput* AIXCOINKERNEL_WARN_UNUSED_RESULT 
  * @param[in] transaction Non-null.
  * @return                The number of inputs.
  */
-AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_count_inputs(
-    const btck_Transaction* transaction) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_count_inputs(
+    const aixk_Transaction* transaction) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Get the txid of a transaction. The returned txid is not owned and
@@ -581,13 +581,13 @@ AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_count
  * @param[in] transaction Non-null.
  * @return                The txid.
  */
-AIXCOINKERNEL_API const btck_Txid* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_get_txid(
-    const btck_Transaction* transaction) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_Txid* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_get_txid(
+    const aixk_Transaction* transaction) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the transaction.
  */
-AIXCOINKERNEL_API void btck_transaction_destroy(btck_Transaction* transaction);
+AIXCOINKERNEL_API void aixk_transaction_destroy(aixk_Transaction* transaction);
 
 ///@}
 
@@ -605,9 +605,9 @@ AIXCOINKERNEL_API void btck_transaction_destroy(btck_Transaction* transaction);
  * @param[in] spent_outputs_len Length of the spent_outputs array.
  * @return                      The precomputed data, or null on error.
  */
-AIXCOINKERNEL_API btck_PrecomputedTransactionData* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_precomputed_transaction_data_create(
-    const btck_Transaction* tx_to,
-    const btck_TransactionOutput** spent_outputs, size_t spent_outputs_len) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_PrecomputedTransactionData* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_precomputed_transaction_data_create(
+    const aixk_Transaction* tx_to,
+    const aixk_TransactionOutput** spent_outputs, size_t spent_outputs_len) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Copy precomputed transaction data.
@@ -615,13 +615,13 @@ AIXCOINKERNEL_API btck_PrecomputedTransactionData* AIXCOINKERNEL_WARN_UNUSED_RES
  * @param[in] precomputed_txdata Non-null.
  * @return                       The copied precomputed transaction data.
  */
-AIXCOINKERNEL_API btck_PrecomputedTransactionData* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_precomputed_transaction_data_copy(
-    const btck_PrecomputedTransactionData* precomputed_txdata) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_PrecomputedTransactionData* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_precomputed_transaction_data_copy(
+    const aixk_PrecomputedTransactionData* precomputed_txdata) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the precomputed transaction data.
  */
-AIXCOINKERNEL_API void btck_precomputed_transaction_data_destroy(btck_PrecomputedTransactionData* precomputed_txdata);
+AIXCOINKERNEL_API void aixk_precomputed_transaction_data_destroy(aixk_PrecomputedTransactionData* precomputed_txdata);
 
 ///@}
 
@@ -636,7 +636,7 @@ AIXCOINKERNEL_API void btck_precomputed_transaction_data_destroy(btck_Precompute
  * @param[in] script_pubkey_len Length of the script pubkey data.
  * @return                      The script pubkey.
  */
-AIXCOINKERNEL_API btck_ScriptPubkey* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_script_pubkey_create(
+AIXCOINKERNEL_API aixk_ScriptPubkey* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_script_pubkey_create(
     const void* script_pubkey, size_t script_pubkey_len);
 
 /**
@@ -645,13 +645,13 @@ AIXCOINKERNEL_API btck_ScriptPubkey* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_scrip
  * @param[in] script_pubkey Non-null.
  * @return                  The copied script pubkey.
  */
-AIXCOINKERNEL_API btck_ScriptPubkey* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_script_pubkey_copy(
-    const btck_ScriptPubkey* script_pubkey) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_ScriptPubkey* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_script_pubkey_copy(
+    const aixk_ScriptPubkey* script_pubkey) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Verify if the input at input_index of tx_to spends the script pubkey
  * under the constraints specified by flags. If the
- * `btck_ScriptVerificationFlags_WITNESS` flag is set in the flags bitfield, the
+ * `aixk_ScriptVerificationFlags_WITNESS` flag is set in the flags bitfield, the
  * amount parameter is used. If the taproot flag is set, the precomputed data
  * must contain the spent outputs.
  *
@@ -662,18 +662,18 @@ AIXCOINKERNEL_API btck_ScriptPubkey* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_scrip
  * @param[in] precomputed_txdata Nullable if the taproot flag is not set. Otherwise, precomputed data
  *                               for tx_to with the spent outputs must be provided.
  * @param[in] input_index        Index of the input in tx_to spending the script_pubkey.
- * @param[in] flags              Bitfield of btck_ScriptVerificationFlags controlling validation constraints.
+ * @param[in] flags              Bitfield of aixk_ScriptVerificationFlags controlling validation constraints.
  * @param[out] status            Nullable, will be set to an error code if the operation fails, or OK otherwise.
  * @return                       1 if the script is valid, 0 otherwise.
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_script_pubkey_verify(
-    const btck_ScriptPubkey* script_pubkey,
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_script_pubkey_verify(
+    const aixk_ScriptPubkey* script_pubkey,
     int64_t amount,
-    const btck_Transaction* tx_to,
-    const btck_PrecomputedTransactionData* precomputed_txdata,
+    const aixk_Transaction* tx_to,
+    const aixk_PrecomputedTransactionData* precomputed_txdata,
     unsigned int input_index,
-    btck_ScriptVerificationFlags flags,
-    btck_ScriptVerifyStatus* status) AIXCOINKERNEL_ARG_NONNULL(1, 3);
+    aixk_ScriptVerificationFlags flags,
+    aixk_ScriptVerifyStatus* status) AIXCOINKERNEL_ARG_NONNULL(1, 3);
 
 /**
  * @brief Serializes the script pubkey through the passed in callback to bytes.
@@ -684,15 +684,15 @@ AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_script_pubkey_verify
  *                          passed back through the writer callback.
  * @return                  0 on success.
  */
-AIXCOINKERNEL_API int btck_script_pubkey_to_bytes(
-    const btck_ScriptPubkey* script_pubkey,
-    btck_WriteBytes writer,
+AIXCOINKERNEL_API int aixk_script_pubkey_to_bytes(
+    const aixk_ScriptPubkey* script_pubkey,
+    aixk_WriteBytes writer,
     void* user_data) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * Destroy the script pubkey.
  */
-AIXCOINKERNEL_API void btck_script_pubkey_destroy(btck_ScriptPubkey* script_pubkey);
+AIXCOINKERNEL_API void aixk_script_pubkey_destroy(aixk_ScriptPubkey* script_pubkey);
 
 ///@}
 
@@ -708,8 +708,8 @@ AIXCOINKERNEL_API void btck_script_pubkey_destroy(btck_ScriptPubkey* script_pubk
  * @param[in] amount        The amount associated with the script pubkey for this output.
  * @return                  The transaction output.
  */
-AIXCOINKERNEL_API btck_TransactionOutput* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_output_create(
-    const btck_ScriptPubkey* script_pubkey,
+AIXCOINKERNEL_API aixk_TransactionOutput* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_output_create(
+    const aixk_ScriptPubkey* script_pubkey,
     int64_t amount) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
@@ -720,8 +720,8 @@ AIXCOINKERNEL_API btck_TransactionOutput* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_
  * @param[in] transaction_output Non-null.
  * @return                       The script pubkey.
  */
-AIXCOINKERNEL_API const btck_ScriptPubkey* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_output_get_script_pubkey(
-    const btck_TransactionOutput* transaction_output) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_ScriptPubkey* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_output_get_script_pubkey(
+    const aixk_TransactionOutput* transaction_output) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Get the amount in the output.
@@ -729,8 +729,8 @@ AIXCOINKERNEL_API const btck_ScriptPubkey* AIXCOINKERNEL_WARN_UNUSED_RESULT btck
  * @param[in] transaction_output Non-null.
  * @return                       The amount.
  */
-AIXCOINKERNEL_API int64_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_output_get_amount(
-    const btck_TransactionOutput* transaction_output) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API int64_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_output_get_amount(
+    const aixk_TransactionOutput* transaction_output) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  *  @brief Copy a transaction output.
@@ -738,13 +738,13 @@ AIXCOINKERNEL_API int64_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_outp
  *  @param[in] transaction_output Non-null.
  *  @return                       The copied transaction output.
  */
-AIXCOINKERNEL_API btck_TransactionOutput* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_output_copy(
-    const btck_TransactionOutput* transaction_output) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_TransactionOutput* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_output_copy(
+    const aixk_TransactionOutput* transaction_output) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the transaction output.
  */
-AIXCOINKERNEL_API void btck_transaction_output_destroy(btck_TransactionOutput* transaction_output);
+AIXCOINKERNEL_API void aixk_transaction_output_destroy(aixk_TransactionOutput* transaction_output);
 
 ///@}
 
@@ -761,51 +761,51 @@ AIXCOINKERNEL_API void btck_transaction_output_destroy(btck_TransactionOutput* t
  * connection is created. This must not be called while a logging connection
  * already exists.
  */
-AIXCOINKERNEL_API void btck_logging_disable();
+AIXCOINKERNEL_API void aixk_logging_disable();
 
 /**
  * @brief Set some options for the global internal logger. This changes global
  * settings and will override settings for all existing @ref
- * btck_LoggingConnection instances.
+ * aixk_LoggingConnection instances.
  *
  * @param[in] options Sets formatting options of the log messages.
  */
-AIXCOINKERNEL_API void btck_logging_set_options(btck_LoggingOptions options);
+AIXCOINKERNEL_API void aixk_logging_set_options(aixk_LoggingOptions options);
 
 /**
  * @brief Set the log level of the global internal logger. This does not
- * enable the selected categories. Use @ref btck_logging_enable_category to
+ * enable the selected categories. Use @ref aixk_logging_enable_category to
  * start logging from a specific, or all categories. This changes a global
  * setting and will override settings for all existing
- * @ref btck_LoggingConnection instances.
+ * @ref aixk_LoggingConnection instances.
  *
- * @param[in] category If btck_LogCategory_ALL is chosen, sets both the global fallback log level
+ * @param[in] category If aixk_LogCategory_ALL is chosen, sets both the global fallback log level
  *                     used by all categories that don't have a specific level set, and also
- *                     sets the log level for messages logged with the btck_LogCategory_ALL category itself.
+ *                     sets the log level for messages logged with the aixk_LogCategory_ALL category itself.
  *                     For any other category, sets a category-specific log level that overrides
  *                     the global fallback for that category only.
 
  * @param[in] level    Log level at which the log category is set.
  */
-AIXCOINKERNEL_API void btck_logging_set_level_category(btck_LogCategory category, btck_LogLevel level);
+AIXCOINKERNEL_API void aixk_logging_set_level_category(aixk_LogCategory category, aixk_LogLevel level);
 
 /**
  * @brief Enable a specific log category for the global internal logger. This
  * changes a global setting and will override settings for all existing @ref
- * btck_LoggingConnection instances.
+ * aixk_LoggingConnection instances.
  *
- * @param[in] category If btck_LogCategory_ALL is chosen, all categories will be enabled.
+ * @param[in] category If aixk_LogCategory_ALL is chosen, all categories will be enabled.
  */
-AIXCOINKERNEL_API void btck_logging_enable_category(btck_LogCategory category);
+AIXCOINKERNEL_API void aixk_logging_enable_category(aixk_LogCategory category);
 
 /**
  * @brief Disable a specific log category for the global internal logger. This
  * changes a global setting and will override settings for all existing @ref
- * btck_LoggingConnection instances.
+ * aixk_LoggingConnection instances.
  *
- * @param[in] category If btck_LogCategory_ALL is chosen, all categories will be disabled.
+ * @param[in] category If aixk_LogCategory_ALL is chosen, all categories will be disabled.
  */
-AIXCOINKERNEL_API void btck_logging_disable_category(btck_LogCategory category);
+AIXCOINKERNEL_API void aixk_logging_disable_category(aixk_LogCategory category);
 
 /**
  * @brief Start logging messages through the provided callback. Log messages
@@ -820,15 +820,15 @@ AIXCOINKERNEL_API void btck_logging_disable_category(btck_LogCategory category);
  * @param[in] user_data_destroy_callback Nullable, function for freeing the user data.
  * @return                               A new kernel logging connection, or null on error.
  */
-AIXCOINKERNEL_API btck_LoggingConnection* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_logging_connection_create(
-    btck_LogCallback log_callback,
+AIXCOINKERNEL_API aixk_LoggingConnection* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_logging_connection_create(
+    aixk_LogCallback log_callback,
     void* user_data,
-    btck_DestroyCallback user_data_destroy_callback) AIXCOINKERNEL_ARG_NONNULL(1);
+    aixk_DestroyCallback user_data_destroy_callback) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Stop logging and destroy the logging connection.
  */
-AIXCOINKERNEL_API void btck_logging_connection_destroy(btck_LoggingConnection* logging_connection);
+AIXCOINKERNEL_API void aixk_logging_connection_destroy(aixk_LoggingConnection* logging_connection);
 
 ///@}
 
@@ -844,19 +844,19 @@ AIXCOINKERNEL_API void btck_logging_connection_destroy(btck_LoggingConnection* l
  * @param[in] chain_type Controls the chain parameters type created.
  * @return               An allocated chain parameters opaque struct.
  */
-AIXCOINKERNEL_API btck_ChainParameters* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chain_parameters_create(
-    btck_ChainType chain_type);
+AIXCOINKERNEL_API aixk_ChainParameters* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chain_parameters_create(
+    aixk_ChainType chain_type);
 
 /**
  * Copy the chain parameters.
  */
-AIXCOINKERNEL_API btck_ChainParameters* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chain_parameters_copy(
-    const btck_ChainParameters* chain_parameters) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_ChainParameters* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chain_parameters_copy(
+    const aixk_ChainParameters* chain_parameters) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the chain parameters.
  */
-AIXCOINKERNEL_API void btck_chain_parameters_destroy(btck_ChainParameters* chain_parameters);
+AIXCOINKERNEL_API void aixk_chain_parameters_destroy(aixk_ChainParameters* chain_parameters);
 
 ///@}
 
@@ -868,29 +868,29 @@ AIXCOINKERNEL_API void btck_chain_parameters_destroy(btck_ChainParameters* chain
 /**
  * Creates an empty context options.
  */
-AIXCOINKERNEL_API btck_ContextOptions* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_context_options_create();
+AIXCOINKERNEL_API aixk_ContextOptions* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_context_options_create();
 
 /**
  * @brief Sets the chain params for the context options. The context created
  * with the options will be configured for these chain parameters.
  *
- * @param[in] context_options  Non-null, previously created by @ref btck_context_options_create.
+ * @param[in] context_options  Non-null, previously created by @ref aixk_context_options_create.
  * @param[in] chain_parameters Is set to the context options.
  */
-AIXCOINKERNEL_API void btck_context_options_set_chainparams(
-    btck_ContextOptions* context_options,
-    const btck_ChainParameters* chain_parameters) AIXCOINKERNEL_ARG_NONNULL(1, 2);
+AIXCOINKERNEL_API void aixk_context_options_set_chainparams(
+    aixk_ContextOptions* context_options,
+    const aixk_ChainParameters* chain_parameters) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * @brief Set the kernel notifications for the context options. The context
  * created with the options will be configured with these notifications.
  *
- * @param[in] context_options Non-null, previously created by @ref btck_context_options_create.
+ * @param[in] context_options Non-null, previously created by @ref aixk_context_options_create.
  * @param[in] notifications   Is set to the context options.
  */
-AIXCOINKERNEL_API void btck_context_options_set_notifications(
-    btck_ContextOptions* context_options,
-    btck_NotificationInterfaceCallbacks notifications) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API void aixk_context_options_set_notifications(
+    aixk_ContextOptions* context_options,
+    aixk_NotificationInterfaceCallbacks notifications) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Set the validation interface callbacks for the context options. The
@@ -898,18 +898,18 @@ AIXCOINKERNEL_API void btck_context_options_set_notifications(
  * interface callbacks. The callbacks will then be triggered from validation
  * events issued by the chainstate manager created from the same context.
  *
- * @param[in] context_options                Non-null, previously created with btck_context_options_create.
+ * @param[in] context_options                Non-null, previously created with aixk_context_options_create.
  * @param[in] validation_interface_callbacks The callbacks used for passing validation information to the
  *                                           user.
  */
-AIXCOINKERNEL_API void btck_context_options_set_validation_interface(
-    btck_ContextOptions* context_options,
-    btck_ValidationInterfaceCallbacks validation_interface_callbacks) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API void aixk_context_options_set_validation_interface(
+    aixk_ContextOptions* context_options,
+    aixk_ValidationInterfaceCallbacks validation_interface_callbacks) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the context options.
  */
-AIXCOINKERNEL_API void btck_context_options_destroy(btck_ContextOptions* context_options);
+AIXCOINKERNEL_API void aixk_context_options_destroy(aixk_ContextOptions* context_options);
 
 ///@}
 
@@ -924,17 +924,17 @@ AIXCOINKERNEL_API void btck_context_options_destroy(btck_ContextOptions* context
  * context will assume mainnet chain parameters and won't attempt to call the
  * kernel notification callbacks.
  *
- * @param[in] context_options Nullable, created by @ref btck_context_options_create.
+ * @param[in] context_options Nullable, created by @ref aixk_context_options_create.
  * @return                    The allocated context, or null on error.
  */
-AIXCOINKERNEL_API btck_Context* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_context_create(
-    const btck_ContextOptions* context_options);
+AIXCOINKERNEL_API aixk_Context* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_context_create(
+    const aixk_ContextOptions* context_options);
 
 /**
  * Copy the context.
  */
-AIXCOINKERNEL_API btck_Context* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_context_copy(
-    const btck_Context* context) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_Context* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_context_copy(
+    const aixk_Context* context) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Interrupt can be used to halt long-running validation functions like
@@ -943,13 +943,13 @@ AIXCOINKERNEL_API btck_Context* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_context_co
  * @param[in] context  Non-null.
  * @return             0 if the interrupt was successful, non-zero otherwise.
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_context_interrupt(
-    btck_Context* context) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_context_interrupt(
+    aixk_Context* context) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the context.
  */
-AIXCOINKERNEL_API void btck_context_destroy(btck_Context* context);
+AIXCOINKERNEL_API void aixk_context_destroy(aixk_Context* context);
 
 ///@}
 
@@ -965,17 +965,17 @@ AIXCOINKERNEL_API void btck_context_destroy(btck_Context* context);
  * @param[in] block_tree_entry Non-null.
  * @return                     The previous block tree entry, or null on error or if the current block tree entry is the genesis block.
  */
-AIXCOINKERNEL_API const btck_BlockTreeEntry* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry_get_previous(
-    const btck_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_BlockTreeEntry* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_tree_entry_get_previous(
+    const aixk_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Return the btck_BlockHeader associated with this entry.
+ * @brief Return the aixk_BlockHeader associated with this entry.
  *
  * @param[in] block_tree_entry Non-null.
- * @return                     btck_BlockHeader.
+ * @return                     aixk_BlockHeader.
  */
-AIXCOINKERNEL_API btck_BlockHeader* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry_get_block_header(
-    const btck_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_BlockHeader* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_tree_entry_get_block_header(
+    const aixk_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Return the height of a certain block tree entry.
@@ -983,8 +983,8 @@ AIXCOINKERNEL_API btck_BlockHeader* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_
  * @param[in] block_tree_entry Non-null.
  * @return                     The block height.
  */
-AIXCOINKERNEL_API int32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry_get_height(
-    const btck_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API int32_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_tree_entry_get_height(
+    const aixk_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Return the block hash associated with a block tree entry.
@@ -992,8 +992,8 @@ AIXCOINKERNEL_API int32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry
  * @param[in] block_tree_entry Non-null.
  * @return                     The block hash.
  */
-AIXCOINKERNEL_API const btck_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry_get_block_hash(
-    const btck_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_tree_entry_get_block_hash(
+    const aixk_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Check if two block tree entries are equal. Two block tree entries are equal when they
@@ -1003,8 +1003,8 @@ AIXCOINKERNEL_API const btck_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_bl
  * @param[in] entry2 Non-null.
  * @return           1 if the block tree entries are equal, 0 otherwise.
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry_equals(
-    const btck_BlockTreeEntry* entry1, const btck_BlockTreeEntry* entry2) AIXCOINKERNEL_ARG_NONNULL(1, 2);
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_tree_entry_equals(
+    const aixk_BlockTreeEntry* entry1, const aixk_BlockTreeEntry* entry2) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 ///@}
 
@@ -1025,8 +1025,8 @@ AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_tree_entry_equ
  *                             data. If the directory does not exist yet, it will be created.
  * @return                     The allocated chainstate manager options, or null on error.
  */
-AIXCOINKERNEL_API btck_ChainstateManagerOptions* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_options_create(
-    const btck_Context* context,
+AIXCOINKERNEL_API aixk_ChainstateManagerOptions* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chainstate_manager_options_create(
+    const aixk_Context* context,
     const char* data_directory,
     size_t data_directory_len,
     const char* blocks_directory,
@@ -1040,49 +1040,49 @@ AIXCOINKERNEL_API btck_ChainstateManagerOptions* AIXCOINKERNEL_WARN_UNUSED_RESUL
  *                                       used for validation. When set to 0 no parallel verification is done.
  *                                       The value range is clamped internally between 0 and 15.
  */
-AIXCOINKERNEL_API void btck_chainstate_manager_options_set_worker_threads_num(
-    btck_ChainstateManagerOptions* chainstate_manager_options,
+AIXCOINKERNEL_API void aixk_chainstate_manager_options_set_worker_threads_num(
+    aixk_ChainstateManagerOptions* chainstate_manager_options,
     int worker_threads) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Sets wipe db in the options. In combination with calling
- * @ref btck_chainstate_manager_import_blocks this triggers either a full reindex,
+ * @ref aixk_chainstate_manager_import_blocks this triggers either a full reindex,
  * or a reindex of just the chainstate database.
  *
- * @param[in] chainstate_manager_options Non-null, created by @ref btck_chainstate_manager_options_create.
+ * @param[in] chainstate_manager_options Non-null, created by @ref aixk_chainstate_manager_options_create.
  * @param[in] wipe_block_tree_db         Set wipe block tree db. Should only be 1 if wipe_chainstate_db is 1 too.
  * @param[in] wipe_chainstate_db         Set wipe chainstate db.
  * @return                               0 if the set was successful, non-zero if the set failed.
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_options_set_wipe_dbs(
-    btck_ChainstateManagerOptions* chainstate_manager_options,
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chainstate_manager_options_set_wipe_dbs(
+    aixk_ChainstateManagerOptions* chainstate_manager_options,
     int wipe_block_tree_db,
     int wipe_chainstate_db) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Sets block tree db in memory in the options.
  *
- * @param[in] chainstate_manager_options   Non-null, created by @ref btck_chainstate_manager_options_create.
+ * @param[in] chainstate_manager_options   Non-null, created by @ref aixk_chainstate_manager_options_create.
  * @param[in] block_tree_db_in_memory      Set block tree db in memory.
  */
-AIXCOINKERNEL_API void btck_chainstate_manager_options_update_block_tree_db_in_memory(
-    btck_ChainstateManagerOptions* chainstate_manager_options,
+AIXCOINKERNEL_API void aixk_chainstate_manager_options_update_block_tree_db_in_memory(
+    aixk_ChainstateManagerOptions* chainstate_manager_options,
     int block_tree_db_in_memory) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Sets chainstate db in memory in the options.
  *
- * @param[in] chainstate_manager_options Non-null, created by @ref btck_chainstate_manager_options_create.
+ * @param[in] chainstate_manager_options Non-null, created by @ref aixk_chainstate_manager_options_create.
  * @param[in] chainstate_db_in_memory    Set chainstate db in memory.
  */
-AIXCOINKERNEL_API void btck_chainstate_manager_options_update_chainstate_db_in_memory(
-    btck_ChainstateManagerOptions* chainstate_manager_options,
+AIXCOINKERNEL_API void aixk_chainstate_manager_options_update_chainstate_db_in_memory(
+    aixk_ChainstateManagerOptions* chainstate_manager_options,
     int chainstate_db_in_memory) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the chainstate manager options.
  */
-AIXCOINKERNEL_API void btck_chainstate_manager_options_destroy(btck_ChainstateManagerOptions* chainstate_manager_options);
+AIXCOINKERNEL_API void aixk_chainstate_manager_options_destroy(aixk_ChainstateManagerOptions* chainstate_manager_options);
 
 ///@}
 
@@ -1096,34 +1096,34 @@ AIXCOINKERNEL_API void btck_chainstate_manager_options_destroy(btck_ChainstateMa
  * validation tasks as well as for retrieving data from the chain and
  * interacting with its chainstate and indexes.
  *
- * @param[in] chainstate_manager_options Non-null, created by @ref btck_chainstate_manager_options_create.
+ * @param[in] chainstate_manager_options Non-null, created by @ref aixk_chainstate_manager_options_create.
  * @return                               The allocated chainstate manager, or null on error.
  */
-AIXCOINKERNEL_API btck_ChainstateManager* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_create(
-    const btck_ChainstateManagerOptions* chainstate_manager_options) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_ChainstateManager* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chainstate_manager_create(
+    const aixk_ChainstateManagerOptions* chainstate_manager_options) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Get the btck_BlockTreeEntry whose associated btck_BlockHeader has the most
+ * @brief Get the aixk_BlockTreeEntry whose associated aixk_BlockHeader has the most
  * known cumulative proof of work.
  *
  * @param[in] chainstate_manager Non-null.
- * @return                       The btck_BlockTreeEntry.
+ * @return                       The aixk_BlockTreeEntry.
  */
-AIXCOINKERNEL_API const btck_BlockTreeEntry* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_get_best_entry(
-    const btck_ChainstateManager* chainstate_manager) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_BlockTreeEntry* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chainstate_manager_get_best_entry(
+    const aixk_ChainstateManager* chainstate_manager) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Processes and validates the provided btck_BlockHeader.
+ * @brief Processes and validates the provided aixk_BlockHeader.
  *
  * @param[in] chainstate_manager        Non-null.
- * @param[in] header                    Non-null btck_BlockHeader to be validated.
- * @param[out] block_validation_state   The result of the btck_BlockHeader validation.
- * @return                              0 if btck_BlockHeader processing completed successfully, non-zero on error.
+ * @param[in] header                    Non-null aixk_BlockHeader to be validated.
+ * @param[out] block_validation_state   The result of the aixk_BlockHeader validation.
+ * @return                              0 if aixk_BlockHeader processing completed successfully, non-zero on error.
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_process_block_header(
-    btck_ChainstateManager* chainstate_manager,
-    const btck_BlockHeader* header,
-    btck_BlockValidationState* block_validation_state) AIXCOINKERNEL_ARG_NONNULL(1, 2, 3);
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chainstate_manager_process_block_header(
+    aixk_ChainstateManager* chainstate_manager,
+    const aixk_BlockHeader* header,
+    aixk_BlockValidationState* block_validation_state) AIXCOINKERNEL_ARG_NONNULL(1, 2, 3);
 
 /**
  * @brief Triggers the start of a reindex if the wipe options were previously
@@ -1136,8 +1136,8 @@ AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_p
  * @param[in] block_file_paths_data_len Length of the block_file_paths_data and block_file_paths_len arrays.
  * @return                              0 if the import blocks call was completed successfully, non-zero otherwise.
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_import_blocks(
-    btck_ChainstateManager* chainstate_manager,
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chainstate_manager_import_blocks(
+    aixk_ChainstateManager* chainstate_manager,
     const char** block_file_paths_data, size_t* block_file_paths_lens,
     size_t block_file_paths_data_len) AIXCOINKERNEL_ARG_NONNULL(1);
 
@@ -1158,9 +1158,9 @@ AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_i
  *                               before its data was persisted.
  * @return                       0 if processing the block was successful. Will also return 0 for valid, but duplicate blocks.
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_process_block(
-    btck_ChainstateManager* chainstate_manager,
-    const btck_Block* block,
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chainstate_manager_process_block(
+    aixk_ChainstateManager* chainstate_manager,
+    const aixk_Block* block,
     int* new_block) AIXCOINKERNEL_ARG_NONNULL(1, 2, 3);
 
 /**
@@ -1177,8 +1177,8 @@ AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_p
  * @param[in] chainstate_manager Non-null.
  * @return                       The chain.
  */
-AIXCOINKERNEL_API const btck_Chain* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_get_active_chain(
-    const btck_ChainstateManager* chainstate_manager) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_Chain* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chainstate_manager_get_active_chain(
+    const aixk_ChainstateManager* chainstate_manager) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Retrieve a block tree entry by its block hash.
@@ -1188,14 +1188,14 @@ AIXCOINKERNEL_API const btck_Chain* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chains
  * @return                       The block tree entry of the block with the passed in hash, or null if
  *                               the block hash is not found.
  */
-AIXCOINKERNEL_API const btck_BlockTreeEntry* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chainstate_manager_get_block_tree_entry_by_hash(
-    const btck_ChainstateManager* chainstate_manager,
-    const btck_BlockHash* block_hash) AIXCOINKERNEL_ARG_NONNULL(1, 2);
+AIXCOINKERNEL_API const aixk_BlockTreeEntry* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chainstate_manager_get_block_tree_entry_by_hash(
+    const aixk_ChainstateManager* chainstate_manager,
+    const aixk_BlockHash* block_hash) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * Destroy the chainstate manager.
  */
-AIXCOINKERNEL_API void btck_chainstate_manager_destroy(btck_ChainstateManager* chainstate_manager);
+AIXCOINKERNEL_API void aixk_chainstate_manager_destroy(aixk_ChainstateManager* chainstate_manager);
 
 ///@}
 
@@ -1212,9 +1212,9 @@ AIXCOINKERNEL_API void btck_chainstate_manager_destroy(btck_ChainstateManager* c
  * @param[in] block_tree_entry   Non-null.
  * @return                       The read out block, or null on error.
  */
-AIXCOINKERNEL_API btck_Block* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_read(
-    const btck_ChainstateManager* chainstate_manager,
-    const btck_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1, 2);
+AIXCOINKERNEL_API aixk_Block* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_read(
+    const aixk_ChainstateManager* chainstate_manager,
+    const aixk_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * @brief Parse a serialized raw block into a new block object.
@@ -1223,7 +1223,7 @@ AIXCOINKERNEL_API btck_Block* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_read(
  * @param[in] raw_block_len Length of the serialized block.
  * @return                  The allocated block, or null on error.
  */
-AIXCOINKERNEL_API btck_Block* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_create(
+AIXCOINKERNEL_API aixk_Block* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_create(
     const void* raw_block, size_t raw_block_len);
 
 /**
@@ -1233,8 +1233,8 @@ AIXCOINKERNEL_API btck_Block* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_create
  * @param[in] block Non-null.
  * @return          The copied block.
  */
-AIXCOINKERNEL_API btck_Block* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_copy(
-    const btck_Block* block) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_Block* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_copy(
+    const aixk_Block* block) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Count the number of transactions contained in a block.
@@ -1242,8 +1242,8 @@ AIXCOINKERNEL_API btck_Block* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_copy(
  * @param[in] block Non-null.
  * @return          The number of transactions in the block.
  */
-AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_count_transactions(
-    const btck_Block* block) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_count_transactions(
+    const aixk_Block* block) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Get the transaction at the provided index. The returned transaction
@@ -1253,19 +1253,19 @@ AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_count_trans
  * @param[in] transaction_index The index of the transaction to be retrieved.
  * @return                      The transaction.
  */
-AIXCOINKERNEL_API const btck_Transaction* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_get_transaction_at(
-    const btck_Block* block, size_t transaction_index) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_Transaction* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_get_transaction_at(
+    const aixk_Block* block, size_t transaction_index) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Get the btck_BlockHeader from the block.
+ * @brief Get the aixk_BlockHeader from the block.
  *
- * Creates a new btck_BlockHeader object from the block's header data.
+ * Creates a new aixk_BlockHeader object from the block's header data.
  *
- * @param[in] block Non-null btck_Block
- * @return          btck_BlockHeader.
+ * @param[in] block Non-null aixk_Block
+ * @return          aixk_BlockHeader.
  */
-AIXCOINKERNEL_API btck_BlockHeader* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_get_header(
-    const btck_Block* block) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_BlockHeader* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_get_header(
+    const aixk_Block* block) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Calculate and return the hash of a block.
@@ -1273,8 +1273,8 @@ AIXCOINKERNEL_API btck_BlockHeader* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_
  * @param[in] block Non-null.
  * @return    The block hash.
  */
-AIXCOINKERNEL_API btck_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_get_hash(
-    const btck_Block* block) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_get_hash(
+    const aixk_Block* block) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Serializes the block through the passed in callback to bytes.
@@ -1286,15 +1286,15 @@ AIXCOINKERNEL_API btck_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_ge
  *                      passed back through the writer callback.
  * @return              0 on success.
  */
-AIXCOINKERNEL_API int btck_block_to_bytes(
-    const btck_Block* block,
-    btck_WriteBytes writer,
+AIXCOINKERNEL_API int aixk_block_to_bytes(
+    const aixk_Block* block,
+    aixk_WriteBytes writer,
     void* user_data) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * Destroy the block.
  */
-AIXCOINKERNEL_API void btck_block_destroy(btck_Block* block);
+AIXCOINKERNEL_API void aixk_block_destroy(aixk_Block* block);
 
 ///@}
 
@@ -1304,36 +1304,36 @@ AIXCOINKERNEL_API void btck_block_destroy(btck_Block* block);
 ///@{
 
 /**
- * Create a new btck_BlockValidationState.
+ * Create a new aixk_BlockValidationState.
  */
-AIXCOINKERNEL_API btck_BlockValidationState* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_validation_state_create();
+AIXCOINKERNEL_API aixk_BlockValidationState* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_validation_state_create();
 
 /**
- * Returns the validation mode from an opaque btck_BlockValidationState pointer.
+ * Returns the validation mode from an opaque aixk_BlockValidationState pointer.
  */
-AIXCOINKERNEL_API btck_ValidationMode btck_block_validation_state_get_validation_mode(
-    const btck_BlockValidationState* block_validation_state) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_ValidationMode aixk_block_validation_state_get_validation_mode(
+    const aixk_BlockValidationState* block_validation_state) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * Returns the validation result from an opaque btck_BlockValidationState pointer.
+ * Returns the validation result from an opaque aixk_BlockValidationState pointer.
  */
-AIXCOINKERNEL_API btck_BlockValidationResult btck_block_validation_state_get_block_validation_result(
-    const btck_BlockValidationState* block_validation_state) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_BlockValidationResult aixk_block_validation_state_get_block_validation_result(
+    const aixk_BlockValidationState* block_validation_state) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Copies the btck_BlockValidationState.
+ * @brief Copies the aixk_BlockValidationState.
  *
  * @param[in] block_validation_state Non-null.
- * @return                           The copied btck_BlockValidationState.
+ * @return                           The copied aixk_BlockValidationState.
  */
-AIXCOINKERNEL_API btck_BlockValidationState* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_validation_state_copy(
-    const btck_BlockValidationState* block_validation_state) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_BlockValidationState* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_validation_state_copy(
+    const aixk_BlockValidationState* block_validation_state) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * Destroy the btck_BlockValidationState.
+ * Destroy the aixk_BlockValidationState.
  */
-AIXCOINKERNEL_API void btck_block_validation_state_destroy(
-    btck_BlockValidationState* block_validation_state) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API void aixk_block_validation_state_destroy(
+    aixk_BlockValidationState* block_validation_state) AIXCOINKERNEL_ARG_NONNULL(1);
 
 ///@}
 
@@ -1348,8 +1348,8 @@ AIXCOINKERNEL_API void btck_block_validation_state_destroy(
  * @param[in] chain Non-null.
  * @return          The current height.
  */
-AIXCOINKERNEL_API int32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chain_get_height(
-    const btck_Chain* chain) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API int32_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chain_get_height(
+    const aixk_Chain* chain) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Retrieve a block tree entry by its height in the currently active chain.
@@ -1360,8 +1360,8 @@ AIXCOINKERNEL_API int32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chain_get_height
  * @return                 The block tree entry at a certain height in the currently active chain, or null
  *                         if the height is out of bounds.
  */
-AIXCOINKERNEL_API const btck_BlockTreeEntry* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chain_get_by_height(
-    const btck_Chain* chain,
+AIXCOINKERNEL_API const aixk_BlockTreeEntry* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chain_get_by_height(
+    const aixk_Chain* chain,
     int block_height) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
@@ -1372,9 +1372,9 @@ AIXCOINKERNEL_API const btck_BlockTreeEntry* AIXCOINKERNEL_WARN_UNUSED_RESULT bt
  * @return                     1 if the block_tree_entry is in the chain, 0 otherwise.
  *
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chain_contains(
-    const btck_Chain* chain,
-    const btck_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1, 2);
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_chain_contains(
+    const aixk_Chain* chain,
+    const aixk_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 ///@}
 
@@ -1391,9 +1391,9 @@ AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_chain_contains(
  * @param[in] block_tree_entry   Non-null.
  * @return                       The read out block spent outputs, or null on error.
  */
-AIXCOINKERNEL_API btck_BlockSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_spent_outputs_read(
-    const btck_ChainstateManager* chainstate_manager,
-    const btck_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1, 2);
+AIXCOINKERNEL_API aixk_BlockSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_spent_outputs_read(
+    const aixk_ChainstateManager* chainstate_manager,
+    const aixk_BlockTreeEntry* block_tree_entry) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * @brief Copy a block's spent outputs.
@@ -1401,8 +1401,8 @@ AIXCOINKERNEL_API btck_BlockSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_
  * @param[in] block_spent_outputs Non-null.
  * @return                        The copied block spent outputs.
  */
-AIXCOINKERNEL_API btck_BlockSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_spent_outputs_copy(
-    const btck_BlockSpentOutputs* block_spent_outputs) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_BlockSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_spent_outputs_copy(
+    const aixk_BlockSpentOutputs* block_spent_outputs) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Returns the number of transaction spent outputs whose data is contained in
@@ -1411,8 +1411,8 @@ AIXCOINKERNEL_API btck_BlockSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_
  * @param[in] block_spent_outputs Non-null.
  * @return                        The number of transaction spent outputs data in the block spent outputs.
  */
-AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_spent_outputs_count(
-    const btck_BlockSpentOutputs* block_spent_outputs) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_spent_outputs_count(
+    const aixk_BlockSpentOutputs* block_spent_outputs) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Returns a transaction spent outputs contained in the block spent
@@ -1423,14 +1423,14 @@ AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_spent_outpu
  * @param[in] transaction_spent_outputs_index The index of the transaction spent outputs within the block spent outputs.
  * @return                                    A transaction spent outputs pointer.
  */
-AIXCOINKERNEL_API const btck_TransactionSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_spent_outputs_get_transaction_spent_outputs_at(
-    const btck_BlockSpentOutputs* block_spent_outputs,
+AIXCOINKERNEL_API const aixk_TransactionSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_spent_outputs_get_transaction_spent_outputs_at(
+    const aixk_BlockSpentOutputs* block_spent_outputs,
     size_t transaction_spent_outputs_index) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the block spent outputs.
  */
-AIXCOINKERNEL_API void btck_block_spent_outputs_destroy(btck_BlockSpentOutputs* block_spent_outputs);
+AIXCOINKERNEL_API void aixk_block_spent_outputs_destroy(aixk_BlockSpentOutputs* block_spent_outputs);
 
 ///@}
 
@@ -1445,8 +1445,8 @@ AIXCOINKERNEL_API void btck_block_spent_outputs_destroy(btck_BlockSpentOutputs* 
  * @param[in] transaction_spent_outputs Non-null.
  * @return                              The copied transaction spent outputs.
  */
-AIXCOINKERNEL_API btck_TransactionSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_spent_outputs_copy(
-    const btck_TransactionSpentOutputs* transaction_spent_outputs) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_TransactionSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_spent_outputs_copy(
+    const aixk_TransactionSpentOutputs* transaction_spent_outputs) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Returns the number of previous transaction outputs contained in the
@@ -1455,8 +1455,8 @@ AIXCOINKERNEL_API btck_TransactionSpentOutputs* AIXCOINKERNEL_WARN_UNUSED_RESULT
  * @param[in] transaction_spent_outputs Non-null
  * @return                              The number of spent transaction outputs for the transaction.
  */
-AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_spent_outputs_count(
-    const btck_TransactionSpentOutputs* transaction_spent_outputs) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_spent_outputs_count(
+    const aixk_TransactionSpentOutputs* transaction_spent_outputs) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Returns a coin contained in the transaction spent outputs at a
@@ -1468,14 +1468,14 @@ AIXCOINKERNEL_API size_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_spent
  *                                      transaction spent outputs.
  * @return                              A coin pointer.
  */
-AIXCOINKERNEL_API const btck_Coin* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_spent_outputs_get_coin_at(
-    const btck_TransactionSpentOutputs* transaction_spent_outputs,
+AIXCOINKERNEL_API const aixk_Coin* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_spent_outputs_get_coin_at(
+    const aixk_TransactionSpentOutputs* transaction_spent_outputs,
     size_t coin_index) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the transaction spent outputs.
  */
-AIXCOINKERNEL_API void btck_transaction_spent_outputs_destroy(btck_TransactionSpentOutputs* transaction_spent_outputs);
+AIXCOINKERNEL_API void aixk_transaction_spent_outputs_destroy(aixk_TransactionSpentOutputs* transaction_spent_outputs);
 
 ///@}
 
@@ -1490,8 +1490,8 @@ AIXCOINKERNEL_API void btck_transaction_spent_outputs_destroy(btck_TransactionSp
  * @param[in] transaction_input Non-null.
  * @return                      The copied transaction input.
  */
-AIXCOINKERNEL_API btck_TransactionInput* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_input_copy(
-    const btck_TransactionInput* transaction_input) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_TransactionInput* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_input_copy(
+    const aixk_TransactionInput* transaction_input) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Get the transaction out point. The returned transaction out point is
@@ -1500,13 +1500,13 @@ AIXCOINKERNEL_API btck_TransactionInput* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_t
  * @param[in] transaction_input Non-null.
  * @return                      The transaction out point.
  */
-AIXCOINKERNEL_API const btck_TransactionOutPoint* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_input_get_out_point(
-    const btck_TransactionInput* transaction_input) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_TransactionOutPoint* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_input_get_out_point(
+    const aixk_TransactionInput* transaction_input) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the transaction input.
  */
-AIXCOINKERNEL_API void btck_transaction_input_destroy(btck_TransactionInput* transaction_input);
+AIXCOINKERNEL_API void aixk_transaction_input_destroy(aixk_TransactionInput* transaction_input);
 
 ///@}
 
@@ -1521,8 +1521,8 @@ AIXCOINKERNEL_API void btck_transaction_input_destroy(btck_TransactionInput* tra
  * @param[in] transaction_out_point Non-null.
  * @return                          The copied transaction out point.
  */
-AIXCOINKERNEL_API btck_TransactionOutPoint* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_out_point_copy(
-    const btck_TransactionOutPoint* transaction_out_point) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_TransactionOutPoint* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_out_point_copy(
+    const aixk_TransactionOutPoint* transaction_out_point) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Get the output position from the transaction out point.
@@ -1530,8 +1530,8 @@ AIXCOINKERNEL_API btck_TransactionOutPoint* AIXCOINKERNEL_WARN_UNUSED_RESULT btc
  * @param[in] transaction_out_point Non-null.
  * @return                          The output index.
  */
-AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_out_point_get_index(
-    const btck_TransactionOutPoint* transaction_out_point) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_out_point_get_index(
+    const aixk_TransactionOutPoint* transaction_out_point) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Get the txid from the transaction out point. The returned txid is
@@ -1540,13 +1540,13 @@ AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_out
  * @param[in] transaction_out_point Non-null.
  * @return                          The txid.
  */
-AIXCOINKERNEL_API const btck_Txid* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_transaction_out_point_get_txid(
-    const btck_TransactionOutPoint* transaction_out_point) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_Txid* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_transaction_out_point_get_txid(
+    const aixk_TransactionOutPoint* transaction_out_point) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the transaction out point.
  */
-AIXCOINKERNEL_API void btck_transaction_out_point_destroy(btck_TransactionOutPoint* transaction_out_point);
+AIXCOINKERNEL_API void aixk_transaction_out_point_destroy(aixk_TransactionOutPoint* transaction_out_point);
 
 ///@}
 
@@ -1561,8 +1561,8 @@ AIXCOINKERNEL_API void btck_transaction_out_point_destroy(btck_TransactionOutPoi
  * @param[in] txid Non-null.
  * @return         The copied txid.
  */
-AIXCOINKERNEL_API btck_Txid* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_txid_copy(
-    const btck_Txid* txid) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_Txid* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_txid_copy(
+    const aixk_Txid* txid) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Check if two txids are equal.
@@ -1571,8 +1571,8 @@ AIXCOINKERNEL_API btck_Txid* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_txid_copy(
  * @param[in] txid2 Non-null.
  * @return          0 if the txid is not equal.
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_txid_equals(
-    const btck_Txid* txid1, const btck_Txid* txid2) AIXCOINKERNEL_ARG_NONNULL(1, 2);
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_txid_equals(
+    const aixk_Txid* txid1, const aixk_Txid* txid2) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * @brief Serializes the txid to bytes.
@@ -1580,13 +1580,13 @@ AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_txid_equals(
  * @param[in] txid    Non-null.
  * @param[out] output The serialized txid.
  */
-AIXCOINKERNEL_API void btck_txid_to_bytes(
-    const btck_Txid* txid, unsigned char output[32]) AIXCOINKERNEL_ARG_NONNULL(1, 2);
+AIXCOINKERNEL_API void aixk_txid_to_bytes(
+    const aixk_Txid* txid, unsigned char output[32]) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * Destroy the txid.
  */
-AIXCOINKERNEL_API void btck_txid_destroy(btck_Txid* txid);
+AIXCOINKERNEL_API void aixk_txid_destroy(aixk_Txid* txid);
 
 ///@}
 
@@ -1603,8 +1603,8 @@ AIXCOINKERNEL_API void btck_txid_destroy(btck_Txid* txid);
  * @param[in] coin Non-null.
  * @return         The copied coin.
  */
-AIXCOINKERNEL_API btck_Coin* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_coin_copy(
-    const btck_Coin* coin) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_Coin* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_coin_copy(
+    const aixk_Coin* coin) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Returns the block height where the transaction that
@@ -1613,8 +1613,8 @@ AIXCOINKERNEL_API btck_Coin* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_coin_copy(
  * @param[in] coin Non-null.
  * @return         The block height of the coin.
  */
-AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_coin_confirmation_height(
-    const btck_Coin* coin) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_coin_confirmation_height(
+    const aixk_Coin* coin) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Returns whether the containing transaction was a coinbase.
@@ -1622,8 +1622,8 @@ AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_coin_confirmati
  * @param[in] coin Non-null.
  * @return         1 if the coin is a coinbase coin, 0 otherwise.
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_coin_is_coinbase(
-    const btck_Coin* coin) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_coin_is_coinbase(
+    const aixk_Coin* coin) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Return the transaction output of a coin. The returned pointer is
@@ -1632,13 +1632,13 @@ AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_coin_is_coinbase(
  * @param[in] coin Non-null.
  * @return         A transaction output pointer.
  */
-AIXCOINKERNEL_API const btck_TransactionOutput* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_coin_get_output(
-    const btck_Coin* coin) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_TransactionOutput* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_coin_get_output(
+    const aixk_Coin* coin) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * Destroy the coin.
  */
-AIXCOINKERNEL_API void btck_coin_destroy(btck_Coin* coin);
+AIXCOINKERNEL_API void aixk_coin_destroy(aixk_Coin* coin);
 
 ///@}
 
@@ -1650,7 +1650,7 @@ AIXCOINKERNEL_API void btck_coin_destroy(btck_Coin* coin);
 /**
  * @brief Create a block hash from its raw data.
  */
-AIXCOINKERNEL_API btck_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_hash_create(
+AIXCOINKERNEL_API aixk_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_hash_create(
     const unsigned char block_hash[32]) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
@@ -1660,8 +1660,8 @@ AIXCOINKERNEL_API btck_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_ha
  * @param[in] hash2 Non-null.
  * @return          0 if the block hashes are not equal.
  */
-AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_hash_equals(
-    const btck_BlockHash* hash1, const btck_BlockHash* hash2) AIXCOINKERNEL_ARG_NONNULL(1, 2);
+AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_hash_equals(
+    const aixk_BlockHash* hash1, const aixk_BlockHash* hash2) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * @brief Copy a block hash.
@@ -1669,8 +1669,8 @@ AIXCOINKERNEL_API int AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_hash_equals(
  * @param[in] block_hash Non-null.
  * @return               The copied block hash.
  */
-AIXCOINKERNEL_API btck_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_hash_copy(
-    const btck_BlockHash* block_hash) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_hash_copy(
+    const aixk_BlockHash* block_hash) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
  * @brief Serializes the block hash to bytes.
@@ -1678,13 +1678,13 @@ AIXCOINKERNEL_API btck_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_ha
  * @param[in] block_hash     Non-null.
  * @param[in] output         The serialized block hash.
  */
-AIXCOINKERNEL_API void btck_block_hash_to_bytes(
-    const btck_BlockHash* block_hash, unsigned char output[32]) AIXCOINKERNEL_ARG_NONNULL(1, 2);
+AIXCOINKERNEL_API void aixk_block_hash_to_bytes(
+    const aixk_BlockHash* block_hash, unsigned char output[32]) AIXCOINKERNEL_ARG_NONNULL(1, 2);
 
 /**
  * Destroy the block hash.
  */
-AIXCOINKERNEL_API void btck_block_hash_destroy(btck_BlockHash* block_hash);
+AIXCOINKERNEL_API void aixk_block_hash_destroy(aixk_BlockHash* block_hash);
 
 ///@}
 
@@ -1695,83 +1695,83 @@ AIXCOINKERNEL_API void btck_block_hash_destroy(btck_BlockHash* block_hash);
 ///@{
 
 /**
- * @brief Create a btck_BlockHeader from serialized data.
+ * @brief Create a aixk_BlockHeader from serialized data.
  *
  * @param[in] raw_block_header      Non-null, serialized header data (80 bytes)
  * @param[in] raw_block_header_len  Length of serialized header (must be 80)
- * @return                          btck_BlockHeader, or null on error.
+ * @return                          aixk_BlockHeader, or null on error.
  */
-AIXCOINKERNEL_API btck_BlockHeader* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_header_create(
+AIXCOINKERNEL_API aixk_BlockHeader* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_header_create(
     const void* raw_block_header, size_t raw_block_header_len);
 
 /**
- * @brief Copy a btck_BlockHeader.
+ * @brief Copy a aixk_BlockHeader.
  *
- * @param[in] header    Non-null btck_BlockHeader.
- * @return              Copied btck_BlockHeader.
+ * @param[in] header    Non-null aixk_BlockHeader.
+ * @return              Copied aixk_BlockHeader.
  */
-AIXCOINKERNEL_API btck_BlockHeader* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_header_copy(
-    const btck_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_BlockHeader* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_header_copy(
+    const aixk_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Get the btck_BlockHash.
+ * @brief Get the aixk_BlockHash.
  *
  * @param[in] header    Non-null header
- * @return              btck_BlockHash.
+ * @return              aixk_BlockHash.
  */
-AIXCOINKERNEL_API btck_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_header_get_hash(
-    const btck_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API aixk_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_header_get_hash(
+    const aixk_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Get the previous btck_BlockHash from btck_BlockHeader. The returned hash
- * is unowned and only valid for the lifetime of the btck_BlockHeader.
+ * @brief Get the previous aixk_BlockHash from aixk_BlockHeader. The returned hash
+ * is unowned and only valid for the lifetime of the aixk_BlockHeader.
  *
- * @param[in] header    Non-null btck_BlockHeader
- * @return              Previous btck_BlockHash
+ * @param[in] header    Non-null aixk_BlockHeader
+ * @return              Previous aixk_BlockHash
  */
-AIXCOINKERNEL_API const btck_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_header_get_prev_hash(
-    const btck_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API const aixk_BlockHash* AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_header_get_prev_hash(
+    const aixk_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Get the timestamp from btck_BlockHeader.
+ * @brief Get the timestamp from aixk_BlockHeader.
  *
- * @param[in] header    Non-null btck_BlockHeader
+ * @param[in] header    Non-null aixk_BlockHeader
  * @return              Block timestamp (Unix epoch seconds)
  */
-AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_header_get_timestamp(
-    const btck_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_header_get_timestamp(
+    const aixk_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Get the nBits difficulty target from btck_BlockHeader.
+ * @brief Get the nBits difficulty target from aixk_BlockHeader.
  *
- * @param[in] header    Non-null btck_BlockHeader
+ * @param[in] header    Non-null aixk_BlockHeader
  * @return              Difficulty target (compact format)
  */
-AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_header_get_bits(
-    const btck_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_header_get_bits(
+    const aixk_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Get the version from btck_BlockHeader.
+ * @brief Get the version from aixk_BlockHeader.
  *
- * @param[in] header    Non-null btck_BlockHeader
+ * @param[in] header    Non-null aixk_BlockHeader
  * @return              Block version
  */
-AIXCOINKERNEL_API int32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_header_get_version(
-    const btck_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API int32_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_header_get_version(
+    const aixk_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * @brief Get the nonce from btck_BlockHeader.
+ * @brief Get the nonce from aixk_BlockHeader.
  *
- * @param[in] header    Non-null btck_BlockHeader
+ * @param[in] header    Non-null aixk_BlockHeader
  * @return              Nonce
  */
-AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT btck_block_header_get_nonce(
-    const btck_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
+AIXCOINKERNEL_API uint32_t AIXCOINKERNEL_WARN_UNUSED_RESULT aixk_block_header_get_nonce(
+    const aixk_BlockHeader* header) AIXCOINKERNEL_ARG_NONNULL(1);
 
 /**
- * Destroy the btck_BlockHeader.
+ * Destroy the aixk_BlockHeader.
  */
-AIXCOINKERNEL_API void btck_block_header_destroy(btck_BlockHeader* header);
+AIXCOINKERNEL_API void aixk_block_header_destroy(aixk_BlockHeader* header);
 
 ///@}
 

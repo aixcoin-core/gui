@@ -10,7 +10,7 @@
 
 #include <cassert>
 
-static constexpr auto MAX_DIGITS_BTC = 16;
+static constexpr auto MAX_DIGITS_AIX = 16;
 
 AixcoinUnits::AixcoinUnits(QObject *parent):
         QAbstractListModel(parent),
@@ -21,9 +21,9 @@ AixcoinUnits::AixcoinUnits(QObject *parent):
 QList<AixcoinUnit> AixcoinUnits::availableUnits()
 {
     QList<AixcoinUnit> unitlist;
-    unitlist.append(Unit::BTC);
-    unitlist.append(Unit::mBTC);
-    unitlist.append(Unit::uBTC);
+    unitlist.append(Unit::AIX);
+    unitlist.append(Unit::mAIX);
+    unitlist.append(Unit::uAIX);
     unitlist.append(Unit::SAT);
     return unitlist;
 }
@@ -31,9 +31,9 @@ QList<AixcoinUnit> AixcoinUnits::availableUnits()
 QString AixcoinUnits::longName(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return QString("BTC");
-    case Unit::mBTC: return QString("mBTC");
-    case Unit::uBTC: return QString::fromUtf8("µBTC (bits)");
+    case Unit::AIX: return QString("AIX");
+    case Unit::mAIX: return QString("mAIX");
+    case Unit::uAIX: return QString::fromUtf8("µAIX (bits)");
     case Unit::SAT: return QString("Satoshi (sat)");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -42,9 +42,9 @@ QString AixcoinUnits::longName(Unit unit)
 QString AixcoinUnits::shortName(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return longName(unit);
-    case Unit::mBTC: return longName(unit);
-    case Unit::uBTC: return QString("bits");
+    case Unit::AIX: return longName(unit);
+    case Unit::mAIX: return longName(unit);
+    case Unit::uAIX: return QString("bits");
     case Unit::SAT: return QString("sat");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -53,9 +53,9 @@ QString AixcoinUnits::shortName(Unit unit)
 QString AixcoinUnits::description(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return QString("Aixcoins");
-    case Unit::mBTC: return QString("Milli-Aixcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case Unit::uBTC: return QString("Micro-Aixcoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case Unit::AIX: return QString("Aixcoins");
+    case Unit::mAIX: return QString("Milli-Aixcoins (1 / 1" THIN_SP_UTF8 "000)");
+    case Unit::uAIX: return QString("Micro-Aixcoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case Unit::SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -64,9 +64,9 @@ QString AixcoinUnits::description(Unit unit)
 qint64 AixcoinUnits::factor(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return 100'000'000;
-    case Unit::mBTC: return 100'000;
-    case Unit::uBTC: return 100;
+    case Unit::AIX: return 100'000'000;
+    case Unit::mAIX: return 100'000;
+    case Unit::uAIX: return 100;
     case Unit::SAT: return 1;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -75,9 +75,9 @@ qint64 AixcoinUnits::factor(Unit unit)
 int AixcoinUnits::decimals(Unit unit)
 {
     switch (unit) {
-    case Unit::BTC: return 8;
-    case Unit::mBTC: return 5;
-    case Unit::uBTC: return 2;
+    case Unit::AIX: return 8;
+    case Unit::mAIX: return 5;
+    case Unit::uAIX: return 2;
     case Unit::SAT: return 0;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -94,7 +94,7 @@ QString AixcoinUnits::format(Unit unit, const CAmount& nIn, bool fPlus, Separato
     qint64 quotient = n_abs / coin;
     QString quotient_str = QString::number(quotient);
     if (justify) {
-        quotient_str = quotient_str.rightJustified(MAX_DIGITS_BTC - num_decimals, ' ');
+        quotient_str = quotient_str.rightJustified(MAX_DIGITS_AIX - num_decimals, ' ');
     }
 
     // Use SI-style thin space separators as these are locale independent and can't be
@@ -232,9 +232,9 @@ namespace {
 qint8 ToQint8(AixcoinUnit unit)
 {
     switch (unit) {
-    case AixcoinUnit::BTC: return 0;
-    case AixcoinUnit::mBTC: return 1;
-    case AixcoinUnit::uBTC: return 2;
+    case AixcoinUnit::AIX: return 0;
+    case AixcoinUnit::mAIX: return 1;
+    case AixcoinUnit::uAIX: return 2;
     case AixcoinUnit::SAT: return 3;
     } // no default case, so the compiler can warn about missing cases
     assert(false);
@@ -243,9 +243,9 @@ qint8 ToQint8(AixcoinUnit unit)
 AixcoinUnit FromQint8(qint8 num)
 {
     switch (num) {
-    case 0: return AixcoinUnit::BTC;
-    case 1: return AixcoinUnit::mBTC;
-    case 2: return AixcoinUnit::uBTC;
+    case 0: return AixcoinUnit::AIX;
+    case 1: return AixcoinUnit::mAIX;
+    case 2: return AixcoinUnit::uAIX;
     case 3: return AixcoinUnit::SAT;
     }
     assert(false);

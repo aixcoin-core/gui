@@ -61,7 +61,7 @@ To run:
 
 * UI elements like AixcoinAmountField, which inherit from QWidget.
 * `aixcoinstrings.cpp`: automatically generated
-* `aixcoinunits.(h/cpp)`: BTC / mBTC / etc. handling
+* `aixcoinunits.(h/cpp)`: AIX / mAIX / etc. handling
 * `callback.h`
 * `guiconstants.h`: UI colors, app name, etc.
 * `guiutil.h`: several helper functions

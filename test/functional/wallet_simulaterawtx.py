@@ -71,7 +71,7 @@ class SimulateTxTest(AixcoinTestFramework):
         tx1changepos = funding["changepos"]
         aixcoin_fee = Decimal(funding["fee"])
 
-        # w0 sees fee + 5 btc decrease, w2 sees + 5 btc
+        # w0 sees fee + 5 aix decrease, w2 sees + 5 aix
         assert_approx(w0.simulaterawtransaction([tx1])["balance_change"], -(Decimal("5") + aixcoin_fee))
         assert_approx(w2.simulaterawtransaction([tx1])["balance_change"], Decimal("5"))
 

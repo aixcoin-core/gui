@@ -401,7 +401,7 @@ Thanks to everyone who directly contributed to this release:
 - nervana21
 - Nicola Leonardo Susca
 - Novo
-- pablomartin4btc
+- pablomartin4aix
 - Peter Todd
 - Pieter Wuille
 - Pol Espinasa

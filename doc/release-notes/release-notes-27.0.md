@@ -193,7 +193,7 @@ Thanks to everyone who directly contributed to this release:
 - naiyoma
 - Nikodemas Tuckus
 - ns-xvrn
-- pablomartin4btc
+- pablomartin4aix
 - Peter Todd
 - Pieter Wuille
 - Richard Myers

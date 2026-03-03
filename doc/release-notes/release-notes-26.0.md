@@ -334,7 +334,7 @@ Thanks to everyone who directly contributed to this release:
 - mruddy
 - Murch
 - ns-xvrn
-- pablomartin4btc
+- pablomartin4aix
 - Pieter Wuille
 - Reese Russell
 - Rhythm Garg

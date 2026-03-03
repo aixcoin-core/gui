@@ -16,11 +16,11 @@
 #include <string>
 #include <type_traits>
 
-const std::string CURRENCY_UNIT = "BTC"; // One formatted unit
+const std::string CURRENCY_UNIT = "AIX"; // One formatted unit
 const std::string CURRENCY_ATOM = "sat"; // One indivisible minimum value unit
 
 enum class FeeRateFormat {
-    BTC_KVB, //!< Use BTC/kvB fee rate unit
+    AIX_KVB, //!< Use AIX/kvB fee rate unit
     SAT_VB,  //!< Use sat/vB fee rate unit
 };
 
@@ -72,7 +72,7 @@ public:
         m_feerate = FeePerVSize(GetFeePerK() + a.GetFeePerK(), 1000);
         return *this;
     }
-    std::string ToString(FeeRateFormat fee_rate_format = FeeRateFormat::BTC_KVB) const;
+    std::string ToString(FeeRateFormat fee_rate_format = FeeRateFormat::AIX_KVB) const;
     friend CFeeRate operator*(const CFeeRate& f, int a) { return CFeeRate(a * f.m_feerate.fee, f.m_feerate.size); }
     friend CFeeRate operator*(int a, const CFeeRate& f) { return CFeeRate(a * f.m_feerate.fee, f.m_feerate.size); }
 
