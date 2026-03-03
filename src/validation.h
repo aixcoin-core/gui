@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_VALIDATION_H
-#define BITCOIN_VALIDATION_H
+#ifndef AIXCOIN_VALIDATION_H
+#define AIXCOIN_VALIDATION_H
 
 #include <arith_uint256.h>
 #include <attributes.h>
@@ -1401,4 +1401,4 @@ bool IsBIP30Unspendable(const uint256& block_hash, int block_height);
 // Returns the script flags which should be checked for a given block
 script_verify_flags GetBlockScriptFlags(const CBlockIndex& block_index, const ChainstateManager& chainman);
 
-#endif // BITCOIN_VALIDATION_H
+#endif // AIXCOIN_VALIDATION_H

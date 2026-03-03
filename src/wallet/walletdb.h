@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_WALLETDB_H
-#define BITCOIN_WALLET_WALLETDB_H
+#ifndef AIXCOIN_WALLET_WALLETDB_H
+#define AIXCOIN_WALLET_WALLETDB_H
 
 #include <key.h>
 #include <primitives/transaction_identifier.h>
@@ -315,4 +315,4 @@ bool HasLegacyRecords(CWallet& wallet);
 bool HasLegacyRecords(CWallet& wallet, DatabaseBatch& batch);
 } // namespace wallet
 
-#endif // BITCOIN_WALLET_WALLETDB_H
+#endif // AIXCOIN_WALLET_WALLETDB_H

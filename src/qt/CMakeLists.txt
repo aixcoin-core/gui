@@ -55,12 +55,12 @@ set(CMAKE_AUTOUIC_SEARCH_PATHS forms)
 
 set(CMAKE_AUTORCC OFF)
 configure_file(aixcoin_locale.qrc aixcoin_locale.qrc USE_SOURCE_PERMISSIONS COPYONLY)
-qt6_add_resources(BITCOIN_QRC aixcoin.qrc)
-qt6_add_resources(BITCOIN_LOCALE_QRC ${CMAKE_CURRENT_BINARY_DIR}/aixcoin_locale.qrc)
+qt6_add_resources(AIXCOIN_QRC aixcoin.qrc)
+qt6_add_resources(AIXCOIN_LOCALE_QRC ${CMAKE_CURRENT_BINARY_DIR}/aixcoin_locale.qrc)
 # See: https://bugreports.qt.io/browse/QTBUG-141858.
 get_target_property(warn_flags warn_interface INTERFACE_COMPILE_OPTIONS)
 if("-Wtrailing-whitespace=any" IN_LIST warn_flags)
-  set_source_files_properties(${BITCOIN_QRC} ${BITCOIN_LOCALE_QRC} PROPERTIES COMPILE_OPTIONS -Wno-trailing-whitespace)
+  set_source_files_properties(${AIXCOIN_QRC} ${AIXCOIN_LOCALE_QRC} PROPERTIES COMPILE_OPTIONS -Wno-trailing-whitespace)
 endif()
 unset(warn_flags)
 
@@ -127,8 +127,8 @@ add_library(aixcoinqt STATIC EXCLUDE_FROM_ALL
   utilitydialog.h
   $<$<PLATFORM_ID:Windows>:winshutdownmonitor.cpp>
   $<$<PLATFORM_ID:Windows>:winshutdownmonitor.h>
-  ${BITCOIN_QRC}
-  ${BITCOIN_LOCALE_QRC}
+  ${AIXCOIN_QRC}
+  ${AIXCOIN_LOCALE_QRC}
 )
 target_compile_definitions(aixcoinqt
   PUBLIC

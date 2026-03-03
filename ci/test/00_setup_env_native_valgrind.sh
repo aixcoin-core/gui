@@ -16,7 +16,7 @@ export NO_DEPENDS=1
 export TEST_RUNNER_EXTRA="--exclude rpc_bind --exclude feature_bind_extra"
 export GOAL="install"
 # TODO enable GUI
-export BITCOIN_CONFIG="\
+export AIXCOIN_CONFIG="\
   --preset=dev-mode \
  -DBUILD_GUI=OFF \
  -DWITH_USDT=OFF \

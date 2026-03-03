@@ -294,7 +294,7 @@ class Binaries:
     def _argv(self, command, bin_path, need_ipc=False):
         """Return argv array that should be used to invoke the command.
 
-        It either uses the aixcoin wrapper executable (if BITCOIN_CMD is set or
+        It either uses the aixcoin wrapper executable (if AIXCOIN_CMD is set or
         need_ipc is True), or the direct binary path (aixcoind, etc). When
         bin_dir is set (by tests calling binaries from previous releases) it
         always uses the direct path.
@@ -319,14 +319,14 @@ def get_binary_paths(config):
 
     paths = types.SimpleNamespace()
     binaries = {
-        "aixcoin": "BITCOIN_BIN",
-        "aixcoind": "BITCOIND",
-        "bench_aixcoin": "BITCOIN_BENCH",
-        "aixcoin-cli": "BITCOINCLI",
-        "aixcoin-util": "BITCOINUTIL",
-        "aixcoin-tx": "BITCOINTX",
-        "aixcoin-chainstate": "BITCOINCHAINSTATE",
-        "aixcoin-wallet": "BITCOINWALLET",
+        "aixcoin": "AIXCOIN_BIN",
+        "aixcoind": "AIXCOIND",
+        "bench_aixcoin": "AIXCOIN_BENCH",
+        "aixcoin-cli": "AIXCOINCLI",
+        "aixcoin-util": "AIXCOINUTIL",
+        "aixcoin-tx": "AIXCOINTX",
+        "aixcoin-chainstate": "AIXCOINCHAINSTATE",
+        "aixcoin-wallet": "AIXCOINWALLET",
     }
     # Set paths to aixcoin core binaries allowing overrides with environment
     # variables.
@@ -337,9 +337,9 @@ def get_binary_paths(config):
             binary + config["environment"]["EXEEXT"],
         )
         setattr(paths, env_variable_name.lower(), os.getenv(env_variable_name, default=default_filename))
-    # BITCOIN_CMD environment variable can be specified to invoke aixcoin
+    # AIXCOIN_CMD environment variable can be specified to invoke aixcoin
     # wrapper binary instead of other executables.
-    paths.aixcoin_cmd = shlex.split(os.getenv("BITCOIN_CMD", "")) or None
+    paths.aixcoin_cmd = shlex.split(os.getenv("AIXCOIN_CMD", "")) or None
     return paths
 
 

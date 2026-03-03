@@ -1,4 +1,4 @@
-# TOR SUPPORT IN BITCOIN
+# TOR SUPPORT IN AIXCOIN
 
 It is possible to run Aixcoin Core as a Tor onion service, and connect to such services.
 

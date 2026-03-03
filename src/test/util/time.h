@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_TEST_UTIL_TIME_H
-#define BITCOIN_TEST_UTIL_TIME_H
+#ifndef AIXCOIN_TEST_UTIL_TIME_H
+#define AIXCOIN_TEST_UTIL_TIME_H
 
 #include <util/check.h>
 #include <util/time.h>
@@ -34,4 +34,4 @@ public:
     }
 };
 
-#endif // BITCOIN_TEST_UTIL_TIME_H
+#endif // AIXCOIN_TEST_UTIL_TIME_H

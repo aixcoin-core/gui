@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SCRIPT_INTERPRETER_H
-#define BITCOIN_SCRIPT_INTERPRETER_H
+#ifndef AIXCOIN_SCRIPT_INTERPRETER_H
+#define AIXCOIN_SCRIPT_INTERPRETER_H
 
 #include <consensus/amount.h>
 #include <hash.h>
@@ -385,4 +385,4 @@ const std::map<std::string, script_verify_flag_name>& ScriptFlagNamesToEnum();
 
 std::vector<std::string> GetScriptFlagNames(script_verify_flags flags);
 
-#endif // BITCOIN_SCRIPT_INTERPRETER_H
+#endif // AIXCOIN_SCRIPT_INTERPRETER_H

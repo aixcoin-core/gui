@@ -11,8 +11,8 @@
 //! dependencies. More complicated public wallet types like CCoinControl should
 //! be defined in dedicated header files.
 
-#ifndef BITCOIN_WALLET_TYPES_H
-#define BITCOIN_WALLET_TYPES_H
+#ifndef AIXCOIN_WALLET_TYPES_H
+#define AIXCOIN_WALLET_TYPES_H
 
 #include <policy/fees/block_policy_estimator.h>
 
@@ -44,4 +44,4 @@ struct CreatedTransactionResult
 
 } // namespace wallet
 
-#endif // BITCOIN_WALLET_TYPES_H
+#endif // AIXCOIN_WALLET_TYPES_H

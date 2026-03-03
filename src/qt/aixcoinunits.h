@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_BITCOINUNITS_H
-#define BITCOIN_QT_BITCOINUNITS_H
+#ifndef AIXCOIN_QT_AIXCOINUNITS_H
+#define AIXCOIN_QT_AIXCOINUNITS_H
 
 #include <consensus/amount.h>
 
@@ -113,4 +113,4 @@ typedef AixcoinUnits::Unit AixcoinUnit;
 QDataStream& operator<<(QDataStream& out, const AixcoinUnit& unit);
 QDataStream& operator>>(QDataStream& in, AixcoinUnit& unit);
 
-#endif // BITCOIN_QT_BITCOINUNITS_H
+#endif // AIXCOIN_QT_AIXCOINUNITS_H

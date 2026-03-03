@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_UTIL_FS_HELPERS_H
-#define BITCOIN_UTIL_FS_HELPERS_H
+#ifndef AIXCOIN_UTIL_FS_HELPERS_H
+#define AIXCOIN_UTIL_FS_HELPERS_H
 
 #include <util/fs.h>
 
@@ -97,4 +97,4 @@ std::optional<fs::perms> InterpretPermString(const std::string& s);
 fs::path GetSpecialFolderPath(int nFolder, bool fCreate = true);
 #endif
 
-#endif // BITCOIN_UTIL_FS_HELPERS_H
+#endif // AIXCOIN_UTIL_FS_HELPERS_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CHAINPARAMSBASE_H
-#define BITCOIN_CHAINPARAMSBASE_H
+#ifndef AIXCOIN_CHAINPARAMSBASE_H
+#define AIXCOIN_CHAINPARAMSBASE_H
 
 #include <util/chaintype.h>
 
@@ -54,4 +54,4 @@ void SelectBaseParams(ChainType chain);
 /** List of possible chain / network names  */
 #define LIST_CHAIN_NAMES "main, test, testnet4, signet, regtest"
 
-#endif // BITCOIN_CHAINPARAMSBASE_H
+#endif // AIXCOIN_CHAINPARAMSBASE_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_UTIL_LOG_H
-#define BITCOIN_UTIL_LOG_H
+#ifndef AIXCOIN_UTIL_LOG_H
+#define AIXCOIN_UTIL_LOG_H
 
 #include <logging/categories.h> // IWYU pragma: export
 #include <tinyformat.h>
@@ -115,4 +115,4 @@ inline void LogPrintFormatInternal(SourceLocation&& source_loc, BCLog::LogFlags 
 #define LogDebug(category, ...) detail_LogIfCategoryAndLevelEnabled(category, BCLog::Level::Debug, __VA_ARGS__)
 #define LogTrace(category, ...) detail_LogIfCategoryAndLevelEnabled(category, BCLog::Level::Trace, __VA_ARGS__)
 
-#endif // BITCOIN_UTIL_LOG_H
+#endif // AIXCOIN_UTIL_LOG_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_RPC_RAWTRANSACTION_UTIL_H
-#define BITCOIN_RPC_RAWTRANSACTION_UTIL_H
+#ifndef AIXCOIN_RPC_RAWTRANSACTION_UTIL_H
+#define AIXCOIN_RPC_RAWTRANSACTION_UTIL_H
 
 #include <addresstype.h>
 #include <consensus/amount.h>
@@ -59,4 +59,4 @@ CMutableTransaction ConstructTransaction(const UniValue& inputs_in, const UniVal
 /** Explain the UniValue "decoded" transaction object, may include extra fields if processed by wallet **/
 std::vector<RPCResult> DecodeTxDoc(const std::string& txid_field_doc, bool wallet);
 
-#endif // BITCOIN_RPC_RAWTRANSACTION_UTIL_H
+#endif // AIXCOIN_RPC_RAWTRANSACTION_UTIL_H

@@ -159,8 +159,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Kha vha khwaṱhisedze u ṅwalulula tshipatshi</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Tsevho: Arali na ṅwalulula tshipatshi tshaṋu nahone na xelelwa nga passphrase yaṋu, ni ḓo XELELA BITCOIN DZANU DZOṰHE!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIXCOINS&lt;/b&gt;!</source>
+        <translation type="unfinished">Tsevho: Arali na ṅwalulula tshipatshi tshaṋu nahone na xelelwa nga passphrase yaṋu, ni ḓo XELELA AIXCOIN DZANU DZOṰHE!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>

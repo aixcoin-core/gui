@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CONSENSUS_VALIDATION_H
-#define BITCOIN_CONSENSUS_VALIDATION_H
+#ifndef AIXCOIN_CONSENSUS_VALIDATION_H
+#define AIXCOIN_CONSENSUS_VALIDATION_H
 
 #include <string>
 #include <consensus/consensus.h>
@@ -164,4 +164,4 @@ inline int GetWitnessCommitmentIndex(const CBlock& block)
     return commitpos;
 }
 
-#endif // BITCOIN_CONSENSUS_VALIDATION_H
+#endif // AIXCOIN_CONSENSUS_VALIDATION_H

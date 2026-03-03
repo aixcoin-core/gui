@@ -992,15 +992,15 @@ class AixcoinTestFramework(metaclass=AixcoinTestMetaClass):
 
     def is_aixcoin_tx_compiled(self):
         """Checks whether aixcoin-tx was compiled."""
-        return self.config["components"].getboolean("BUILD_BITCOIN_TX")
+        return self.config["components"].getboolean("BUILD_AIXCOIN_TX")
 
     def is_aixcoin_util_compiled(self):
         """Checks whether aixcoin-util was compiled."""
-        return self.config["components"].getboolean("ENABLE_BITCOIN_UTIL")
+        return self.config["components"].getboolean("ENABLE_AIXCOIN_UTIL")
 
     def is_aixcoin_chainstate_compiled(self):
         """Checks whether aixcoin-chainstate was compiled."""
-        return self.config["components"].getboolean("ENABLE_BITCOIN_CHAINSTATE")
+        return self.config["components"].getboolean("ENABLE_AIXCOIN_CHAINSTATE")
 
     def is_zmq_compiled(self):
         """Checks whether the zmq module was compiled."""

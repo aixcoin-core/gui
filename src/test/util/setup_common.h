@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_TEST_UTIL_SETUP_COMMON_H
-#define BITCOIN_TEST_UTIL_SETUP_COMMON_H
+#ifndef AIXCOIN_TEST_UTIL_SETUP_COMMON_H
+#define AIXCOIN_TEST_UTIL_SETUP_COMMON_H
 
 #include <common/args.h> // IWYU pragma: export
 #include <kernel/caches.h>
@@ -261,4 +261,4 @@ std::unique_ptr<T> MakeNoLogFileContext(const ChainType chain_type = ChainType::
 
 CBlock getBlock13b8a();
 
-#endif // BITCOIN_TEST_UTIL_SETUP_COMMON_H
+#endif // AIXCOIN_TEST_UTIL_SETUP_COMMON_H

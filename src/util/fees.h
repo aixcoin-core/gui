@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_UTIL_FEES_H
-#define BITCOIN_UTIL_FEES_H
+#ifndef AIXCOIN_UTIL_FEES_H
+#define AIXCOIN_UTIL_FEES_H
 
 /* Used to determine type of fee estimation requested */
 enum class FeeEstimateMode {
@@ -12,4 +12,4 @@ enum class FeeEstimateMode {
     CONSERVATIVE, //!< Force estimateSmartFee to use conservative estimates
 };
 
-#endif // BITCOIN_UTIL_FEES_H
+#endif // AIXCOIN_UTIL_FEES_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_INDEX_TXOSPENDERINDEX_H
-#define BITCOIN_INDEX_TXOSPENDERINDEX_H
+#ifndef AIXCOIN_INDEX_TXOSPENDERINDEX_H
+#define AIXCOIN_INDEX_TXOSPENDERINDEX_H
 
 #include <index/base.h>
 #include <interfaces/chain.h>
@@ -63,4 +63,4 @@ public:
 extern std::unique_ptr<TxoSpenderIndex> g_txospenderindex;
 
 
-#endif // BITCOIN_INDEX_TXOSPENDERINDEX_H
+#endif // AIXCOIN_INDEX_TXOSPENDERINDEX_H

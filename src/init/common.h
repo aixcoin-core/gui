@@ -5,8 +5,8 @@
 //! @file
 //! @brief Common init functions shared by aixcoin-node, aixcoin-wallet, etc.
 
-#ifndef BITCOIN_INIT_COMMON_H
-#define BITCOIN_INIT_COMMON_H
+#ifndef AIXCOIN_INIT_COMMON_H
+#define AIXCOIN_INIT_COMMON_H
 
 #include <util/result.h>
 
@@ -21,4 +21,4 @@ bool StartLogging(const ArgsManager& args);
 void LogPackageVersion();
 } // namespace init
 
-#endif // BITCOIN_INIT_COMMON_H
+#endif // AIXCOIN_INIT_COMMON_H

@@ -123,8 +123,8 @@ Signing is only possible with addresses of the type 'legacy'.</translation>
         <translation type="unfinished">Kadarnaat sifrañ an doug-moneiz</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Diwall: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIXCOINS&lt;/b&gt;!</source>
+        <translation type="unfinished">Diwall: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIXCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>

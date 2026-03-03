@@ -116,7 +116,7 @@ add_dependencies(libaixcoinkernel aixcoinkernel)
 
 get_target_property(aixcoinkernel_type aixcoinkernel TYPE)
 if(aixcoinkernel_type STREQUAL "STATIC_LIBRARY")
-  target_compile_definitions(aixcoinkernel PUBLIC BITCOINKERNEL_STATIC)
+  target_compile_definitions(aixcoinkernel PUBLIC AIXCOINKERNEL_STATIC)
 endif()
 
 configure_file(${PROJECT_SOURCE_DIR}/libaixcoinkernel.pc.in ${PROJECT_BINARY_DIR}/libaixcoinkernel.pc @ONLY)

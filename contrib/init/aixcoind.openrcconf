@@ -1,33 +1,33 @@
 # /etc/conf.d/aixcoind: config file for /etc/init.d/aixcoind
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/aixcoin/aixcoin.conf"
+#AIXCOIND_CONFIGFILE="/etc/aixcoin/aixcoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/aixcoind"
+# What directory to write pidfile to?  (created and owned by $AIXCOIND_USER)
+#AIXCOIND_PIDDIR="/var/run/aixcoind"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/aixcoind.pid"
+#AIXCOIND_PIDFILE="${AIXCOIND_PIDDIR}/aixcoind.pid"
 
 # Where to write aixcoind data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/aixcoind"
+#AIXCOIND_DATADIR="/var/lib/aixcoind"
 
 # User and group to own aixcoind process
-#BITCOIND_USER="aixcoin"
-#BITCOIND_GROUP="aixcoin"
+#AIXCOIND_USER="aixcoin"
+#AIXCOIND_GROUP="aixcoin"
 
 # Path to aixcoind executable
-#BITCOIND_BIN="/usr/bin/aixcoind"
+#AIXCOIND_BIN="/usr/bin/aixcoind"
 
 # Nice value to run aixcoind under
-#BITCOIND_NICE=0
+#AIXCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-#BITCOIND_OPTS=""
+#AIXCOIND_OPTS=""
 
 # The timeout in seconds OpenRC will wait for aixcoind to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-BITCOIND_SIGTERM_TIMEOUT=600
+AIXCOIND_SIGTERM_TIMEOUT=600

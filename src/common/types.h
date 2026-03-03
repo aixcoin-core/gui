@@ -10,8 +10,8 @@
 //! dependencies. More complicated types should be defined in dedicated header
 //! files.
 
-#ifndef BITCOIN_COMMON_TYPES_H
-#define BITCOIN_COMMON_TYPES_H
+#ifndef AIXCOIN_COMMON_TYPES_H
+#define AIXCOIN_COMMON_TYPES_H
 
 namespace common {
 enum class PSBTError {
@@ -25,4 +25,4 @@ enum class PSBTError {
 };
 } // namespace common
 
-#endif // BITCOIN_COMMON_TYPES_H
+#endif // AIXCOIN_COMMON_TYPES_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_COINS_H
-#define BITCOIN_COINS_H
+#ifndef AIXCOIN_COINS_H
+#define AIXCOIN_COINS_H
 
 #include <attributes.h>
 #include <compressor.h>
@@ -587,4 +587,4 @@ private:
 
 };
 
-#endif // BITCOIN_COINS_H
+#endif // AIXCOIN_COINS_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_SENDCOINSDIALOG_H
-#define BITCOIN_QT_SENDCOINSDIALOG_H
+#ifndef AIXCOIN_QT_SENDCOINSDIALOG_H
+#define AIXCOIN_QT_SENDCOINSDIALOG_H
 
 #include <primitives/transaction_identifier.h>
 #include <qt/clientmodel.h>
@@ -153,4 +153,4 @@ private:
     QString m_psbt_button_text{tr("Create Unsigned")};
 };
 
-#endif // BITCOIN_QT_SENDCOINSDIALOG_H
+#endif // AIXCOIN_QT_SENDCOINSDIALOG_H

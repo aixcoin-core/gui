@@ -160,7 +160,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">אָפּלייקענען וואָלעט ענקריפּשאַן</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIXCOINS&lt;/b&gt;!</source>
         <translation type="unfinished">ווארענונג: אויב איר קריפּטירט אייער וואָלעט און פאַרלירן אייער פּאַראָל, וועט איר &lt;b&gt;פאַרלירן אַלע אייער ביטקאָינס &lt;/b&gt;!</translation>
     </message>
     <message>

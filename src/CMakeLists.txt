@@ -296,7 +296,7 @@ if(WITH_EMBEDDED_ASMAP)
 endif()
 
 # Aixcoin wrapper executable that can call other executables.
-if(BUILD_BITCOIN_BIN)
+if(BUILD_AIXCOIN_BIN)
   add_executable(aixcoin aixcoin.cpp)
   add_windows_resources(aixcoin aixcoin-res.rc)
   add_windows_application_manifest(aixcoin)

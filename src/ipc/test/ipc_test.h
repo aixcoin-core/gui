@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_IPC_TEST_IPC_TEST_H
-#define BITCOIN_IPC_TEST_IPC_TEST_H
+#ifndef AIXCOIN_IPC_TEST_IPC_TEST_H
+#define AIXCOIN_IPC_TEST_IPC_TEST_H
 
 #include <primitives/transaction.h>
 #include <script/script.h>
@@ -27,4 +27,4 @@ void IpcPipeTest();
 void IpcSocketPairTest();
 void IpcSocketTest(const fs::path& datadir);
 
-#endif // BITCOIN_IPC_TEST_IPC_TEST_H
+#endif // AIXCOIN_IPC_TEST_IPC_TEST_H

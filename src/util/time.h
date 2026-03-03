@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_UTIL_TIME_H
-#define BITCOIN_UTIL_TIME_H
+#ifndef AIXCOIN_UTIL_TIME_H
+#define AIXCOIN_UTIL_TIME_H
 
 #include <chrono> // IWYU pragma: export
 #include <cstdint>
@@ -158,4 +158,4 @@ struct timeval MillisToTimeval(int64_t nTimeout);
  */
 struct timeval MillisToTimeval(std::chrono::milliseconds ms);
 
-#endif // BITCOIN_UTIL_TIME_H
+#endif // AIXCOIN_UTIL_TIME_H

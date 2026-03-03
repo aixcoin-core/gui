@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_KERNEL_BITCOINKERNEL_WRAPPER_H
-#define BITCOIN_KERNEL_BITCOINKERNEL_WRAPPER_H
+#ifndef AIXCOIN_KERNEL_AIXCOINKERNEL_WRAPPER_H
+#define AIXCOIN_KERNEL_AIXCOINKERNEL_WRAPPER_H
 
 #include <kernel/aixcoinkernel.h>
 
@@ -1254,4 +1254,4 @@ public:
 
 } // namespace btck
 
-#endif // BITCOIN_KERNEL_BITCOINKERNEL_WRAPPER_H
+#endif // AIXCOIN_KERNEL_AIXCOINKERNEL_WRAPPER_H

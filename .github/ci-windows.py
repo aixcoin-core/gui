@@ -126,14 +126,14 @@ def run_tests(ci_type):
 
     if ci_type == "standard":
         test_envs = {
-            "BITCOIN_BIN": "aixcoin.exe",
-            "BITCOIND": "aixcoind.exe",
-            "BITCOINCLI": "aixcoin-cli.exe",
-            "BITCOIN_BENCH": "bench_aixcoin.exe",
-            "BITCOINTX": "aixcoin-tx.exe",
-            "BITCOINUTIL": "aixcoin-util.exe",
-            "BITCOINWALLET": "aixcoin-wallet.exe",
-            "BITCOINCHAINSTATE": "aixcoin-chainstate.exe",
+            "AIXCOIN_BIN": "aixcoin.exe",
+            "AIXCOIND": "aixcoind.exe",
+            "AIXCOINCLI": "aixcoin-cli.exe",
+            "AIXCOIN_BENCH": "bench_aixcoin.exe",
+            "AIXCOINTX": "aixcoin-tx.exe",
+            "AIXCOINUTIL": "aixcoin-util.exe",
+            "AIXCOINWALLET": "aixcoin-wallet.exe",
+            "AIXCOINCHAINSTATE": "aixcoin-chainstate.exe",
         }
         for var, exe in test_envs.items():
             os.environ[var] = str(release_bin / exe)
@@ -164,7 +164,7 @@ def run_tests(ci_type):
         run(test_cmd)
 
     elif ci_type == "fuzz":
-        os.environ["BITCOINFUZZ"] = str(release_bin / "fuzz.exe")
+        os.environ["AIXCOINFUZZ"] = str(release_bin / "fuzz.exe")
         fuzz_cmd = [
             sys.executable,
             str(build_dir / "test" / "fuzz" / "test_runner.py"),

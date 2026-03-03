@@ -16,7 +16,7 @@ export GOAL="install"
 export CI_LIMIT_STACK_SIZE=1
 export DOWNLOAD_PREVIOUS_RELEASES="true"
 # Use -Werror as the CMake version does not support CMAKE_COMPILE_WARNING_AS_ERROR
-export BITCOIN_CONFIG="\
+export AIXCOIN_CONFIG="\
  --preset=dev-mode \
  -DREDUCE_EXPORTS=ON \
  -DCMAKE_BUILD_TYPE=Debug \

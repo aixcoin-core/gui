@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_RPCCONSOLE_H
-#define BITCOIN_QT_RPCCONSOLE_H
+#ifndef AIXCOIN_QT_RPCCONSOLE_H
+#define AIXCOIN_QT_RPCCONSOLE_H
 
 #include <aixcoin-build-config.h> // IWYU pragma: keep
 
@@ -210,4 +210,4 @@ protected:
     }
 };
 
-#endif // BITCOIN_QT_RPCCONSOLE_H
+#endif // AIXCOIN_QT_RPCCONSOLE_H

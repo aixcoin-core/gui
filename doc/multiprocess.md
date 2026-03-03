@@ -19,14 +19,14 @@ Specifying `-DENABLE_IPC=ON` requires [Cap'n Proto](https://capnproto.org/) to b
 Alternatively the [depends system](../depends) can be used to avoid needing to install local dependencies:
 
 ```
-cd <BITCOIN_SOURCE_DIRECTORY>
+cd <AIXCOIN_SOURCE_DIRECTORY>
 make -C depends NO_QT=1
 # Set host platform to output of gcc -dumpmachine or clang -dumpmachine or check the depends/ directory for the generated subdirectory name
 HOST_PLATFORM="x86_64-pc-linux-gnu"
 cmake -B build --toolchain=depends/$HOST_PLATFORM/toolchain.cmake
 cmake --build build
 build/bin/aixcoin -m node -regtest -printtoconsole -debug=ipc
-BITCOIN_CMD="aixcoin -m" build/test/functional/test_runner.py
+AIXCOIN_CMD="aixcoin -m" build/test/functional/test_runner.py
 ```
 
 The `cmake` build will pick up settings and library locations from the depends directory, so there is no need to pass `-DENABLE_IPC=ON` as a separate flag when using the depends system (it's controlled by the `NO_IPC=1` option).

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CRYPTO_SIPHASH_H
-#define BITCOIN_CRYPTO_SIPHASH_H
+#ifndef AIXCOIN_CRYPTO_SIPHASH_H
+#define AIXCOIN_CRYPTO_SIPHASH_H
 
 #include <array>
 #include <cstdint>
@@ -69,4 +69,4 @@ public:
     uint64_t operator()(const uint256& val, uint32_t extra) const noexcept;
 };
 
-#endif // BITCOIN_CRYPTO_SIPHASH_H
+#endif // AIXCOIN_CRYPTO_SIPHASH_H

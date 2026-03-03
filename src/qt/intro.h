@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_INTRO_H
-#define BITCOIN_QT_INTRO_H
+#ifndef AIXCOIN_QT_INTRO_H
+#define AIXCOIN_QT_INTRO_H
 
 #include <qt/freespacechecker.h>
 
@@ -85,4 +85,4 @@ private:
     friend class FreespaceChecker;
 };
 
-#endif // BITCOIN_QT_INTRO_H
+#endif // AIXCOIN_QT_INTRO_H

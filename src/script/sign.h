@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_SCRIPT_SIGN_H
-#define BITCOIN_SCRIPT_SIGN_H
+#ifndef AIXCOIN_SCRIPT_SIGN_H
+#define AIXCOIN_SCRIPT_SIGN_H
 
 #include <attributes.h>
 #include <coins.h>
@@ -122,4 +122,4 @@ bool IsSegWitOutput(const SigningProvider& provider, const CScript& script);
 /** Sign the CMutableTransaction */
 bool SignTransaction(CMutableTransaction& mtx, const SigningProvider* provider, const std::map<COutPoint, Coin>& coins, int sighash, std::map<int, bilingual_str>& input_errors);
 
-#endif // BITCOIN_SCRIPT_SIGN_H
+#endif // AIXCOIN_SCRIPT_SIGN_H

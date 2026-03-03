@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_TXMEMPOOL_H
-#define BITCOIN_TXMEMPOOL_H
+#ifndef AIXCOIN_TXMEMPOOL_H
+#define AIXCOIN_TXMEMPOOL_H
 
 #include <coins.h>
 #include <consensus/amount.h>
@@ -778,4 +778,4 @@ public:
     /** Clear m_temp_added and m_non_base_coins. */
     void Reset();
 };
-#endif // BITCOIN_TXMEMPOOL_H
+#endif // AIXCOIN_TXMEMPOOL_H

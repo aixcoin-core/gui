@@ -7,22 +7,22 @@ export LC_ALL=C
 TOPDIR=${TOPDIR:-$(git rev-parse --show-toplevel)}
 BUILDDIR=${BUILDDIR:-$TOPDIR/build}
 BINDIR=${BINDIR:-$BUILDDIR/bin}
-BITCOIND=${BITCOIND:-$BINDIR/aixcoind}
+AIXCOIND=${AIXCOIND:-$BINDIR/aixcoind}
 SHARE_EXAMPLES_DIR=${SHARE_EXAMPLES_DIR:-$TOPDIR/share/examples}
 EXAMPLE_CONF_FILE=${EXAMPLE_CONF_FILE:-$SHARE_EXAMPLES_DIR/aixcoin.conf}
 
-[ ! -x "$BITCOIND" ] && echo "$BITCOIND not found or not executable." && exit 1
+[ ! -x "$AIXCOIND" ] && echo "$AIXCOIND not found or not executable." && exit 1
 
 DIRTY=""
-VERSION_OUTPUT=$($BITCOIND --version)
+VERSION_OUTPUT=$($AIXCOIND --version)
 if [[ $VERSION_OUTPUT == *"dirty"* ]]; then
-  DIRTY="${DIRTY}${BITCOIND}\n"
+  DIRTY="${DIRTY}${AIXCOIND}\n"
 fi
 
 if [ -n "$DIRTY" ]
 then
-  echo -e "WARNING: $BITCOIND was built from a dirty tree.\n"
-  echo -e "To safely generate a aixcoin.conf file, please commit your changes to $BITCOIND, rebuild, then run this script again.\n"
+  echo -e "WARNING: $AIXCOIND was built from a dirty tree.\n"
+  echo -e "To safely generate a aixcoin.conf file, please commit your changes to $AIXCOIND, rebuild, then run this script again.\n"
 fi
 
 echo 'Generating example aixcoin.conf file in share/examples/'
@@ -49,7 +49,7 @@ EOF
 # parse the output from aixcoind --help
 # adding newlines is a bit funky to ensure portability for BSD
 # see here for more details: https://stackoverflow.com/a/24575385
-${BITCOIND} --help \
+${AIXCOIND} --help \
     | sed '1,/Options:/d' \
     | sed -E '/^[[:space:]]{2}-help/,/^[[:space:]]*$/d' \
     | sed -E 's/^[[:space:]]{2}\-/#/' \

@@ -143,7 +143,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ยืนยันการเข้ารหัสกระเป๋าเงิน</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIXCOINS&lt;/b&gt;!</source>
         <translation type="unfinished">คำเตือน: หากคุณเข้ารหัสกระเป๋าของคุณและสูญเสียรหัสผ่านของคุณ คุณจะสูญเสียบิตคอยน์ทั้งหมดของคุณ!</translation>
     </message>
     <message>

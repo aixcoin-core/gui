@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_LOGGING_H
-#define BITCOIN_LOGGING_H
+#ifndef AIXCOIN_LOGGING_H
+#define AIXCOIN_LOGGING_H
 
 #include <crypto/siphash.h>
 #include <logging/categories.h> // IWYU pragma: export
@@ -299,4 +299,4 @@ static inline bool LogAcceptCategory(BCLog::LogFlags category, BCLog::Level leve
 /** Return true if str parses as a log category and set the flag */
 bool GetLogCategory(BCLog::LogFlags& flag, std::string_view str);
 
-#endif // BITCOIN_LOGGING_H
+#endif // AIXCOIN_LOGGING_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_BENCH_BENCH_H
-#define BITCOIN_BENCH_BENCH_H
+#ifndef AIXCOIN_BENCH_BENCH_H
+#define AIXCOIN_BENCH_BENCH_H
 
 #include <bench/nanobench.h> // IWYU pragma: export
 #include <util/fs.h>
@@ -68,4 +68,4 @@ public:
 #define BENCHMARK(n) \
     benchmark::BenchRunner PASTE2(bench_runner_, n) { STRINGIZE(n), n }
 
-#endif // BITCOIN_BENCH_BENCH_H
+#endif // AIXCOIN_BENCH_BENCH_H

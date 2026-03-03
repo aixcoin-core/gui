@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_KEY_H
-#define BITCOIN_KEY_H
+#ifndef AIXCOIN_KEY_H
+#define AIXCOIN_KEY_H
 
 #include <musig.h>
 #include <pubkey.h>
@@ -329,4 +329,4 @@ public:
     ~ECC_Context();
 };
 
-#endif // BITCOIN_KEY_H
+#endif // AIXCOIN_KEY_H

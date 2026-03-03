@@ -160,8 +160,8 @@ La firma ye possible solamentu con direcciones del tipu 'legacy'.</translation>
         <translation type="unfinished">Confirmar el cifrado de la cartera</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation type="unfinished">Advertencia: Si cifras la tua cartera y pierdes la frase de seguridá, ¡perderás &lt;b&gt;TOOS LOS TUYOS BITCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIXCOINS&lt;/b&gt;!</source>
+        <translation type="unfinished">Advertencia: Si cifras la tua cartera y pierdes la frase de seguridá, ¡perderás &lt;b&gt;TOOS LOS TUYOS AIXCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>

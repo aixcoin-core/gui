@@ -2,8 +2,8 @@
 // Copyright (c) 2009-present The Aixcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITCOIN_POLICY_FEES_BLOCK_POLICY_ESTIMATOR_H
-#define BITCOIN_POLICY_FEES_BLOCK_POLICY_ESTIMATOR_H
+#ifndef AIXCOIN_POLICY_FEES_BLOCK_POLICY_ESTIMATOR_H
+#define AIXCOIN_POLICY_FEES_BLOCK_POLICY_ESTIMATOR_H
 
 #include <consensus/amount.h>
 #include <policy/feerate.h>
@@ -344,4 +344,4 @@ private:
     FastRandomContext& insecure_rand GUARDED_BY(m_insecure_rand_mutex);
 };
 
-#endif // BITCOIN_POLICY_FEES_BLOCK_POLICY_ESTIMATOR_H
+#endif // AIXCOIN_POLICY_FEES_BLOCK_POLICY_ESTIMATOR_H

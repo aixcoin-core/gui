@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_TEST_UTIL_NET_H
-#define BITCOIN_TEST_UTIL_NET_H
+#ifndef AIXCOIN_TEST_UTIL_NET_H
+#define AIXCOIN_TEST_UTIL_NET_H
 
 #include <compat/compat.h>
 #include <netmessagemaker.h>
@@ -384,4 +384,4 @@ void DynSock::Pipe::PushNetMsg(const std::string& type, Args&&... payload)
 
 std::vector<NodeEvictionCandidate> GetRandomNodeEvictionCandidates(int n_candidates, FastRandomContext& random_context);
 
-#endif // BITCOIN_TEST_UTIL_NET_H
+#endif // AIXCOIN_TEST_UTIL_NET_H

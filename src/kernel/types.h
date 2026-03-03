@@ -10,8 +10,8 @@
 //! dependencies. More complicated types should be defined in dedicated header
 //! files.
 
-#ifndef BITCOIN_KERNEL_TYPES_H
-#define BITCOIN_KERNEL_TYPES_H
+#ifndef AIXCOIN_KERNEL_TYPES_H
+#define AIXCOIN_KERNEL_TYPES_H
 
 namespace kernel {
 //! Information about chainstate that notifications are sent from.
@@ -27,4 +27,4 @@ struct ChainstateRole {
 };
 } // namespace kernel
 
-#endif // BITCOIN_KERNEL_TYPES_H
+#endif // AIXCOIN_KERNEL_TYPES_H

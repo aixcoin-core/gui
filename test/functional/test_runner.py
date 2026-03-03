@@ -463,7 +463,7 @@ def main():
         assert results_filepath.parent.exists(), "Results file parent directory does not exist"
         logging.debug("Test results will be written to " + str(results_filepath))
 
-    enable_aixcoind = config["components"].getboolean("ENABLE_BITCOIND")
+    enable_aixcoind = config["components"].getboolean("ENABLE_AIXCOIND")
 
     if not enable_aixcoind:
         print("No functional tests to run.")

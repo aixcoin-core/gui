@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_TEST_UTIL_COMMON_H
-#define BITCOIN_TEST_UTIL_COMMON_H
+#ifndef AIXCOIN_TEST_UTIL_COMMON_H
+#define AIXCOIN_TEST_UTIL_COMMON_H
 
 #include <ostream>
 #include <optional>
@@ -52,4 +52,4 @@ inline std::ostream& operator<<(std::ostream& os, const T& obj)
 
 // @}
 
-#endif // BITCOIN_TEST_UTIL_COMMON_H
+#endif // AIXCOIN_TEST_UTIL_COMMON_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CLUSTER_LINEARIZE_H
-#define BITCOIN_CLUSTER_LINEARIZE_H
+#ifndef AIXCOIN_CLUSTER_LINEARIZE_H
+#define AIXCOIN_CLUSTER_LINEARIZE_H
 
 #include <algorithm>
 #include <cstdint>
@@ -2038,4 +2038,4 @@ void PostLinearize(const DepGraph<SetType>& depgraph, std::span<DepGraphIndex> l
 
 } // namespace cluster_linearize
 
-#endif // BITCOIN_CLUSTER_LINEARIZE_H
+#endif // AIXCOIN_CLUSTER_LINEARIZE_H

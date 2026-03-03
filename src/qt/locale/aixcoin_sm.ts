@@ -159,7 +159,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Tautuaina le faʻamaufaʻailoa o le 'wallet'</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR AIXCOINS&lt;/b&gt;!</source>
         <translation type="unfinished">Fa'amaoniga: Afai e te fa'amaonia lau 'aofa'i ma le leiloa o lau fa'amaoniga, o le a &lt;b&gt;Losi uma au Aixcoinsi&lt;/b&gt;!</translation>
     </message>
     <message>

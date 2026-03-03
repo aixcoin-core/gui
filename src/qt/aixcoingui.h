@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_BITCOINGUI_H
-#define BITCOIN_QT_BITCOINGUI_H
+#ifndef AIXCOIN_QT_AIXCOINGUI_H
+#define AIXCOIN_QT_AIXCOINGUI_H
 
 #include <aixcoin-build-config.h> // IWYU pragma: keep
 
@@ -353,4 +353,4 @@ private Q_SLOTS:
     void onMenuSelection(QAction* action);
 };
 
-#endif // BITCOIN_QT_BITCOINGUI_H
+#endif // AIXCOIN_QT_AIXCOINGUI_H

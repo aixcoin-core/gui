@@ -19,14 +19,14 @@ fi
 RETVAL=0
 
 prog=aixcoind
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/aixcoind
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/aixcoind}
+# you can override the lockfile via AIXCOIND_LOCKFILE in /etc/sysconfig/aixcoind
+lockfile=${AIXCOIND_LOCKFILE-/var/lock/subsys/aixcoind}
 
-# aixcoind defaults to /usr/bin/aixcoind, override with BITCOIND_BIN
-aixcoind=${BITCOIND_BIN-/usr/bin/aixcoind}
+# aixcoind defaults to /usr/bin/aixcoind, override with AIXCOIND_BIN
+aixcoind=${AIXCOIND_BIN-/usr/bin/aixcoind}
 
-# aixcoind opts default to -disablewallet, override with BITCOIND_OPTS
-aixcoind_opts=${BITCOIND_OPTS--disablewallet}
+# aixcoind opts default to -disablewallet, override with AIXCOIND_OPTS
+aixcoind_opts=${AIXCOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_UTIL_CHECK_H
-#define BITCOIN_UTIL_CHECK_H
+#ifndef AIXCOIN_UTIL_CHECK_H
+#define AIXCOIN_UTIL_CHECK_H
 
 #include <attributes.h>
 
@@ -141,4 +141,4 @@ constexpr T&& inline_assertion_check(LIFETIMEBOUND T&& val, [[maybe_unused]] con
 #   define ASAN_UNPOISON_MEMORY_REGION(addr, size) ((void)(addr), (void)(size))
 #endif
 
-#endif // BITCOIN_UTIL_CHECK_H
+#endif // AIXCOIN_UTIL_CHECK_H

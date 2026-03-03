@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or https://opensource.org/license/mit.
 
-#ifndef BITCOIN_UTIL_EXPECTED_H
-#define BITCOIN_UTIL_EXPECTED_H
+#ifndef AIXCOIN_UTIL_EXPECTED_H
+#define AIXCOIN_UTIL_EXPECTED_H
 
 #include <attributes.h>
 #include <util/check.h>
@@ -129,4 +129,4 @@ public:
 
 } // namespace util
 
-#endif // BITCOIN_UTIL_EXPECTED_H
+#endif // AIXCOIN_UTIL_EXPECTED_H

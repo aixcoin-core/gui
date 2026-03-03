@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_PAYMENTSERVER_H
-#define BITCOIN_QT_PAYMENTSERVER_H
+#ifndef AIXCOIN_QT_PAYMENTSERVER_H
+#define AIXCOIN_QT_PAYMENTSERVER_H
 
 // This class handles payment requests from clicking on
 // aixcoin: URIs
@@ -50,7 +50,7 @@ class QLocalServer;
 class QUrl;
 QT_END_NAMESPACE
 
-extern const QString BITCOIN_IPC_PREFIX;
+extern const QString AIXCOIN_IPC_PREFIX;
 
 class PaymentServer : public QObject
 {
@@ -104,4 +104,4 @@ private:
     OptionsModel* optionsModel{nullptr};
 };
 
-#endif // BITCOIN_QT_PAYMENTSERVER_H
+#endif // AIXCOIN_QT_PAYMENTSERVER_H
