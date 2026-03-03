@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2018-present The Bitcoin Core developers
+# Copyright (c) 2018-present The Aixcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Tests the includeconf argument
@@ -14,10 +14,10 @@ Verify that:
 4. multiple includeconf arguments can be specified in the main config
    file.
 """
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixcoinTestFramework
 
 
-class IncludeConfTest(BitcoinTestFramework):
+class IncludeConfTest(AixcoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 

@@ -1,5 +1,5 @@
 # bash programmable completion for aixcoind(1) and aixcoin-qt(1)
-# Copyright (c) 2012-present The Bitcoin Core developers
+# Copyright (c) 2012-present The Aixcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

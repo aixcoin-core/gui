@@ -87,9 +87,9 @@ OpenRC).
 ### macOS
 
     Binary:              /usr/local/bin/aixcoind
-    Configuration file:  ~/Library/Application Support/Bitcoin/aixcoin.conf
-    Data directory:      ~/Library/Application Support/Bitcoin
-    Lock file:           ~/Library/Application Support/Bitcoin/.lock
+    Configuration file:  ~/Library/Application Support/Aixcoin/aixcoin.conf
+    Data directory:      ~/Library/Application Support/Aixcoin
+    Lock file:           ~/Library/Application Support/Aixcoin/.lock
 
 Installing Service Configuration
 -----------------------------------

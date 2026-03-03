@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Copyright (c) 2019-present The Bitcoin Core developers
+# Copyright (c) 2019-present The Aixcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 export LC_ALL=C
@@ -251,7 +251,7 @@ mkdir -p "$DISTSRC"
           ${CONFIGFLAGS} \
           "${CMAKE_EXE_LINKER_FLAGS}"
 
-    # Build Bitcoin Core
+    # Build Aixcoin Core
     cmake --build build -j "$JOBS" ${V:+--verbose}
 
     mkdir -p "$OUTDIR"
@@ -264,12 +264,12 @@ mkdir -p "$DISTSRC"
             ;;
     esac
 
-    # Setup the directory where our Bitcoin Core build for HOST will be
+    # Setup the directory where our Aixcoin Core build for HOST will be
     # installed. This directory will also later serve as the input for our
     # binary tarballs.
     INSTALLPATH="${PWD}/installed/${DISTNAME}"
     mkdir -p "${INSTALLPATH}"
-    # Install built Bitcoin Core to $INSTALLPATH
+    # Install built Aixcoin Core to $INSTALLPATH
     case "$HOST" in
         *darwin*)
             # This workaround can be dropped for CMake >= 3.27.

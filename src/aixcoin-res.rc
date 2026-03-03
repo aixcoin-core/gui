@@ -15,7 +15,7 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        CLIENT_NAME " project"
-            VALUE "FileDescription",    "aixcoin (Bitcoin wrapper executable that can call other executables)"
+            VALUE "FileDescription",    "aixcoin (Aixcoin wrapper executable that can call other executables)"
             VALUE "FileVersion",        CLIENT_VERSION_STRING
             VALUE "InternalName",       "aixcoin"
             VALUE "LegalCopyright",     COPYRIGHT_STR

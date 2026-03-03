@@ -1,4 +1,4 @@
-Bitcoin Core version 0.17.0.1 is now available from:
+Aixcoin Core version 0.17.0.1 is now available from:
 
   <https://aixcoincore.org/bin/aixcoin-core-0.17.0.1/>
 

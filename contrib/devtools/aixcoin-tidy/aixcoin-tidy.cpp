@@ -1,4 +1,4 @@
-// Copyright (c) 2023 Bitcoin Developers
+// Copyright (c) 2023 Aixcoin Developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +7,7 @@
 #include <clang-tidy/ClangTidyModule.h>
 #include <clang-tidy/ClangTidyModuleRegistry.h>
 
-class BitcoinModule final : public clang::tidy::ClangTidyModule
+class AixcoinModule final : public clang::tidy::ClangTidyModule
 {
 public:
     void addCheckFactories(clang::tidy::ClangTidyCheckFactories& CheckFactories) override
@@ -16,7 +16,7 @@ public:
     }
 };
 
-static clang::tidy::ClangTidyModuleRegistry::Add<BitcoinModule>
+static clang::tidy::ClangTidyModuleRegistry::Add<AixcoinModule>
     X("aixcoin-module", "Adds aixcoin checks.");
 
-volatile int BitcoinModuleAnchorSource = 0;
+volatile int AixcoinModuleAnchorSource = 0;

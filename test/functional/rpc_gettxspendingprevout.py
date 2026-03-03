@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) The Bitcoin Core developers
+# Copyright (c) The Aixcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test gettxspendingprevout RPC."""
 
-from test_framework.test_framework import BitcoinTestFramework
+from test_framework.test_framework import AixcoinTestFramework
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
@@ -30,7 +30,7 @@ def spent_out_in_block(txid, vout, spending_tx_id, blockhash, spending_tx):
     """Expected result for an output spent in a confirmed block, with full tx data"""
     return {'txid': txid, 'vout': vout, 'spendingtxid': spending_tx_id, 'blockhash': blockhash, 'spendingtx': spending_tx}
 
-class GetTxSpendingPrevoutTest(BitcoinTestFramework):
+class GetTxSpendingPrevoutTest(AixcoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 3
         self.noban_tx_relay = True

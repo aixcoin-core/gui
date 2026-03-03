@@ -10,7 +10,7 @@
 # config file.
 
 [Unit]
-Description=Bitcoin daemon
+Description=Aixcoin daemon
 Documentation=https://github.com/aixcoin/aixcoin/blob/master/doc/init.md
 
 # https://www.freedesktop.org/wiki/Software/systemd/NetworkTarget/

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-# Copyright (c) The Bitcoin Core developers
+# Copyright (c) The Aixcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test the aixcoin wrapper tool."""
 from test_framework.test_framework import (
-    BitcoinTestFramework,
+    AixcoinTestFramework,
     SkipTest,
 )
 from test_framework.util import (
@@ -16,7 +16,7 @@ import platform
 import re
 
 
-class ToolBitcoinTest(BitcoinTestFramework):
+class ToolAixcoinTest(AixcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -110,4 +110,4 @@ def get_exe_name(version_str):
 
 
 if __name__ == '__main__':
-    ToolBitcoinTest(__file__).main()
+    ToolAixcoinTest(__file__).main()

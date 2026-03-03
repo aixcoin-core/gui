@@ -4,16 +4,16 @@ Test Shell for Interactive Environments
 This document describes how to use the `TestShell` submodule in the functional
 test suite.
 
-The `TestShell` submodule extends the `BitcoinTestFramework` functionality to
+The `TestShell` submodule extends the `AixcoinTestFramework` functionality to
 external interactive environments for prototyping and educational purposes. Just
-like `BitcoinTestFramework`, the `TestShell` allows the user to:
+like `AixcoinTestFramework`, the `TestShell` allows the user to:
 
 * Manage regtest aixcoind subprocesses.
 * Access RPC interfaces of the underlying aixcoind instances.
 * Log events to the functional test logging utility.
 
 The `TestShell` can be useful in interactive environments where it is necessary
-to extend the object lifetime of the underlying `BitcoinTestFramework` between
+to extend the object lifetime of the underlying `AixcoinTestFramework` between
 user inputs. Such environments include the Python3 command line interpreter or
 [Jupyter](https://jupyter.org/) notebooks running a Python3 kernel.
 
@@ -22,9 +22,9 @@ user inputs. Such environments include the Python3 command line interpreter or
 * Python3
 * `aixcoind` built in the same repository as the `TestShell`.
 
-## 2. Importing `TestShell` from the Bitcoin Core repository
+## 2. Importing `TestShell` from the Aixcoin Core repository
 
-We can import the `TestShell` by adding the path of the configured Bitcoin Core
+We can import the `TestShell` by adding the path of the configured Aixcoin Core
 `test_framework` module to the beginning of the PATH variable, and then
 importing the `TestShell` class from the `test_shell` sub-package. Since
 the build system creates a copy of the `test_framework` module into a new `build/`
@@ -43,7 +43,7 @@ processes and logging utilities.
 * `TestShell().setup()`
 * `TestShell().shutdown()`
 
-The `TestShell` inherits all `BitcoinTestFramework` members and methods, such
+The `TestShell` inherits all `AixcoinTestFramework` members and methods, such
 as:
 * `TestShell().nodes[index].rpc_method()`
 * `TestShell().log.info("Custom log message")`
@@ -58,7 +58,7 @@ The following sections demonstrate how to initialize, run, and shut down a
 20XX-XX-XXTXX:XX:XX.XXXXXXX TestFramework (INFO): Initializing test directory /path/to/aixcoin_func_test_XXXXXXX
 ```
 The `TestShell` forwards all functional test parameters of the parent
-`BitcoinTestFramework` object. The full set of argument keywords which can be
+`AixcoinTestFramework` object. The full set of argument keywords which can be
 used to initialize the `TestShell` can be found in [section
 #6](#custom-testshell-parameters) of this document.
 
@@ -74,12 +74,12 @@ TestShell is already running!
 
 ## 4. Interacting with the `TestShell`
 
-Unlike the `BitcoinTestFramework` class, the `TestShell` keeps the underlying
-Bitcoind subprocesses (nodes) and logging utilities running until the user
+Unlike the `AixcoinTestFramework` class, the `TestShell` keeps the underlying
+Aixcoind subprocesses (nodes) and logging utilities running until the user
 explicitly shuts down the `TestShell` object.
 
 During the time between the `setup` and `shutdown` calls, all `aixcoind` node
-processes and `BitcoinTestFramework` convenience methods can be accessed
+processes and `AixcoinTestFramework` convenience methods can be accessed
 interactively.
 
 **Example: Mining a regtest chain**
@@ -156,7 +156,7 @@ To prevent the logs from being removed after a shutdown, simply set the
 ```
 
 The following utility consolidates logs from the aixcoind nodes and the
-underlying `BitcoinTestFramework`:
+underlying `AixcoinTestFramework`:
 
 * `/path/to/aixcoin/build/test/functional/combine_logs.py
   '/path/to/aixcoin_func_test_XXXXXXX'`
@@ -164,7 +164,7 @@ underlying `BitcoinTestFramework`:
 ## 6. Custom `TestShell` parameters
 
 The `TestShell` object initializes with the default settings inherited from the
-`BitcoinTestFramework` class. The user can override these in
+`AixcoinTestFramework` class. The user can override these in
 `TestShell().setup(key=value)`.
 
 **Note:** `TestShell().reset()` will reset test parameters to default values and

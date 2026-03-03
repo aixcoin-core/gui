@@ -34,16 +34,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Bitcoin-Qt</string>
+  <string>Aixcoin-Qt</string>
 
   <key>CFBundleName</key>
-  <string>Bitcoin-Qt</string>
+  <string>Aixcoin-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.aixcoinfoundation.Bitcoin-Qt</string>
+  <string>org.aixcoinfoundation.Aixcoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -51,7 +51,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.aixcoin.BitcoinPayment</string>
+      <string>org.aixcoin.AixcoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>aixcoin</string>

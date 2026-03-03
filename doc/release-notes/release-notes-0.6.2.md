@@ -1,5 +1,5 @@
-Bitcoin version 0.6.2 is now available for download at:
-http://sourceforge.net/projects/aixcoin/files/Bitcoin/aixcoin-0.6.2/
+Aixcoin version 0.6.2 is now available for download at:
+http://sourceforge.net/projects/aixcoin/files/Aixcoin/aixcoin-0.6.2/
 
 This is a bug-fix and code-cleanup release, with no major new features.
 

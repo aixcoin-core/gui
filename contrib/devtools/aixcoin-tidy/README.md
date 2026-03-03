@@ -1,4 +1,4 @@
-# Bitcoin Tidy
+# Aixcoin Tidy
 
 Example Usage:
 

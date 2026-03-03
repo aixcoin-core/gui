@@ -1,5 +1,5 @@
-Bitcoin version 0.5.1 is now available for download at:
-http://sourceforge.net/projects/aixcoin/files/Bitcoin/aixcoin-0.5.1/
+Aixcoin version 0.5.1 is now available for download at:
+http://sourceforge.net/projects/aixcoin/files/Aixcoin/aixcoin-0.5.1/
 
 This is a bugfix-only release.
 

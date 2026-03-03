@@ -1,7 +1,7 @@
 22.0 Release Notes
 ==================
 
-Bitcoin Core version 22.0 is now available from:
+Aixcoin Core version 22.0 is now available from:
 
   <https://aixcoincore.org/bin/aixcoin-core-22.0/>
 
@@ -21,36 +21,36 @@ How to Upgrade
 
 If you are running an older version, shut it down. Wait until it has completely
 shut down (which might take a few minutes in some cases), then run the
-installer (on Windows) or just copy over `/Applications/Bitcoin-Qt` (on Mac)
+installer (on Windows) or just copy over `/Applications/Aixcoin-Qt` (on Mac)
 or `aixcoind`/`aixcoin-qt` (on Linux).
 
-Upgrading directly from a version of Bitcoin Core that has reached its EOL is
+Upgrading directly from a version of Aixcoin Core that has reached its EOL is
 possible, but it might take some time if the data directory needs to be migrated. Old
-wallet versions of Bitcoin Core are generally supported.
+wallet versions of Aixcoin Core are generally supported.
 
 Compatibility
 ==============
 
-Bitcoin Core is supported and extensively tested on operating systems
-using the Linux kernel, macOS 10.14+, and Windows 7 and newer.  Bitcoin
+Aixcoin Core is supported and extensively tested on operating systems
+using the Linux kernel, macOS 10.14+, and Windows 7 and newer.  Aixcoin
 Core should also work on most other Unix-like systems but is not as
-frequently tested on them.  It is not recommended to use Bitcoin Core on
+frequently tested on them.  It is not recommended to use Aixcoin Core on
 unsupported systems.
 
-From Bitcoin Core 22.0 onwards, macOS versions earlier than 10.14 are no longer supported.
+From Aixcoin Core 22.0 onwards, macOS versions earlier than 10.14 are no longer supported.
 
 Notable changes
 ===============
 
 P2P and network changes
 -----------------------
-- Added support for running Bitcoin Core as an
+- Added support for running Aixcoin Core as an
   [I2P (Invisible Internet Project)](https://en.wikipedia.org/wiki/I2P) service
   and connect to such services. See [i2p.md](https://github.com/aixcoin/aixcoin/blob/22.x/doc/i2p.md) for details. (#20685)
 - This release removes support for Tor version 2 hidden services in favor of Tor
   v3 only, as the Tor network [dropped support for Tor
   v2](https://blog.torproject.org/v2-deprecation-timeline) with the release of
-  Tor version 0.4.6.  Henceforth, Bitcoin Core ignores Tor v2 addresses; it
+  Tor version 0.4.6.  Henceforth, Aixcoin Core ignores Tor v2 addresses; it
   neither rumors them over the network to other peers, nor stores them in memory
   or to `peers.dat`.  (#22050)
 
@@ -137,7 +137,7 @@ Files
 - The list of banned hosts and networks (via `setban` RPC) is now saved on disk
   in JSON format in `banlist.json` instead of `banlist.dat`. `banlist.dat` is
   only read on startup if `banlist.json` is not present. Changes are only written to the new
-  `banlist.json`. A future version of Bitcoin Core may completely ignore
+  `banlist.json`. A future version of Aixcoin Core may completely ignore
   `banlist.dat`. (#20966)
 
 New settings
@@ -160,7 +160,7 @@ Tools and Utilities
 - A new CLI `-addrinfo` command returns the number of addresses known to the
   node per network type (including Tor v2 versus v3) and total. This can be
   useful to see if the node knows enough addresses in a network to use options
-  like `-onlynet=<network>` or to upgrade to this release of Bitcoin Core 22.0
+  like `-onlynet=<network>` or to upgrade to this release of Aixcoin Core 22.0
   that supports Tor v3 only.  (#21595)
 
 - A new `-rpcwaittimeout` argument to `aixcoin-cli` sets the timeout
@@ -458,7 +458,7 @@ A detailed list of changes in this version follows. To keep the list to a manage
 - aixcoin-core/gui#4 UI external signer support (e.g. hardware wallet) (Sjors)
 - aixcoin-core/gui#13 Hide peer detail view if multiple are selected (promag)
 - aixcoin-core/gui#18 Add peertablesortproxy module (hebasto)
-- aixcoin-core/gui#21 Improve pruning tooltip (fluffypony, BitcoinErrorLog)
+- aixcoin-core/gui#21 Improve pruning tooltip (fluffypony, AixcoinErrorLog)
 - aixcoin-core/gui#72 Log static plugins meta data and used style (hebasto)
 - aixcoin-core/gui#79 Embed monospaced font (hebasto)
 - aixcoin-core/gui#85 Remove unused "What's This" button in dialogs on Windows OS (hebasto)
@@ -954,7 +954,7 @@ A detailed list of changes in this version follows. To keep the list to a manage
 - aixcoin/aixcoin#20473 Document current boost dependency as 1.71.0 (laanwj)
 - aixcoin/aixcoin#20512 Add bash as an OpenBSD dependency (emilengler)
 - aixcoin/aixcoin#20568 Use FeeModes doc helper in estimatesmartfee (MarcoFalke)
-- aixcoin/aixcoin#20577 libconsensus: add missing error code description, fix NBitcoin link (theStack)
+- aixcoin/aixcoin#20577 libconsensus: add missing error code description, fix NAixcoin link (theStack)
 - aixcoin/aixcoin#20587 Tidy up Tor doc (more stringent) (wodry)
 - aixcoin/aixcoin#20592 Update wtxidrelay documentation per BIP339 (jonatack)
 - aixcoin/aixcoin#20601 Update for FreeBSD 12.2, add GUI Build Instructions (jarolrod)

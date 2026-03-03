@@ -2,7 +2,7 @@
 
 #### Preparation
 
-As of Bitcoin Core v22.0, releases are signed by a number of public keys on the basis
+As of Aixcoin Core v22.0, releases are signed by a number of public keys on the basis
 of the [guix.sigs repository](https://github.com/aixcoin-core/guix.sigs/). When
 verifying binary downloads, you (the end user) decide which of these public keys you
 trust and then use that trust model to evaluate the signature on a file that contains

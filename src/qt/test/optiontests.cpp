@@ -1,4 +1,4 @@
-// Copyright (c) 2018-present The Bitcoin Core developers
+// Copyright (c) 2018-present The Aixcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -107,7 +107,7 @@ void OptionTests::parametersInteraction()
 {
     // Test that the bug https://github.com/aixcoin-core/gui/issues/567 does not resurface.
     // It was fixed via https://github.com/aixcoin-core/gui/pull/568.
-    // With fListen=false in ~/.config/Bitcoin/Bitcoin-Qt.conf and all else left as default,
+    // With fListen=false in ~/.config/Aixcoin/Aixcoin-Qt.conf and all else left as default,
     // aixcoin-qt should set both -listen and -listenonion to false and start successfully.
     gArgs.LockSettings([&](common::Settings& s) {
         s.forced_settings.erase("listen");

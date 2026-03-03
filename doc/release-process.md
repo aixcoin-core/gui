@@ -116,7 +116,7 @@ Generate list of authors:
 
 ### Setup and perform Guix builds
 
-Checkout the Bitcoin Core version you'd like to build:
+Checkout the Aixcoin Core version you'd like to build:
 
 ```sh
 pushd ./aixcoin
@@ -300,9 +300,9 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
   - aixcoin-dev and aixcoin-core-dev mailing list
 
-  - Bitcoin Core announcements list https://aixcoincore.org/en/list/announcements/join/
+  - Aixcoin Core announcements list https://aixcoincore.org/en/list/announcements/join/
 
-  - Bitcoin Core Twitter https://twitter.com/aixcoincoreorg
+  - Aixcoin Core Twitter https://twitter.com/aixcoincoreorg
 
   - Celebrate
 

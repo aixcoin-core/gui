@@ -99,7 +99,7 @@ class aixcoin-qt,aixcoind,aixcoin-cli,aixcoin-wallet bold
 
 - *libaixcoin_util* should be a standalone dependency that any library can depend on, and it should not depend on other libraries except *libaixcoin_crypto*. It provides basic utilities that fill in gaps in the C++ standard library and provide lightweight abstractions over platform-specific features. Since the util library is distributed with the kernel and is usable by kernel applications, it shouldn't contain functions that external code shouldn't call, like higher level code targeted at the node or wallet. (*libaixcoin_common* is a better place for higher level code, or code that is meant to be used by internal applications only.)
 
-- *libaixcoin_common* is a home for miscellaneous shared code used by different Bitcoin Core applications. It should not depend on anything other than *libaixcoin_util*, *libaixcoin_consensus*, and *libaixcoin_crypto*.
+- *libaixcoin_common* is a home for miscellaneous shared code used by different Aixcoin Core applications. It should not depend on anything other than *libaixcoin_util*, *libaixcoin_consensus*, and *libaixcoin_crypto*.
 
 - *libaixcoin_kernel* should only depend on *libaixcoin_util*, *libaixcoin_consensus*, and *libaixcoin_crypto*.
 

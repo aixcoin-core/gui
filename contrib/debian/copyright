@@ -1,13 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Bitcoin
+Upstream-Name: Aixcoin
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
  irc://#aixcoin-core-dev@libera.chat
 Source: https://github.com/aixcoin/aixcoin
 
 Files: *
-Copyright: 2009-2026, Bitcoin Core Developers
+Copyright: 2009-2026, Aixcoin Core Developers
 License: Expat
-Comment: The Bitcoin Core Developers encompasses all contributors to the
+Comment: The Aixcoin Core Developers encompasses all contributors to the
          project, listed in the release notes or the git log.
 
 Files: debian/*
