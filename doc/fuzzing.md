@@ -250,7 +250,7 @@ Read the [Honggfuzz documentation](https://github.com/google/honggfuzz/blob/mast
 Aixcoin Core participates in Google's [OSS-Fuzz](https://github.com/google/oss-fuzz/tree/master/projects/aixcoin-core)
 program, which includes a dashboard of [publicly disclosed vulnerabilities](https://issues.oss-fuzz.com/issues?q=aixcoin-core%20status:open).
 
-Aixcoin Core follows its [security disclosure policy](https://aixcoincore.org/en/security-advisories/),
+Aixcoin Core follows its [security disclosure policy](https://aixcoin-core.github.io/aixcoincore.org/en/security-advisories/),
 which may differ from Google's standard
 [90-day disclosure window](https://google.github.io/oss-fuzz/getting-started/bug-disclosure-guidelines/)
 .

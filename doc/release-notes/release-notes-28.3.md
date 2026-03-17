@@ -1,6 +1,6 @@
 Aixcoin Core version 28.3 is now available from:
 
-  <https://aixcoincore.org/bin/aixcoin-core-28.3/>
+  <https://aixcoin-core.github.io/aixcoincore.org/bin/aixcoin-core-28.3/>
 
 This release includes various bug fixes and performance
 improvements, as well as updated translations.
@@ -11,7 +11,7 @@ Please report bugs using the issue tracker at GitHub:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://aixcoincore.org/en/list/announcements/join/>
+  <https://aixcoin-core.github.io/aixcoincore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============

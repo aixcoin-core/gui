@@ -275,11 +275,11 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
   - blog post
 
-  - maintained versions [table](https://github.com/aixcoin-core/aixcoincore.org/commits/master/_includes/posts/maintenance-table.md)
+  - maintained versions [table](https://github.com/aixcoin-core/aixcoin-core.github.io/aixcoincore.org/commits/master/_includes/posts/maintenance-table.md)
 
   - RPC documentation update
 
-      - See https://github.com/aixcoin-core/aixcoincore.org/blob/master/contrib/doc-gen/
+      - See https://github.com/aixcoin-core/aixcoin-core.github.io/aixcoincore.org/blob/master/contrib/doc-gen/
 
 
 - Update repositories
@@ -300,7 +300,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
   - aixcoin-dev and aixcoin-core-dev mailing list
 
-  - Aixcoin Core announcements list https://aixcoincore.org/en/list/announcements/join/
+  - Aixcoin Core announcements list https://aixcoin-core.github.io/aixcoincore.org/en/list/announcements/join/
 
   - Aixcoin Core Twitter https://twitter.com/aixcoincoreorg
 

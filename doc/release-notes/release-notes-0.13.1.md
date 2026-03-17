@@ -12,7 +12,7 @@ Please report bugs using the issue tracker at github:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://aixcoincore.org/en/list/announcements/join/>
+  <https://aixcoin-core.github.io/aixcoincore.org/en/list/announcements/join/>
 
 Compatibility
 ==============
@@ -159,13 +159,13 @@ For more information about segwit, please see the [segwit FAQ][], the
 operator, please see the [versionbits FAQ][] for information about
 signaling support for a soft fork.
 
-[Segwit FAQ]: https://aixcoincore.org/en/2016/01/26/segwit-benefits/
-[segwit wallet developers guide]: https://aixcoincore.org/en/segwit_wallet_dev/
+[Segwit FAQ]: https://aixcoin-core.github.io/aixcoincore.org/en/2016/01/26/segwit-benefits/
+[segwit wallet developers guide]: https://aixcoin-core.github.io/aixcoincore.org/en/segwit_wallet_dev/
 [BIP141]: https://github.com/aixcoin/bips/blob/master/bip-0141.mediawiki
 [BIP143]: https://github.com/aixcoin/bips/blob/master/bip-0143.mediawiki
 [BIP144]: https://github.com/aixcoin/bips/blob/master/bip-0144.mediawiki
 [BIP145]: https://github.com/aixcoin/bips/blob/master/bip-0145.mediawiki
-[versionbits FAQ]: https://aixcoincore.org/en/2016/06/08/version-bits-miners-faq/
+[versionbits FAQ]: https://aixcoin-core.github.io/aixcoincore.org/en/2016/06/08/version-bits-miners-faq/
 
 
 Null dummy soft fork

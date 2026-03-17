@@ -1,6 +1,6 @@
 Aixcoin Core version *0.15.2* is now available from:
 
-  <https://aixcoincore.org/bin/aixcoin-core-0.15.2/>
+  <https://aixcoin-core.github.io/aixcoincore.org/bin/aixcoin-core-0.15.2/>
 
 This is a new minor version release, including various bugfixes and
 performance improvements, as well as updated translations.
@@ -11,7 +11,7 @@ Please report bugs using the issue tracker at GitHub:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://aixcoincore.org/en/list/announcements/join/>
+  <https://aixcoin-core.github.io/aixcoincore.org/en/list/announcements/join/>
 
 How to Upgrade
 ==============

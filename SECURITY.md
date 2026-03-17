@@ -3,7 +3,7 @@
 ## Supported Versions
 
 See our website for versions of Aixcoin Core that are currently supported with
-security updates: https://aixcoincore.org/en/lifecycle/#schedule
+security updates: https://aixcoin-core.github.io/aixcoincore.org/en/lifecycle/#schedule
 
 ## Reporting a Vulnerability
 

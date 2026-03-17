@@ -4,7 +4,7 @@ Aixcoin Core integration/staging tree
 https://aixcoincore.org
 
 For an immediately usable, binary version of the Aixcoin Core software, see
-https://aixcoincore.org/en/download/.
+https://aixcoin-core.github.io/aixcoincore.org/en/download/.
 
 What is Aixcoin Core?
 ---------------------

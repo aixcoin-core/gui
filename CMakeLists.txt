@@ -53,7 +53,7 @@ set(CMAKE_TRY_COMPILE_PLATFORM_VARIABLES
 project(AixcoinCore
   VERSION ${CLIENT_VERSION_MAJOR}.${CLIENT_VERSION_MINOR}.${CLIENT_VERSION_BUILD}
   DESCRIPTION "Aixcoin client software"
-  HOMEPAGE_URL "https://aixcoincore.org/"
+  HOMEPAGE_URL "https://aixcoin-core.github.io/aixcoincore.org/"
   LANGUAGES NONE
 )
 
