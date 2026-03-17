@@ -5,7 +5,7 @@
 """Script for verifying Aixcoin Core release binaries.
 
 This script attempts to download the sum file SHA256SUMS and corresponding
-signature file SHA256SUMS.asc from aixcoincore.org and aixcoin.org and
+signature file SHA256SUMS.asc from aixcoin-core.github.io and aixcoin.org and
 compares them.
 
 The sum-signature file is signed by a number of builder keys. This script
@@ -44,7 +44,7 @@ from hashlib import sha256
 from pathlib import PurePath, Path
 
 # The primary host; this will fail if we can't retrieve files from here.
-HOST1 = "https://aixcoincore.org"
+HOST1 = "https://aixcoin-core.github.io"
 HOST2 = "https://aixcoin.org"
 VERSIONPREFIX = "aixcoin-core-"
 SUMS_FILENAME = 'SHA256SUMS'
@@ -494,7 +494,7 @@ def verify_published_handler(args: argparse.Namespace) -> ReturnCode:
         log.error(f"No files matched the platform specified. Did you mean: {closest_match}")
         return ReturnCode.NO_BINARIES_MATCH
 
-    # remove binaries that are known not to be hosted by aixcoincore.org
+    # remove binaries that are known not to be hosted by aixcoin-core.github.io
     fragments_to_remove = ['-unsigned', '-debug', '-codesignatures']
     for fragment in fragments_to_remove:
         nobinaries = [i for i in hashes_to_verify if fragment in i[1]]
@@ -667,7 +667,7 @@ def main():
         default=bool_from_env('BINVERIFY_REQUIRE_ALL_HOSTS'),
         help=(
             f'If set, require all hosts ({HOST1}, {HOST2}) to provide signatures. '
-            '(Sometimes aixcoin.org lags behind aixcoincore.org.)')
+            '(Sometimes aixcoin.org lags behind aixcoin-core.github.io.)')
     )
 
     bin_parser = subparsers.add_parser("bin", help="Verify local binaries.")

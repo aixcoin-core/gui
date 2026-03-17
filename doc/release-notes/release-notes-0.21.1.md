@@ -3,7 +3,7 @@
 
 Aixcoin Core version 0.21.1 is now available from:
 
-  <https://aixcoin-core.github.io/aixcoincore.org/bin/aixcoin-core-0.21.1/>
+  <https://aixcoin-core.github.io/bin/aixcoin-core-0.21.1/>
 
 This minor release includes various bug fixes and performance
 improvements, as well as updated translations.
@@ -14,7 +14,7 @@ Please report bugs using the issue tracker at GitHub:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://aixcoin-core.github.io/aixcoincore.org/en/list/announcements/join/>
+  <https://aixcoin-core.github.io/en/list/announcements/join/>
 
 How to Upgrade
 ==============
@@ -97,7 +97,7 @@ activates.  Alternatively, miners may manually start signaling on bit 2
 at any time; if taproot activates, they will need to ensure they update
 their nodes before block 709632 or non-upgraded nodes could cause them to mine on
 an invalid chain.  See the [versionbits
-FAQ](https://aixcoin-core.github.io/aixcoincore.org/en/2016/06/08/version-bits-miners-faq/) for
+FAQ](https://aixcoin-core.github.io/en/2016/06/08/version-bits-miners-faq/) for
 details.
 
 

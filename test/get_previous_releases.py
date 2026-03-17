@@ -168,7 +168,7 @@ def download_binary(tag, args) -> int:
         archive_format = 'zip'
 
     archive = f'aixcoin-{tag[1:]}-{host}.{archive_format}'
-    archive_url = f'https://aixcoin-core.github.io/aixcoincore.org/{bin_path}/{archive}'
+    archive_url = f'https://aixcoin-core.github.io/{bin_path}/{archive}'
 
     print(f'Fetching: {archive_url}')
 

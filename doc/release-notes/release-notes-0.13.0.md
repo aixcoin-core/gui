@@ -11,7 +11,7 @@ Please report bugs using the issue tracker at github:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://aixcoin-core.github.io/aixcoincore.org/en/list/announcements/join/>
+  <https://aixcoin-core.github.io/en/list/announcements/join/>
 
 Compatibility
 ==============

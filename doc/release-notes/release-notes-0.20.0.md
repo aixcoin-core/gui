@@ -3,7 +3,7 @@
 
 Aixcoin Core version 0.20.0 is now available from:
 
-  <https://aixcoin-core.github.io/aixcoincore.org/bin/aixcoin-core-0.20.0/>
+  <https://aixcoin-core.github.io/bin/aixcoin-core-0.20.0/>
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
@@ -14,7 +14,7 @@ Please report bugs using the issue tracker at GitHub:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://aixcoin-core.github.io/aixcoincore.org/en/list/announcements/join/>
+  <https://aixcoin-core.github.io/en/list/announcements/join/>
 
 How to Upgrade
 ==============
@@ -206,7 +206,7 @@ GUI changes
   peer selection. See the `-asmap` configuration option in _New
   Settings_, above.  (#18402)
 
-- A "known bug" [announced](https://aixcoin-core.github.io/aixcoincore.org/en/releases/0.18.0/#wallet-gui)
+- A "known bug" [announced](https://aixcoin-core.github.io/en/releases/0.18.0/#wallet-gui)
   in the release notes of version 0.18 has been fixed.  The issue
   affected anyone who simultaneously used multiple Aixcoin Core wallets
   and the GUI coin control feature. (#18894)
@@ -247,7 +247,7 @@ Documentation changes
 ---------------------
 
 - Aixcoin Core's automatically-generated source code documentation is
-  now available at https://doxygen.aixcoincore.org.  (#17596)
+  now available at https://doxygen.aixcoin-core.github.io.  (#17596)
 
 Low-level changes
 =================
@@ -775,7 +775,7 @@ Build system
 - #17503 Remove bitness from aixcoin-qt help message and manpage (laanwj)
 - #17539 Update and improve Developer Notes (hebasto)
 - #17561 Changed MiniUPnPc link to https in dependencies.md (sandakersmann)
-- #17596 Change doxygen URL to doxygen.aixcoincore.org (laanwj)
+- #17596 Change doxygen URL to doxygen.aixcoin-core.github.io (laanwj)
 - #17598 Update release process with latest changes (MarcoFalke)
 - #17617 Unify unix epoch time descriptions (jonatack)
 - #17637 script: Add keyserver to verify-commits readme (emilengler)

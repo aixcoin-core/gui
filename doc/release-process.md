@@ -237,7 +237,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 ```
 
 
-- Upload to the aixcoincore.org server:
+- Upload to the aixcoin-core.github.io server:
     1. The contents of each `./aixcoin/guix-build-${VERSION}/output/${HOST}/` directory.
 
        Guix will output all of the results into host subdirectories, but the SHA256SUMS
@@ -264,22 +264,22 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
   ```
 
   Insert the magnet URI into the announcement sent to mailing lists. This permits
-  people without access to `aixcoincore.org` to download the binary distribution.
+  people without access to `aixcoin-core.github.io` to download the binary distribution.
   Also put it into the `optional_magnetlink:` slot in the YAML file for
-  aixcoincore.org.
+  aixcoin-core.github.io.
 
 - Archive the release notes for the new version to `doc/release-notes/release-notes-${VERSION}.md`
   (branch `master` and branch of the release).
 
-- Update the aixcoincore.org website
+- Update the aixcoin-core.github.io website
 
   - blog post
 
-  - maintained versions [table](https://github.com/aixcoin-core/aixcoin-core.github.io/aixcoincore.org/commits/master/_includes/posts/maintenance-table.md)
+  - maintained versions [table](https://github.com/aixcoin-core/aixcoin-core.github.io/commits/master/_includes/posts/maintenance-table.md)
 
   - RPC documentation update
 
-      - See https://github.com/aixcoin-core/aixcoin-core.github.io/aixcoincore.org/blob/master/contrib/doc-gen/
+      - See https://github.com/aixcoin-core/aixcoin-core.github.io/blob/master/contrib/doc-gen/
 
 
 - Update repositories
@@ -300,7 +300,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
   - aixcoin-dev and aixcoin-core-dev mailing list
 
-  - Aixcoin Core announcements list https://aixcoin-core.github.io/aixcoincore.org/en/list/announcements/join/
+  - Aixcoin Core announcements list https://aixcoin-core.github.io/en/list/announcements/join/
 
   - Aixcoin Core Twitter https://twitter.com/aixcoincoreorg
 

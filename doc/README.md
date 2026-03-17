@@ -5,7 +5,7 @@ Setup
 ---------------------
 Aixcoin Core is the original Aixcoin client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Aixcoin transactions, which requires several hundred gigabytes or more of disk space. Depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to several days or more.
 
-To download Aixcoin Core, visit [aixcoincore.org](https://aixcoin-core.github.io/aixcoincore.org/en/download/).
+To download Aixcoin Core, visit [aixcoin-core.github.io](https://aixcoin-core.github.io/en/download/).
 
 Running
 ---------------------
@@ -56,7 +56,7 @@ The Aixcoin repo's [root README](/README.md) contains relevant information on th
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://doxygen.aixcoincore.org/)
+- [Source Code Documentation (External Link)](https://doxygen.aixcoin-core.github.io/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [JSON-RPC Interface](JSON-RPC-interface.md)

@@ -6,7 +6,7 @@ announced or released.
 
 Aixcoin Core version 24.0.1 is now available from:
 
-  <https://aixcoin-core.github.io/aixcoincore.org/bin/aixcoin-core-24.0.1/>
+  <https://aixcoin-core.github.io/bin/aixcoin-core-24.0.1/>
 
 This release includes new features, various bug fixes and performance
 improvements, as well as updated translations.
@@ -17,7 +17,7 @@ Please report bugs using the issue tracker at GitHub:
 
 To receive security and update notifications, please subscribe to:
 
-  <https://aixcoin-core.github.io/aixcoincore.org/en/list/announcements/join/>
+  <https://aixcoin-core.github.io/en/list/announcements/join/>
 
 How to Upgrade
 ==============
@@ -91,7 +91,7 @@ not accept unconfirmed transactions as final, and if they insist on doing so,
 to take the appropriate steps to ensure they have some recourse or plan for
 when their assumptions do not hold.
 
-[Aixcoin Core 0.12.0]: https://aixcoin-core.github.io/aixcoincore.org/en/releases/0.12.0/#opt-in-replace-by-fee-transactions
+[Aixcoin Core 0.12.0]: https://aixcoin-core.github.io/en/releases/0.12.0/#opt-in-replace-by-fee-transactions
 [bip125]: https://github.com/aixcoin/bips/blob/master/bip-0125.mediawiki
 
 Notable changes
