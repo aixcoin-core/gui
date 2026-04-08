@@ -290,7 +290,7 @@ cat "$VERSION"/*/all.SHA256SUMS.asc > SHA256SUMS.asc
 
   - Update packaging repo
 
-      - Push the flatpak to flathub, e.g. https://github.com/flathub/org.aixcoincore.aixcoin-qt/pull/2
+      - Push the flatpak to flathub, e.g. https://github.com/flathub/io.aixcoin-core.github.aixcoin-qt/pull/2
 
       - Push the snap, see https://github.com/aixcoin-core/packaging/blob/main/snap/local/build.md
 
